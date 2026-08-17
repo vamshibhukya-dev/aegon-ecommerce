@@ -1,0 +1,421 @@
+/* ==========================================================================
+                              AEGON — DESIGN TOKENS
+                Core visual tokens shared across the application.
+   ========================================================================== */
+
+:root {
+
+    /* ==========================================================================
+       01. BRAND COLORS
+       ========================================================================== */
+
+    --color-brand-primary: hsl(152, 68%, 42%);
+    --color-brand-primary-dark: hsl(152, 68%, 32%);
+    --color-brand-primary-light: hsl(152, 68%, 92%);
+
+    --color-brand-secondary: hsl(258, 90%, 66%);
+    --color-brand-secondary-dark: hsl(258, 90%, 52%);
+
+    --color-brand-accent: hsl(28, 96%, 58%);
+    --color-brand-accent-light: hsl(28, 96%, 92%);
+
+
+    /* ==========================================================================
+       02. NEUTRAL COLORS
+       ========================================================================== */
+
+    --color-white: #ffffff;
+    --color-black: #0a0e0c;
+
+    --color-gray-50: #f7f9f8;
+    --color-gray-100: #eef2f0;
+    --color-gray-200: #dfe6e2;
+    --color-gray-300: #c3cec8;
+    --color-gray-400: #93a49c;
+    --color-gray-500: #667b71;
+    --color-gray-600: #4b5f56;
+    --color-gray-700: #384944;
+    --color-gray-800: #263330;
+    --color-gray-900: #161e1c;
+
+
+    /* ==========================================================================
+       03. SEMANTIC COLORS
+       ========================================================================== */
+
+    --color-success: hsl(152, 68%, 42%);
+    --color-success-light: hsl(152, 68%, 93%);
+
+    --color-warning: hsl(42, 96%, 55%);
+    --color-warning-light: hsl(42, 96%, 93%);
+
+    --color-danger: hsl(4, 86%, 58%);
+    --color-danger-light: hsl(4, 86%, 95%);
+
+    --color-info: hsl(206, 90%, 56%);
+    --color-info-light: hsl(206, 90%, 94%);
+
+
+    /* ==========================================================================
+       04. SURFACE COLORS
+       ========================================================================== */
+
+    --color-surface-body: var(--color-gray-50);
+    --color-surface-primary: var(--color-white);
+    --color-surface-secondary: var(--color-gray-100);
+    --color-surface-card: var(--color-white);
+    --color-surface-elevated: var(--color-white);
+    --color-surface-inverse: var(--color-gray-900);
+
+    --color-surface-overlay: hsla(160, 30%, 8%, 0.55);
+
+    --color-surface-glass: hsla(0, 0%, 100%, 0.60);
+    --color-surface-glass-strong: hsla(0, 0%, 100%, 0.82);
+
+
+    /* ==========================================================================
+       05. TEXT COLORS
+       ========================================================================== */
+
+    --color-text-primary: var(--color-gray-900);
+    --color-text-secondary: var(--color-gray-600);
+    --color-text-muted: var(--color-gray-500);
+    --color-text-inverse: var(--color-white);
+
+    --color-text-on-brand: var(--color-white);
+    --color-text-link: var(--color-brand-primary-dark);
+
+
+    /* ==========================================================================
+       06. BORDER COLORS
+       ========================================================================== */
+
+    --color-border-default: var(--color-gray-200);
+    --color-border-strong: var(--color-gray-300);
+
+    --color-border-glass: hsla(0, 0%, 100%, 0.35);
+
+
+    /* ==========================================================================
+       07. SHADOWS
+       ========================================================================== */
+
+    --shadow-color: 160 30% 10%;
+
+    --shadow-xs:
+        0 1px 2px hsl(var(--shadow-color) / 0.06);
+
+    --shadow-sm:
+        0 2px 6px hsl(var(--shadow-color) / 0.08);
+
+    --shadow-md:
+        0 8px 24px hsl(var(--shadow-color) / 0.10);
+
+    --shadow-lg:
+        0 16px 40px hsl(var(--shadow-color) / 0.14);
+
+    --shadow-xl:
+        0 24px 64px hsl(var(--shadow-color) / 0.18);
+
+    --shadow-inset:
+        inset 0 1px 2px hsl(var(--shadow-color) / 0.12);
+
+    --shadow-brand-glow:
+        0 0 0 1px hsl(152 68% 42% / 0.25),
+        0 8px 30px hsl(152 68% 42% / 0.35);
+
+    --shadow-accent-glow:
+        0 0 0 1px hsl(28 96% 58% / 0.25),
+        0 8px 30px hsl(28 96% 58% / 0.35);
+
+
+    /* ==========================================================================
+       08. GRADIENTS
+       ========================================================================== */
+
+    --gradient-brand:
+        linear-gradient(
+            135deg,
+            hsl(152, 68%, 46%) 0%,
+            hsl(168, 76%, 40%) 100%
+        );
+
+    --gradient-secondary:
+        linear-gradient(
+            135deg,
+            hsl(258, 90%, 66%) 0%,
+            hsl(280, 85%, 62%) 100%
+        );
+
+    --gradient-accent:
+        linear-gradient(
+            135deg,
+            hsl(28, 96%, 60%) 0%,
+            hsl(8, 90%, 60%) 100%
+        );
+
+    --gradient-hero:
+        radial-gradient(
+            circle at 20% 20%,
+            hsl(152 68% 46% / 0.35),
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 85% 15%,
+            hsl(28 96% 60% / 0.30),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 60% 90%,
+            hsl(258 90% 66% / 0.25),
+            transparent 45%
+        ),
+        linear-gradient(
+            160deg,
+            hsl(160 45% 12%) 0%,
+            hsl(168 55% 8%) 60%,
+            hsl(150 40% 6%) 100%
+        );
+
+    --gradient-footer:
+        linear-gradient(
+            180deg,
+            hsl(160 40% 9%) 0%,
+            hsl(160 45% 5%) 100%
+        );
+
+    --gradient-overlay:
+        linear-gradient(
+            180deg,
+            hsla(160, 30%, 6%, 0) 0%,
+            hsla(160, 30%, 6%, 0.75) 100%
+        );
+
+    --gradient-brand-border:
+        linear-gradient(
+            135deg,
+            hsl(152 68% 46%),
+            hsl(258 90% 66%),
+            hsl(28 96% 60%)
+        );
+
+    --gradient-text:
+        linear-gradient(
+            135deg,
+            hsl(152 68% 42%) 0%,
+            hsl(258 90% 60%) 100%
+        );
+
+
+    /* ==========================================================================
+       09. TYPOGRAPHY
+       ========================================================================== */
+
+    /* Font Families */
+
+    --font-display:
+        'Clash Display',
+        'Poppins',
+        'Segoe UI',
+        sans-serif;
+
+    --font-body:
+        'Manrope',
+        'Segoe UI',
+        system-ui,
+        sans-serif;
+
+    --font-mono:
+        'JetBrains Mono',
+        ui-monospace,
+        monospace;
+
+
+    /* Font Sizes */
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 1.875rem;
+    --font-size-3xl: 2.25rem;
+    --font-size-4xl: 2.75rem;
+    --font-size-5xl: 3.5rem;
+
+
+    /* Font Weights */
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+
+    /* Line Heights */
+
+    --line-height-tight: 1.15;
+    --line-height-snug: 1.35;
+    --line-height-normal: 1.6;
+    --line-height-loose: 1.85;
+
+
+    /* Letter Spacing */
+
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.06em;
+    --letter-spacing-wider: 0.12em;
+
+
+    /* ==========================================================================
+       10. SPACING SCALE
+       ========================================================================== */
+
+    --space-3xs: 0.25rem;
+    --space-2xs: 0.5rem;
+    --space-xs: 0.75rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4.5rem;
+    --space-3xl: 6rem;
+    --space-4xl: 8rem;
+
+
+    /* ==========================================================================
+       11. BORDER RADIUS
+       ========================================================================== */
+
+    --radius-xs: 6px;
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-full: 999px;
+
+
+    /* ==========================================================================
+       12. LAYOUT
+       ========================================================================== */
+
+    --container-width: 1280px;
+    --container-width-narrow: 880px;
+
+    --container-padding:
+        clamp(1.25rem, 4vw, 3rem);
+
+    --header-height: 76px;
+    --header-height-scrolled: 64px;
+
+
+    /* ==========================================================================
+       13. TRANSITIONS & MOTION
+       ========================================================================== */
+
+    --duration-fast: 150ms;
+    --duration-base: 280ms;
+    --duration-slow: 480ms;
+
+    --ease-standard:
+        cubic-bezier(0.4, 0, 0.2, 1);
+
+    --ease-out-back:
+        cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --ease-in-out:
+        cubic-bezier(0.65, 0, 0.35, 1);
+
+
+    /* ==========================================================================
+       14. Z-INDEX SCALE
+       ========================================================================== */
+
+    --z-index-dropdown: 100;
+    --z-index-sticky: 200;
+    --z-index-overlay: 300;
+    --z-index-modal: 400;
+    --z-index-toast: 500;
+
+
+    /* ==========================================================================
+       15. GLASS EFFECT
+       ========================================================================== */
+
+    --glass-blur: 18px;
+    --glass-saturation: 180%;
+}
+
+
+/* ==========================================================================
+   THEME OVERRIDES
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+
+        --color-surface-body: var(--color-gray-900);
+        --color-surface-primary: var(--color-gray-800);
+        --color-surface-card: hsl(160, 22%, 12%);
+        --color-surface-elevated: hsl(160, 20%, 14%);
+        --color-surface-secondary: hsl(160, 18%, 16%);
+        --color-surface-inverse: var(--color-gray-50);
+
+        --color-text-primary: var(--color-gray-50);
+        --color-text-secondary: var(--color-gray-300);
+        --color-text-muted: var(--color-gray-400);
+        --color-text-inverse: var(--color-gray-900);
+        --color-text-link: hsl(152, 68%, 62%);
+
+        --color-border-default: hsl(160, 15%, 22%);
+        --color-border-strong: hsl(160, 15%, 30%);
+        --color-border-glass: hsla(0, 0%, 100%, 0.08);
+
+        --shadow-color: 160 60% 2%;
+
+        --shadow-xs:
+            0 1px 2px hsl(var(--shadow-color) / 0.4);
+
+        --shadow-sm:
+            0 2px 8px hsl(var(--shadow-color) / 0.45);
+
+        --shadow-md:
+            0 8px 28px hsl(var(--shadow-color) / 0.5);
+
+        --shadow-lg:
+            0 18px 48px hsl(var(--shadow-color) / 0.55);
+
+        --shadow-xl:
+            0 28px 72px hsl(var(--shadow-color) / 0.6);
+    }
+}
+
+
+[data-theme="dark"] {
+
+    --color-surface-body: var(--color-gray-900);
+    --color-surface-primary: var(--color-gray-800);
+    --color-surface-card: hsl(160, 22%, 12%);
+    --color-surface-elevated: hsl(160, 20%, 14%);
+    --color-surface-secondary: hsl(160, 18%, 16%);
+    --color-surface-inverse: var(--color-gray-50);
+
+    --color-text-primary: var(--color-gray-50);
+    --color-text-secondary: var(--color-gray-300);
+    --color-text-muted: var(--color-gray-400);
+    --color-text-inverse: var(--color-gray-900);
+    --color-text-link: hsl(152, 68%, 62%);
+
+    --color-border-default: hsl(160, 15%, 22%);
+    --color-border-strong: hsl(160, 15%, 30%);
+    --color-border-glass: hsla(0, 0%, 100%, 0.08);
+}
+
+
+[data-theme="light"] {
+    color-scheme: light;
+}
