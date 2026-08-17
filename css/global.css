@@ -1,0 +1,90 @@
+/* =====================================================================================
+                                  AEGON — GLOBAL BASE STYLES
+                Application-wide typography, behavior and foundational styling.
+   ================================================================================== */
+
+
+/* ==========================================================================
+   01. DOCUMENT
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 130px);
+}
+
+
+/* ==========================================================================
+   02. BODY
+   ========================================================================== */
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-normal);
+    color: var(--color-text-primary);
+    background-color: var(--color-surface-body);
+    overflow-x: hidden;
+
+    transition:
+        background-color var(--duration-base) var(--ease-standard),
+        color var(--duration-base) var(--ease-standard);
+}
+
+
+/* ==========================================================================
+   03. HEADINGS
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--color-text-primary);
+}
+
+
+/* ==========================================================================
+   04. PARAGRAPHS
+   ========================================================================== */
+
+p {
+    color: var(--color-text-secondary);
+}
+
+
+/* ==========================================================================
+   05. LINKS
+   ========================================================================== */
+
+a {
+    color: var(--color-text-link);
+}
+
+
+/* ==========================================================================
+   06. FORM CONTROLS
+   ========================================================================== */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ==========================================================================
+   07. TEXT SELECTION
+   ========================================================================== */
+
+::selection {
+    color: var(--color-text-on-brand);
+    background-color: var(--color-brand-primary);
+}

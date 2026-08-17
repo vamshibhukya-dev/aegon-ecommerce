@@ -1,2 +1,9 @@
+/* =====================================================================================
+                                    AEGON — MAIN STYLESHEET
+                       Primary stylesheet entry point for the application.
+   ================================================================================== */
+
+
 @import url("./variables.css");
 @import url("./reset.css");
+@import url("./global.css");
