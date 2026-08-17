@@ -1,0 +1,91 @@
+/* =====================================================================================
+                                       AEGON — CSS RESET
+                Normalize browser defaults for a predictable styling foundation.
+   ================================================================================== */
+
+/* ---------- Box Model ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Document ---------- */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* ---------- Media ---------- */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+/* ---------- Typography ---------- */
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* ---------- Forms ---------- */
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  border: 0;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ---------- Lists ---------- */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ---------- Links ---------- */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Tables ---------- */
+
+table {
+  border-collapse: collapse;
+}
