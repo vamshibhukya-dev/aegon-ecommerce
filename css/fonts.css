@@ -1,0 +1,123 @@
+/* ==========================================================================
+                            AEGON — LOCAL FONT FACES
+   ========================================================================== */
+
+
+/* ========== Poppins font-family ========== */
+
+/* ---------- Poppins — SemiBold (600) ---------- */
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../assets/fonts/poppins/Poppins-SemiBold.woff2') format('woff2');
+}
+
+
+/* ---------- Poppins — Bold (700) ---------- */
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../assets/fonts/poppins/Poppins-Bold.woff2') format('woff2');
+}
+
+
+/* ---------- Poppins — ExtraBold (800) ---------- */
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../assets/fonts/poppins/Poppins-ExtraBold.woff2') format('woff2');
+}
+
+
+
+
+/* ========== Manrope font-family ========== */
+
+/* ---------- Manrope — Regular (400) ---------- */
+
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/manrope/Manrope-Regular.woff2') format('woff2');
+}
+
+
+/* ---------- Manrope — Medium (500) ---------- */
+
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../assets/fonts/manrope/Manrope-Medium.woff2') format('woff2');
+}
+
+
+/* ---------- Manrope — SemiBold (600) ---------- */
+
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../assets/fonts/manrope/Manrope-SemiBold.woff2') format('woff2');
+}
+
+
+/* ---------- Manrope — Bold (700) ---------- */
+
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../assets/fonts/manrope/Manrope-Bold.woff2') format('woff2');
+}
+
+
+/* ---------- Manrope — ExtraBold (800) ---------- */
+
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../assets/fonts/manrope/Manrope-ExtraBold.woff2') format('woff2');
+}
+
+
+
+
+/* ========== JetBrains Mono font-family ========== */
+
+/* ---------- JetBrains Mono — Regular (400) ---------- */
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+
+/* ---------- JetBrains Mono — Medium (500) ---------- */
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../assets/fonts/jetbrains-mono/JetBrainsMono-Medium.woff2') format('woff2');
+}
