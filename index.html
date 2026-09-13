@@ -1,13 +1,513 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AEGON — Fresh Groceries, Delivered Fast</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- JavaScript -->
     <script src="./js/main.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <!-- ==========================================================================
+                                       GLOBAL HEADER
+       ========================================================================== -->
+    <!-- ==========================================================================
+                               PROMOTIONAL ANNOUNCEMENT BANNER
+       ========================================================================== -->
+
+    <div
+      class="announcement__banner"
+      role="note"
+      aria-label="Promotional Announcement"
+    >
+      <p class="announcement-banner__message">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="15"
+          viewBox="0 0 24 24"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="17" cy="18" r="2" />
+            <circle cx="7" cy="18" r="2" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M11 17h4M13.5 7h.943c1.31 0 1.966 0 2.521.315c.556.314.926.895 1.667 2.056c.52.814 1.064 1.406 1.831 1.931c.772.53 1.14.789 1.343 1.204c.195.398.195.869.195 1.811c0 1.243 0 1.864-.349 2.259l-.046.049c-.367.375-.946.375-2.102.375H19"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m13 7l.994 2.486c.487 1.217.73 1.826 1.239 2.17c.508.344 1.163.344 2.475.344H21M4.87 17c-1.353 0-2.03 0-2.45-.44C2 16.122 2 15.415 2 14V7c0-1.414 0-2.121.42-2.56S3.517 4 4.87 4h5.26c1.353 0 2.03 0 2.45.44C13 4.878 13 5.585 13 7v10H8.696"
+            />
+          </g>
+        </svg>
+        <span>
+          <strong>Free delivery</strong>&nbsp;on your first order &mdash; use
+          code&nbsp;<strong>WELCOME50</strong>&nbsp;for 50% off!
+        </span>
+      </p>
+    </div>
+
+    <!-- ==========================================================================
+                                   SITE HEADER NAVIGATION
+       ========================================================================== -->
+    <header class="site-header">
+      <input
+        type="checkbox"
+        id="nav-toggle"
+        class="navbar__toggle-input"
+        aria-hidden="true"
+      />
+      <div class="container navbar">
+        <a href="index.html" class="navbar__brand" aria-label="AEGON home">
+          <span class="navbar__brand-mark" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                fill="currentColor"
+                d="M20.89 2.3C20.47 2.22 10.42.55 5.07 5.9c-.71.71-1.33 1.54-1.85 2.47c-2.06 3.7-1.48 7.99 1.47 10.94C6.47 21.09 8.73 22 11.05 22c1.54 0 3.11-.4 4.58-1.22c.93-.52 1.76-1.14 2.47-1.85c5.35-5.35 3.67-15.39 3.6-15.82a.99.99 0 0 0-.81-.81m-4.2 15.22c-.58.58-1.26 1.09-2.03 1.51c-2.65 1.47-5.17 1.07-7 .04C8.3 15.1 10.73 11.35 14 9c-3.7 1.65-6.72 4.58-8.47 8.23c-1.43-1.85-2.29-4.78-.56-7.89c.43-.77.94-1.45 1.51-2.03c3.86-3.86 11.05-3.4 13.34-3.14c.26 2.29.72 9.48-3.14 13.34Z"
+              />
+            </svg>
+          </span>
+          <span class="navbar__brand-name"> AEGON </span>
+        </a>
+
+        <!-- ================= PRIMARY NAVIGATION ================= -->
+        <nav class="navbar__menu" aria-label="Primary navigation">
+          <a
+            href="index.html"
+            class="navbar__link is-active"
+            aria-current="page"
+          >
+            Home
+          </a>
+          <a href="about.html" class="navbar__link"> About </a>
+
+          <div class="mega-menu">
+            <a href="products.html" class="navbar__link" aria-haspopup="true">
+              <span>Categories</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <path d="M0 0h16v16H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M3.2 5.74a.75.75 0 0 1 1.06-.04L8 9.227L11.74 5.7a.75.75 0 1 1 1.02 1.1l-4.25 4a.75.75 0 0 1-1.02 0l-4.25-4a.75.75 0 0 1-.04-1.06"
+                />
+              </svg>
+            </a>
+
+            <!-- ================= CATEGORIES MENU ================= -->
+            <div class="mega-menu__panel">
+              <!-- ======= FRESH PRODUCE ======= -->
+              <section class="mega-menu__col">
+                <h6 class="mega-menu__title">Fresh Produce</h6>
+                <ul>
+                  <li>
+                    <a href="products.html#vegetables"> Vegetables </a>
+                  </li>
+                  <li>
+                    <a href="products.html#fruits"> Fruits </a>
+                  </li>
+                  <li>
+                    <a href="products.html#groceries"> Groceries </a>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- ======= DAIRY & BAKERY ======= -->
+              <section class="mega-menu__col">
+                <h6 class="mega-menu__title">Dairy &amp; Bakery</h6>
+                <ul>
+                  <li>
+                    <a href="products.html#dairy"> Dairy </a>
+                  </li>
+                  <li>
+                    <a href="products.html#bakery"> Bakery </a>
+                  </li>
+                  <li>
+                    <a href="products.html#frozen-foods"> Frozen Foods </a>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- ======= SNACKS & MORE ======= -->
+              <section class="mega-menu__col">
+                <h6 class="mega-menu__title">Snacks &amp; More</h6>
+                <ul>
+                  <li>
+                    <a href="products.html#snacks"> Snacks </a>
+                  </li>
+                  <li>
+                    <a href="products.html#beverages"> Beverages </a>
+                  </li>
+                  <li>
+                    <a href="products.html#personal-care"> Personal Care </a>
+                  </li>
+                  <li>
+                    <a href="products.html#household"> Household </a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          <a href="products.html" class="navbar__link"> Products </a>
+          <a href="offers.html" class="navbar__link"> Offers </a>
+          <a
+          href="cart.html"
+          class="navbar__link navbar__cart"
+          aria-label="Shopping cart"
+        >
+          <span class="navbar__cart-icon" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <g fill="none" stroke="currentColor">
+                <circle cx="10" cy="19" r="1.5" />
+                <circle cx="17" cy="19" r="1.5" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.5 4h2l3.504 11H17"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.224 12.5L6.3 6.5h12.507a.5.5 0 0 1 .475.658l-1.667 5a.5.5 0 0 1-.474.342z"
+                />
+              </g>
+            </svg>
+          </span>
+          <span class="navbar__cart-label">Cart</span>
+          <span
+            class="badge badge--gradient badge--cart"
+            aria-label="Cart items"
+          >
+            <span data-cart-count>0</span>
+          </span>
+        </a>
+        </nav>
+
+        <!-- ================= NAVBAR ACTIONS ================= -->
+        <div class="navbar__actions">
+          <div class="navbar__user-menu">
+            <button
+              type="button"
+              class="navbar__icon-btn"
+              aria-label="Open account menu"
+              aria-haspopup="true"
+              aria-controls="account-menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 640 640"
+              >
+                <path d="M0 0h640v640H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M240 192c0-44.2 35.8-80 80-80s80 35.8 80 80s-35.8 80-80 80s-80-35.8-80-80m208 0c0-70.7-57.3-128-128-128s-128 57.3-128 128s57.3 128 128 128s128-57.3 128-128M144 544c0-70.7 57.3-128 128-128h96c70.7 0 128 57.3 128 128v8c0 13.3 10.7 24 24 24s24-10.7 24-24v-8c0-97.2-78.8-176-176-176h-96c-97.2 0-176 78.8-176 176v8c0 13.3 10.7 24 24 24s24-10.7 24-24z"
+                />
+              </svg>
+            </button>
+
+            <div
+              id="account-menu"
+              class="navbar__user-menu-panel"
+              data-account-panel
+            >
+              <a href="login.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 640 640"
+                >
+                  <path d="M0 0h640v640H0z" fill="none" />
+                  <path
+                    fill="currentColor"
+                    d="M240 192c0-44.2 35.8-80 80-80s80 35.8 80 80s-35.8 80-80 80s-80-35.8-80-80m208 0c0-70.7-57.3-128-128-128s-128 57.3-128 128s57.3 128 128 128s128-57.3 128-128M144 544c0-70.7 57.3-128 128-128h96c70.7 0 128 57.3 128 128v8c0 13.3 10.7 24 24 24s24-10.7 24-24v-8c0-97.2-78.8-176-176-176h-96c-97.2 0-176 78.8-176 176v8c0 13.3 10.7 24 24 24s24-10.7 24-24z"
+                  />
+                </svg>
+                <span>Login</span>
+              </a>
+
+              <a href="signup.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 640 640"
+                >
+                  <path d="M0 0h640v640H0z" fill="none" />
+                  <path
+                    fill="currentColor"
+                    d="M240 192c0-44.2 35.8-80 80-80s80 35.8 80 80s-35.8 80-80 80s-80-35.8-80-80m208 0c0-70.7-57.3-128-128-128s-128 57.3-128 128s57.3 128 128 128s128-57.3 128-128M144 544c0-70.7 57.3-128 128-128h96c70.7 0 128 57.3 128 128v8c0 13.3 10.7 24 24 24s24-10.7 24-24v-8c0-97.2-78.8-176-176-176h-96c-97.2 0-176 78.8-176 176v8c0 13.3 10.7 24 24 24s24-10.7 24-24z"
+                  />
+                </svg>
+                <span>Sign Up</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <label for="nav-toggle" class="navbar__toggle" aria-label="Toggle menu">
+          <svg
+            class="icon-menu"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 17h18M3 12h18M3 7h18"
+            />
+          </svg>
+          <svg
+            class="icon-close"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m18 18l-6-6m0 0L6 6m6 6l6-6m-6 6l-6 6"
+            />
+          </svg>
+        </label>
+      </div>
+
+      <!-- ==========================================================================
+                                DELIVERY LOCATION & SEARCH BAR 
+       ========================================================================== -->
+      <div class="container utility-bar">
+        <button
+          type="button"
+          class="location-picker"
+          aria-label="Change delivery location"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 16 16"
+          >
+            <path d="M0 0h16v16H0z" fill="none" />
+            <path
+              fill="currentColor"
+              d="M8 1a6 6 0 0 1 6 6c0 2.874-3.097 6.016-4.84 7.558c-.67.59-1.65.59-2.32 0C5.098 13.016 2 9.874 2 7a6 6 0 0 1 6-6m0 1a5 5 0 0 0-5 5c0 1.108.614 2.395 1.57 3.683c.933 1.258 2.087 2.377 2.934 3.126c.29.256.702.256.992 0c.847-.749 2-1.867 2.935-3.126C12.386 9.395 13 8.108 13 7a5 5 0 0 0-5-5m0 2.75a2.25 2.25 0 1 1 0 4.5a2.25 2.25 0 0 1 0-4.5m0 1a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5"
+            />
+          </svg>
+          <span class="location-picker__label"> Deliver to </span>
+          <span class="location-picker__value"> Koramangala, Bengaluru </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 16 16"
+          >
+            <path d="M0 0h16v16H0z" fill="none" />
+            <path
+              fill="currentColor"
+              d="M3.2 5.74a.75.75 0 0 1 1.06-.04L8 9.227L11.74 5.7a.75.75 0 1 1 1.02 1.1l-4.25 4a.75.75 0 0 1-1.02 0l-4.25-4a.75.75 0 0 1-.04-1.06"
+            />
+          </svg>
+        </button>
+
+        <form
+          class="search-box"
+          role="search"
+          action="products.html"
+          method="get"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 20 20"
+          >
+            <path d="M0 0h20v20H0z" fill="none" />
+            <path
+              fill="currentColor"
+              d="M13.535 14.596a6.5 6.5 0 1 1 1.06-1.06l3.435 3.434a.75.75 0 0 1-.976 1.133l-.084-.073zM14.5 9.5a5 5 0 1 0-10 0a5 5 0 0 0 10 0"
+            />
+          </svg>
+
+          <label for="site-search" class="sr-only">
+            Search for groceries
+          </label>
+
+          <input
+            type="search"
+            id="site-search"
+            name="q"
+            placeholder="Search for fruits, milk, bread..."
+            autocomplete="off"
+          />
+          <button type="submit" class="search-box__submit">Search</button>
+        </form>
+      </div>
+
+      <!-- ==========================================================================
+                                  MOBILE NAVIGATION PANEL
+       ========================================================================== -->
+      <nav
+        class="navbar__mobile-panel container"
+        aria-label="Mobile navigation"
+      >
+        <a href="index.html" class="navbar__link is-active" aria-current="page">
+          Home
+        </a>
+        <a href="about.html" class="navbar__link"> About </a>
+
+        <div class="mega-menu">
+          <a href="#" class="navbar__link" aria-haspopup="true">
+            <span>Categories</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 16 16"
+            >
+              <path d="M0 0h16v16H0z" fill="none" />
+              <path
+                fill="currentColor"
+                d="M3.2 5.74a.75.75 0 0 1 1.06-.04L8 9.227L11.74 5.7a.75.75 0 1 1 1.02 1.1l-4.25 4a.75.75 0 0 1-1.02 0l-4.25-4a.75.75 0 0 1-.04-1.06"
+              />
+            </svg>
+          </a>
+
+          <!-- ================= CATEGORIES MENU ================= -->
+          <div class="mega-menu__panel">
+            <!-- ======= FRESH PRODUCE ======= -->
+            <section class="mega-menu__col">
+              <h6 class="mega-menu__title">Fresh Produce</h6>
+              <ul>
+                <li>
+                  <a href="products.html#vegetables"> Vegetables </a>
+                </li>
+                <li>
+                  <a href="products.html#fruits"> Fruits </a>
+                </li>
+                <li>
+                  <a href="products.html#groceries"> Groceries </a>
+                </li>
+              </ul>
+            </section>
+
+            <!-- ======= DAIRY & BAKERY ======= -->
+            <section class="mega-menu__col">
+              <h6 class="mega-menu__title">Dairy &amp; Bakery</h6>
+              <ul>
+                <li>
+                  <a href="products.html#dairy"> Dairy </a>
+                </li>
+                <li>
+                  <a href="products.html#bakery"> Bakery </a>
+                </li>
+                <li>
+                  <a href="products.html#frozen-foods"> Frozen Foods </a>
+                </li>
+              </ul>
+            </section>
+
+            <!-- ======= SNACKS & MORE ======= -->
+            <section class="mega-menu__col">
+              <h6 class="mega-menu__title">Snacks &amp; More</h6>
+              <ul>
+                <li>
+                  <a href="products.html#snacks"> Snacks </a>
+                </li>
+                <li>
+                  <a href="products.html#beverages"> Beverages </a>
+                </li>
+                <li>
+                  <a href="products.html#personal-care"> Personal Care </a>
+                </li>
+                <li>
+                  <a href="products.html#household"> Household </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <a href="products.html" class="navbar__link"> Products </a>
+        <a href="offers.html" class="navbar__link"> Offers </a>
+        <a
+          href="cart.html"
+          class="navbar__link navbar__cart"
+          aria-label="Shopping cart"
+        >
+          <span class="navbar__cart-icon" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <g fill="none" stroke="currentColor">
+                <circle cx="10" cy="19" r="1.5" />
+                <circle cx="17" cy="19" r="1.5" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.5 4h2l3.504 11H17"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.224 12.5L6.3 6.5h12.507a.5.5 0 0 1 .475.658l-1.667 5a.5.5 0 0 1-.474.342z"
+                />
+              </g>
+            </svg>
+          </span>
+          <span class="navbar__cart-label">Cart</span>
+          <span
+            class="badge badge--gradient badge--cart"
+            aria-label="Cart items"
+          >
+            <span data-cart-count>0</span>
+          </span>
+        </a>
+      </nav>
+    </header>
+  </body>
 </html>

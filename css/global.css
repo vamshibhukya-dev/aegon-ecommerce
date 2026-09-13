@@ -3,35 +3,33 @@
                 Application-wide typography, behavior and foundational styling.
    ================================================================================== */
 
-
 /* ==========================================================================
    01. DOCUMENT
    ========================================================================== */
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--header-height) + 130px);
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 130px);
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light dark;
 }
-
 
 /* ==========================================================================
    02. BODY
    ========================================================================== */
 
 body {
-    font-family: var(--font-body);
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-normal);
-    color: var(--color-text-primary);
-    background-color: var(--color-surface-body);
-    overflow-x: hidden;
-
-    transition:
-        background-color var(--duration-base) var(--ease-standard),
-        color var(--duration-base) var(--ease-standard);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition:
+    background-color var(--duration-base) var(--ease-standard),
+    color var(--duration-base) var(--ease-standard);
 }
-
 
 /* ==========================================================================
    03. HEADINGS
@@ -43,30 +41,50 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-display);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-    color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
 }
 
+h1 {
+  font-size: clamp(2rem, 4.2vw + 1rem, var(--font-size-5xl));
+}
+h2 {
+  font-size: clamp(1.7rem, 3vw + 1rem, var(--font-size-4xl));
+}
+h3 {
+  font-size: clamp(1.4rem, 2vw + 1rem, var(--font-size-3xl));
+}
+h4 {
+  font-size: var(--font-size-xl);
+}
+h5 {
+  font-size: var(--font-size-lg);
+}
+h6 {
+  font-size: var(--font-size-md);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
 
 /* ==========================================================================
    04. PARAGRAPHS
    ========================================================================== */
 
 p {
-    color: var(--color-text-secondary);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
 }
-
 
 /* ==========================================================================
    05. LINKS
    ========================================================================== */
 
 a {
-    color: var(--color-text-link);
+  color: var(--color-text-link);
 }
-
 
 /* ==========================================================================
    06. FORM CONTROLS
@@ -76,15 +94,14 @@ button,
 input,
 select,
 textarea {
-    font-family: inherit;
+  font-family: inherit;
 }
-
 
 /* ==========================================================================
    07. TEXT SELECTION
    ========================================================================== */
 
 ::selection {
-    color: var(--color-text-on-brand);
-    background-color: var(--color-brand-primary);
+  color: var(--color-text-on-brand);
+  background-color: var(--color-brand-primary);
 }

@@ -184,6 +184,12 @@
             hsl(160 45% 5%) 100%
         );
 
+    --gradient-card-sheen: 
+        linear-gradient(
+            120deg, 
+            hsla(0,0%,100%,0.5) 0%, 
+            hsla(0,0%,100%,0) 40%);
+
     --gradient-overlay:
         linear-gradient(
             180deg,
@@ -198,6 +204,14 @@
             hsl(258 90% 66%),
             hsl(28 96% 60%)
         );
+
+    --gradient-conic-loader: 
+        conic-gradient(
+            from 0deg, 
+            hsl(152 68% 46%), 
+            hsl(258 90% 66%), 
+            hsl(28 96% 60%), 
+            hsl(152 68% 46%));   
 
     --gradient-text:
         linear-gradient(
@@ -274,7 +288,7 @@
        10. SPACING SCALE
        ========================================================================== */
 
-    --space-3xs: 0.25rem;
+    --space-3xs: 0.2rem;
     --space-2xs: 0.5rem;
     --space-xs: 0.75rem;
     --space-sm: 1rem;
@@ -302,7 +316,7 @@
        12. LAYOUT
        ========================================================================== */
 
-    --container-width: 1280px;
+    --container-width: 1440px;
     --container-width-narrow: 880px;
 
     --container-padding:
@@ -364,6 +378,9 @@
         --color-surface-elevated: hsl(160, 20%, 14%);
         --color-surface-secondary: hsl(160, 18%, 16%);
         --color-surface-inverse: var(--color-gray-50);
+        --color-surface-glass: hsla(160, 30%, 12%, 0.55);
+        --color-surface-glass-strong: hsla(160, 25%, 10%, 0.78);
+        --color-surface-overlay: hsla(160, 40%, 3%, 0.65);
 
         --color-text-primary: var(--color-gray-50);
         --color-text-secondary: var(--color-gray-300);

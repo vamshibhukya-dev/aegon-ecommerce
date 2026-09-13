@@ -9,3 +9,5 @@
 @import url("./global.css");
 @import url("./fonts.css");
 @import url("./layout.css");
+@import url("./components/header.css");
+@import url("./responsive.css");
