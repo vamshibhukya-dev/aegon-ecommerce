@@ -1,8 +1,8 @@
 /* ===================================================================================
                                     HEADER RESPONSIVE
  ================================================================================== */
-/* ======= TABLET & COMPACT DESKTOP ======= */
-@media screen and (max-width: 1024px) {
+/* ================= TABLET & COMPACT DESKTOP ================= */
+@media (max-width: 1023px) {
   .announcement-banner__message {
     padding: 0.4rem var(--space-sm);
     font-size: 0.67rem;
@@ -38,8 +38,7 @@
     margin-left: auto;
   }
 
-
-  /* ======= CATEGORIES MENU ======= */
+  /* Categories menu */
   .mega-menu {
     display: block;
   }
@@ -80,8 +79,7 @@
       visibility 350ms var(--ease-standard);
   }
 
-  /* ======= Open Categories ======= */
-
+  /* Open Categories */
   .mega-menu.is-open .mega-menu__panel,
   .mega-menu:focus-within .mega-menu__panel {
     max-height: 420px;
@@ -95,8 +93,7 @@
     border-bottom: 1px solid var(--color-border-default);
   }
 
-
-  /* ======= CATEGORY COLOUMNS ======= */
+  /* Category Coloumns */
   .mega-menu__col {
     min-width: 0;
   }
@@ -127,12 +124,13 @@
     position: absolute;
     top: 8px;
     right: -14px;
-    
   }
 }
 
-/* ======= MOBILE NAVIGATION ======= */
-@media screen and (max-width: 768px) {
+
+
+/* ================= MOBILE NAVIGATION ================= */
+@media (max-width: 767px) {
   .announcement-banner__message {
     font-size: 0.62rem;
   }
@@ -158,11 +156,16 @@
   }
 }
 
-/* ======= SMALL MOBILE ======= */
-@media screen and (max-width: 480px) {
+
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 479px) {
   .announcement-banner__message {
     padding: 0.4rem var(--space-sm);
-    font-size: 0.62rem;
+    font-size: 0.58rem;
+  }
+  .announcement-banner__message svg {
+    display: none;
   }
 
   .mega-menu__panel {
@@ -171,5 +174,139 @@
   }
   .mega-menu__col {
     width: 100%;
+  }
+}
+
+
+
+
+
+
+/* ===================================================================================
+                                  HERO SECTION RESPONSIVE
+ ================================================================================== */
+/* ================= TABLET ================= */
+@media (max-width: 1100px) {
+  .hero__content {
+    width: min(680px, 68vw);
+  }
+
+  .floating-card--order {
+    right: 24px;
+  }
+
+  .floating-card--rating {
+    right: 24px;
+  }
+}
+
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 760px) {
+  .hero__banner {
+    background-position: 62% center;
+  }
+
+  .hero__content {
+    width: 100%;
+  }
+
+  .hero__title {
+    margin-top: 22px;
+    font-size: clamp(44px, 12vw, 62px);
+  }
+
+  .hero__description {
+    max-width: 590px;
+    font-size: var(--font-size-base);
+    line-height: 1.55;
+  }
+
+  .hero__actions {
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .btn {
+    min-height: 58px;
+    font-size: var(--font-size-base);
+    padding-inline: 27px;
+    padding-block: 14px;
+  }
+
+  .btn--primary,
+  .btn--outline-light {
+    min-width: auto;
+  }
+
+  .hero__stats {
+    gap: var(--space-md);
+
+    margin-top: 34px;
+    padding-top: var(--space-md);
+  }
+
+  .hero-stat__value {
+    font-size: 27px;
+  }
+
+  .hero-stat__label {
+    font-size: 11px;
+  }
+
+  .hero__floating-card {
+    display: none;
+  }
+
+  .hero__scroll-hint {
+    display: none;
+  }
+}
+
+
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .hero {
+    padding-block: var(--space-xl) var(--space-3xl);
+  }
+
+  .hero__eyebrow {
+    font-size: var(--font-size-xs);
+  }
+
+  .hero__title {
+    font-size: 46px;
+    letter-spacing: -0.06em;
+  }
+
+  .hero__description {
+    font-size: 15px;
+  }
+
+  .hero__actions {
+    display: grid;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero__stats {
+    gap: var(--space-sm);
+  }
+
+  .hero-stat {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .hero-stat__value {
+    font-size: 23px;
+  }
+  .hero-stat__label {
+    font-size: 10px;
   }
 }

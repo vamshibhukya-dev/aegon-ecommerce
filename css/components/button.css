@@ -1,0 +1,192 @@
+/* ==========================================================================
+   BUTTON
+   ========================================================================== */
+
+.btn {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--space-2xs);
+
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing-normal);
+
+  padding: 0.9rem 1.7rem;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+
+  cursor: pointer;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  white-space: nowrap;
+
+  transition:
+    transform var(--duration-base) var(--ease-out-back),
+    box-shadow var(--duration-base) var(--ease-standard),
+    background-color var(--duration-base) var(--ease-standard),
+    color var(--duration-base) var(--ease-standard),
+    border-color var(--duration-base) var(--ease-standard);
+}
+
+/* ==========================================================================
+   BUTTON — ACTIVE STATE
+   ========================================================================== */
+
+.btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* ==========================================================================
+   BUTTON — PRIMARY
+   ========================================================================== */
+
+.btn--primary {
+  background: var(--btn-primary-background);
+  color: var(--btn-primary-color);
+
+  box-shadow: var(--shadow-md);
+}
+
+.btn--primary:hover {
+  transform: translateY(var(--btn-hover-lift));
+  box-shadow: var(--shadow-brand-glow);
+}
+
+/* ==========================================================================
+   BUTTON — SECONDARY
+   ========================================================================== */
+
+.btn--secondary {
+  background: var(--btn-secondary-background);
+  color: var(--btn-secondary-color);
+
+  border-color: var(--btn-secondary-border-color);
+}
+
+.btn--secondary:hover {
+  background: var(--color-brand-primary-light);
+  transform: translateY(var(--btn-hover-lift));
+}
+
+/* ==========================================================================
+   BUTTON — ACCENT
+   ========================================================================== */
+
+.btn--accent {
+  background: var(--gradient-accent);
+  color: var(--color-white);
+
+  box-shadow: var(--shadow-md);
+}
+
+.btn--accent:hover {
+  transform: translateY(var(--btn-hover-lift));
+  box-shadow: var(--shadow-accent-glow);
+}
+
+/* ==========================================================================
+   BUTTON — GHOST
+   ========================================================================== */
+
+.btn--ghost {
+  background: transparent;
+  color: var(--btn-ghost-color);
+}
+
+.btn--ghost:hover {
+  background: var(--color-surface-secondary);
+}
+
+/* ==========================================================================
+   BUTTON — OUTLINE LIGHT
+   ========================================================================== */
+
+.btn--outline-light {
+  background: hsla(0, 0%, 100%, 0.08);
+  color: var(--color-white);
+
+  border-color: hsla(0, 0%, 100%, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.btn--outline-light:hover {
+  background: hsla(0, 0%, 100%, 0.18);
+
+  transform: translateY(var(--btn-hover-lift));
+}
+
+/* ==========================================================================
+   BUTTON — SIZE MODIFIERS
+   ========================================================================== */
+
+.btn--sm {
+  padding: 0.6rem 1.15rem;
+  font-size: var(--font-size-xs);
+}
+
+.btn--lg {
+  padding: 1.1rem 2.2rem;
+  font-size: var(--font-size-md);
+}
+
+/* ==========================================================================
+   BUTTON — BLOCK
+   ========================================================================== */
+
+.btn--block {
+  width: 100%;
+}
+
+/* ==========================================================================
+   BUTTON — ICON
+   ========================================================================== */
+
+.btn--icon {
+  padding: 0.75rem;
+
+  border-radius: var(--radius-full);
+  aspect-ratio: 1;
+}
+
+.btn svg {
+  width: 1.1em;
+  height: 1.1em;
+
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   BUTTON — SHINE EFFECT
+   ========================================================================== */
+
+.btn::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    hsla(0, 0%, 100%, 0.35) 50%,
+    transparent 80%
+  );
+
+  transform: translateX(-120%);
+
+  transition: transform var(--duration-slow) var(--ease-standard);
+}
+
+.btn:hover::after {
+  transform: translateX(120%);
+}

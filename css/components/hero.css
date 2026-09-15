@@ -1,0 +1,348 @@
+/* ===================================================================================
+                                      HERO SECTION
+ ================================================================================== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-hero);
+  color: var(--color-white);
+  padding-block: var(--space-2xl) var(--space-3xl);
+  isolation: isolate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 0.12) 1px,
+    transparent 1.4px
+  );
+  background-size: 26px 26px;
+  opacity: 0.5;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  animation: bgPan 40s linear infinite;
+}
+
+.hero--banner {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: url("../../assets/images/bannerimage.png");
+  background-repeat: no-repeat;
+  background-position: right 32%;
+  background-size: 220% auto;
+  background-attachment: fixed;
+}
+
+.hero__banner-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      100deg,
+      hsla(158, 45%, 6%, 0.98) 0%,
+      hsla(160, 42%, 8%, 0.92) 42%,
+      hsla(160, 38%, 9%, 0.55) 72%,
+      hsla(160, 30%, 8%, 0.35) 100%
+    ),
+    radial-gradient(
+      circle at 15% 85%,
+      hsla(28, 96%, 58%, 0.22),
+      transparent 45%
+    );
+}
+
+/* ================= HERO CONTENT ================= */
+.hero__content {
+  width: min(750px, 58vw);
+  padding-top: 0;
+}
+
+/* ================= EYEBROW ================= */
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  min-height: 35px;
+  padding: 7px 14px;
+  border: 1px solid var(--color-border-glass);
+  border-radius: var(--radius-full);
+  background: rgba(24, 54, 43, 0.56);
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: var(--line-height-tight);
+  backdrop-filter: blur(12px);
+}
+
+.hero__eyebrow-icon {
+  width: 17px;
+  height: 17px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+/* ================= FLOATING SHAPES ================= */
+.floating-shapes span {
+  background: var(--gradient-brand);
+}
+.floating-shapes span:nth-child(2) {
+  background: var(--gradient-accent);
+}
+.floating-shapes span:nth-child(3) {
+  background: var(--gradient-secondary);
+}
+
+.anim-float-slow {
+  animation: organic-morph 10s ease-in-out infinite;
+  will-change: transform, border-radius;
+}
+
+@keyframes organic-morph {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
+  }
+  25% {
+    transform: translate3d(0, -27px, 0);
+    border-radius: 55% 45% 35% 65% / 60% 40% 55% 45%;
+  }
+  50% {
+    transform: translate3d(-6px, 10px, 0);
+    border-radius: 60% 40% 35% 65% / 55% 65% 35% 45%;
+  }
+  75% {
+    transform: translate3d(-10px, -6px, 0);
+    border-radius: 35% 65% 55% 45% / 40% 55% 45% 60%;
+  }
+}
+
+/* ================= MAIN HEADING ================= */
+.hero__title {
+  max-width: 15ch;
+  margin: 25px 0 23px;
+
+  font-size: clamp(58px, 4.15vw, 78px);
+  font-weight: var(--font-weight-extrabold);
+}
+
+.hero__title-accent {
+  background: linear-gradient(135deg, hsl(152, 80%, 62%), hsl(45, 96%, 65%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= DESCRIPSCTION ================= */
+.hero__description {
+  color: hsla(0, 0%, 100%, 0.78);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+
+  letter-spacing: var(--letter-spacing-tight);
+  max-width: 46ch;
+}
+
+/* ================= HERO ACTIONS ================= */
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-top: 28px;
+}
+
+/* ================= STATISTICS ================= */
+.hero__stats {
+  display: flex;
+  align-items: flex-start;
+  gap: 55px;
+
+  max-width: 750px;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.18);
+}
+
+.hero-stat {
+  min-width: 120px;
+}
+
+.hero-stat__value {
+  display: block;
+  margin-bottom: 10px;
+
+  font-family: var(--font-display);
+  font-size: clamp(31px, 2.05vw, 39px);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.hero-stat__accent {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-stat__label {
+  display: block;
+
+  font-size: var(--font-size-xs);
+  color: hsla(0, 0%, 100%, 0.65);
+}
+
+
+
+/* ================= FLOATING CARDS ================= */
+.hero__floating-card {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+}
+
+.glass {
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+  -webkit-backdrop-filter: blur(var(--glass-blur))
+    saturate(var(--glass-saturation));
+  border: 1px solid var(--color-border-glass);
+}
+
+.hero__floating-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  background: var(--color-brand-primary-light);
+  color: var(--color-brand-primary-dark);
+  flex-shrink: 0;
+}
+
+.floating__card--order {
+  top: 98px;
+  right: 5%;
+}
+.floating__card--rating {
+  right: 7%;
+  bottom: 19.2%;
+}
+
+.floating-card__title,
+.floating-card__subtitle {
+  display: block;
+  white-space: nowrap;
+}
+
+.floating-card__title {
+  margin-bottom: 5px;
+
+  font-size: var(--font-size-base);
+
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1;
+}
+
+.floating-card__subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.anim-order__card,
+.anim-rating__card {
+  animation: delivery-reviews-float 8s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes delivery-reviews-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate3d(4px, -8px, 0) rotate(3deg);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) rotate(0deg);
+  }
+  75% {
+    transform: translate3d(-4px, -6px, 0) rotate(-3deg);
+  }
+}
+
+
+/* ================= SCROLL INDICATOR ================= */
+.hero__scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xs);
+
+  color: rgba(255, 255, 255, 0.68);
+  font-size: var(--space-xs);
+  font-weight: var(--font-weight-medium);
+  transform: translateX(-50%);
+}
+
+.hero__scroll-mouse {
+  position: relative;
+  display: block;
+
+  width: 25px;
+  height: 39px;
+
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-2md);
+}
+
+.hero__scroll-mouse span {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+
+  width: 3px;
+  height: 7px;
+
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.75);
+  transform: translateX(-50%);
+  animation: scroll-wheel 1.8s ease-in-out infinite;
+}
+@keyframes scroll-wheel {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}

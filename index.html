@@ -29,8 +29,8 @@
       <p class="announcement-banner__message">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="15"
-          height="15"
+          width="17"
+          height="17"
           viewBox="0 0 24 24"
         >
           <path d="M0 0h24v24H0z" fill="none" />
@@ -171,42 +171,42 @@
           <a href="products.html" class="navbar__link"> Products </a>
           <a href="offers.html" class="navbar__link"> Offers </a>
           <a
-          href="cart.html"
-          class="navbar__link navbar__cart"
-          aria-label="Shopping cart"
-        >
-          <span class="navbar__cart-icon" aria-hidden="true">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <g fill="none" stroke="currentColor">
-                <circle cx="10" cy="19" r="1.5" />
-                <circle cx="17" cy="19" r="1.5" />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.5 4h2l3.504 11H17"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.224 12.5L6.3 6.5h12.507a.5.5 0 0 1 .475.658l-1.667 5a.5.5 0 0 1-.474.342z"
-                />
-              </g>
-            </svg>
-          </span>
-          <span class="navbar__cart-label">Cart</span>
-          <span
-            class="badge badge--gradient badge--cart"
-            aria-label="Cart items"
+            href="cart.html"
+            class="navbar__link navbar__cart"
+            aria-label="Shopping cart"
           >
-            <span data-cart-count>0</span>
-          </span>
-        </a>
+            <span class="navbar__cart-icon" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <g fill="none" stroke="currentColor">
+                  <circle cx="10" cy="19" r="1.5" />
+                  <circle cx="17" cy="19" r="1.5" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.5 4h2l3.504 11H17"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.224 12.5L6.3 6.5h12.507a.5.5 0 0 1 .475.658l-1.667 5a.5.5 0 0 1-.474.342z"
+                  />
+                </g>
+              </svg>
+            </span>
+            <span class="navbar__cart-label">Cart</span>
+            <span
+              class="badge badge--gradient badge--cart"
+              aria-label="Cart items"
+            >
+              <span data-cart-count>0</span>
+            </span>
+          </a>
         </nav>
 
         <!-- ================= NAVBAR ACTIONS ================= -->
@@ -509,5 +509,212 @@
         </a>
       </nav>
     </header>
+
+
+
+    <!-- ==========================================================================
+                                       HERO SECTION
+       ========================================================================== -->
+    <main>
+      <section class="hero hero--banner" aria-labelledby="hero-title">
+        <!-- ================= BACKGROUND LAYERS ================= -->
+        <div class="hero__banner" aria-hidden="true"></div>
+        <div class="hero__banner-overlay" aria-hidden="true"></div>
+
+        <div class="floating-shapes" aria-hidden="true">
+          <span
+            class="anim-float-slow"
+            style="
+              position: absolute;
+              width: 120px;
+              height: 120px;
+              top: 12%;
+              left: 6%;
+              filter: blur(3px);
+              opacity: 0.35;
+              z-index: -1;
+            "
+          ></span>
+          <span
+            class="anim-float-slow"
+            style="
+              position: absolute;
+              width: 70px;
+              height: 70px;
+              top: 65%;
+              left: 2%;
+              filter: blur(3px);
+              opacity: 0.3;
+            "
+          ></span>
+          <span
+            class="anim-float-slow"
+            style="
+              position: absolute;
+              width: 160px;
+              height: 160px;
+              bottom: -8%;
+              right: 8%;
+              filter: blur(3px);
+              opacity: 0.28;
+            "
+          ></span>
+        </div>
+
+         <!-- ================= HERO CONTENT ================= -->
+        <div class="container">
+          <div class="hero__content">
+            <!-- Eyebrow -->
+            <div class="hero__eyebrow">
+              <svg
+                class="hero__eyebrow-icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 7v5l3 2"></path>
+              </svg>
+
+              <span> Delivery in as fast as 10 minutes </span>
+            </div>
+
+            <!-- Main heading -->
+            <h1 class="hero__title" id="hero-title">
+              Fresh Groceries
+              <span class="hero__title-accent">Delivered</span> in Minutes.
+            </h1>
+
+            <!-- Description -->
+            <p class="hero__description">
+              Farm-fresh fruits, vegetables, dairy and daily essentials
+              handpicked and delivered straight to your door — fast, fresh and
+              reliable, every single time.
+            </p>
+
+            <!-- CTA buttons -->
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--lg" href="#products">
+                <span>Shop Now</span>
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 56 56"
+                >
+                  <path d="M0 0h56v56H0z" fill="none" />
+                  <path
+                    fill="currentColor"
+                    d="M8.207 46.445c1.242 0 2.11-.843 2.11-2.086c0-.82-.071-1.593-.071-2.695c0-8.695 3.023-12.234 11.625-12.234h16.172l5.766-.352l-7.899 7.219l-5.203 5.297c-.375.375-.586.937-.586 1.5c0 1.172.914 2.015 2.063 2.015c.538 0 1.054-.21 1.523-.656L49.27 28.914c.491-.469.726-1.008.726-1.594c0-.562-.235-1.125-.727-1.57L33.755 10.258c-.516-.516-1.032-.703-1.57-.703c-1.149 0-2.063.843-2.063 2.015c0 .563.21 1.102.586 1.477l5.203 5.297l7.875 7.218l-5.742-.328H21.66c-11.11 0-15.656 4.875-15.656 16.22c0 1.358.047 2.53.21 3.233c.188.961.774 1.758 1.993 1.758"
+                  />
+                </svg>
+              </a>
+
+              <a class="btn btn--outline-light btn--lg" href="#products">
+                Explore Products
+              </a>
+            </div>
+
+            <!-- Statistics -->
+            <div class="hero__stats" aria-label="AEGON statistics">
+              <div class="hero-stat">
+                <strong class="hero-stat__value">
+                  15<span class="hero-stat__accent">min</span>
+                </strong>
+                <span class="hero-stat__label"> Avg. Delivery Time </span>
+              </div>
+
+              <div class="hero-stat">
+                <strong class="hero-stat__value"> 2M+ </strong>
+                <span class="hero-stat__label"> Happy Customers </span>
+              </div>
+
+              <div class="hero-stat">
+                <strong class="hero-stat__value"> 5,000+ </strong>
+                <span class="hero-stat__label"> Products Listed </span>
+              </div>
+            </div>
+          </div>
+
+
+           <!-- ================= ORDER STATUS CARD ================= -->
+          <aside
+            class="hero__floating-card glass anim-order__card floating__card--order"
+            aria-label="Order status"
+          >
+            <div class="hero__floating-icon">
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <g fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="17" cy="18" r="2" />
+                  <circle cx="7" cy="18" r="2" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11 17h4M13.5 7h.943c1.31 0 1.966 0 2.521.315c.556.314.926.895 1.667 2.056c.52.814 1.064 1.406 1.831 1.931c.772.53 1.14.789 1.343 1.204c.195.398.195.869.195 1.811c0 1.243 0 1.864-.349 2.259l-.046.049c-.367.375-.946.375-2.102.375H19"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m13 7l.994 2.486c.487 1.217.73 1.826 1.239 2.17c.508.344 1.163.344 2.475.344H21M4.87 17c-1.353 0-2.03 0-2.45-.44C2 16.122 2 15.415 2 14V7c0-1.414 0-2.121.42-2.56S3.517 4 4.87 4h5.26c1.353 0 2.03 0 2.45.44C13 4.878 13 5.585 13 7v10H8.696"
+                  />
+                </g>
+              </svg>
+            </div>
+
+            <div>
+              <strong class="floating-card__title"> Order #4821 </strong>
+              <span class="floating-card__subtitle"> Out for delivery </span>
+            </div>
+          </aside>
+
+
+           <!-- ================= RATING CARD ================= -->
+          <aside
+            class="hero__floating-card glass anim-rating__card floating__card--rating"
+            aria-label="Customer rating"
+          >
+            <div class="hero__floating-icon">
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M10.486 4.114c.675-1.162 2.353-1.162 3.028 0l2.065 3.56c.19.328.52.551.895.608l3.43.518c1.494.226 2.018 2.114.854 3.078l-2.499 2.07a1.25 1.25 0 0 0-.43 1.197l.7 3.676c.274 1.44-1.238 2.558-2.535 1.876L12.582 18.9a1.25 1.25 0 0 0-1.164 0l-3.412 1.797c-1.297.683-2.809-.436-2.535-1.876l.7-3.676a1.25 1.25 0 0 0-.43-1.197l-2.5-2.07c-1.163-.964-.64-2.852.856-3.078l3.43-.518a1.25 1.25 0 0 0 .894-.609zm1.73.753a.25.25 0 0 0-.432 0l-2.066 3.56a2.75 2.75 0 0 1-1.967 1.338l-3.43.518a.25.25 0 0 0-.122.44l2.499 2.07a2.75 2.75 0 0 1 .947 2.632l-.7 3.676a.25.25 0 0 0 .362.268l3.412-1.796a2.75 2.75 0 0 1 2.562 0l3.412 1.796a.25.25 0 0 0 .362-.268l-.7-3.676a2.75 2.75 0 0 1 .947-2.632l2.5-2.07a.25.25 0 0 0-.123-.44l-3.43-.518a2.75 2.75 0 0 1-1.967-1.339z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <div>
+              <strong class="floating-card__title"> 4.9 / 5.0 </strong>
+
+              <span class="floating-card__subtitle"> 28,400 reviews </span>
+            </div>
+          </aside>
+
+
+           <!-- ================= SCROLL INDICATOR ================= -->
+          <div class="hero__scroll-hint" aria-hidden="true">
+            <span class="hero__scroll-mouse">
+              <span></span>
+            </span>
+            <span> Scroll to explore </span>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
