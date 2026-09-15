@@ -13,5 +13,6 @@
 @import url("./components/header.css");
 @import url("./components/hero.css");
 @import url("./components/button.css");
+@import url("./components/category-card.css");
 
 @import url("./responsive.css");

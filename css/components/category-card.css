@@ -1,0 +1,92 @@
+/* ===================================================================================
+                                   CATEGORY-CARD STYLES
+ ================================================================================== */
+
+.category-slider {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: var(--space-sm);
+
+  /* Enough space for hover transform */
+  padding-block: var(--space-md) var(--space-lg);
+}
+
+.category-slider__item {
+  min-width: 0;
+}
+
+.category-card {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xs);
+
+  padding: var(--space-md) var(--space-xs);
+
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-border-default);
+
+  text-align: center;
+
+  transition:
+    transform var(--duration-base) var(--ease-out-back),
+    box-shadow var(--duration-base) var(--ease-standard),
+    border-color var(--duration-base) var(--ease-standard);
+
+  /* Helps transformed elements render cleanly */
+  /* will-change: transform; */
+}
+
+.category-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.category-card__icon {
+  width: 64px;
+  height: 64px;
+
+  border-radius: var(--radius-md);
+
+  display: grid;
+  place-items: center;
+
+  background: var(--gradient-brand);
+  color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+
+  transition: transform var(--duration-base) var(--ease-out-back);
+}
+
+.category-slider__item:nth-child(2n) .category-card__icon {
+  background: var(--gradient-secondary);
+}
+
+.category-slider__item:nth-child(3n) .category-card__icon {
+  background: var(--gradient-accent);
+}
+
+.category-card:hover .category-card__icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.category-card__icon img {
+  width: 36px;
+  height: 36px;
+  filter: brightness(0) invert(1);
+}
+
+.category-card__name {
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.category-card__count {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
