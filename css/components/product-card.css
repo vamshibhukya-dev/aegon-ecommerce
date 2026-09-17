@@ -68,7 +68,7 @@
   color: hsl(38, 90%, 38%);
 }
 .badge--accent {
-  background: var(--color-accent-light);
+  background: var(--color-brand-accent-light);
   color: hsl(28, 90%, 42%);
 }
 
