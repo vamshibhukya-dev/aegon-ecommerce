@@ -36,18 +36,13 @@
     border-color var(--duration-base) var(--ease-standard);
 }
 
-/* ==========================================================================
-   BUTTON — ACTIVE STATE
-   ========================================================================== */
-
+/* Button - Active State */
 .btn:active {
   transform: translateY(1px) scale(0.98);
 }
 
-/* ==========================================================================
-   BUTTON — PRIMARY
-   ========================================================================== */
 
+/* Button - Primary */
 .btn--primary {
   background: var(--btn-primary-background);
   color: var(--btn-primary-color);
@@ -60,10 +55,8 @@
   box-shadow: var(--shadow-brand-glow);
 }
 
-/* ==========================================================================
-   BUTTON — SECONDARY
-   ========================================================================== */
 
+/* Button - Secondary */
 .btn--secondary {
   background: var(--btn-secondary-background);
   color: var(--btn-secondary-color);
@@ -76,10 +69,8 @@
   transform: translateY(var(--btn-hover-lift));
 }
 
-/* ==========================================================================
-   BUTTON — ACCENT
-   ========================================================================== */
 
+/* Button - accent */
 .btn--accent {
   background: var(--gradient-accent);
   color: var(--color-white);
@@ -92,10 +83,8 @@
   box-shadow: var(--shadow-accent-glow);
 }
 
-/* ==========================================================================
-   BUTTON — GHOST
-   ========================================================================== */
 
+/* Button - Ghost */
 .btn--ghost {
   background: transparent;
   color: var(--btn-ghost-color);
@@ -105,10 +94,8 @@
   background: var(--color-surface-secondary);
 }
 
-/* ==========================================================================
-   BUTTON — OUTLINE LIGHT
-   ========================================================================== */
 
+/* Button - Outline Light */
 .btn--outline-light {
   background: hsla(0, 0%, 100%, 0.08);
   color: var(--color-white);
@@ -123,10 +110,8 @@
   transform: translateY(var(--btn-hover-lift));
 }
 
-/* ==========================================================================
-   BUTTON — SIZE MODIFIERS
-   ========================================================================== */
 
+/* Button - Size Modifiers */
 .btn--sm {
   padding: 0.6rem 1.15rem;
   font-size: var(--font-size-xs);
@@ -137,18 +122,14 @@
   font-size: var(--font-size-md);
 }
 
-/* ==========================================================================
-   BUTTON — BLOCK
-   ========================================================================== */
 
+/* Button - Block */
 .btn--block {
   width: 100%;
 }
 
-/* ==========================================================================
-   BUTTON — ICON
-   ========================================================================== */
 
+/* Button - Icon */
 .btn--icon {
   padding: 0.75rem;
 
@@ -163,10 +144,8 @@
   flex-shrink: 0;
 }
 
-/* ==========================================================================
-   BUTTON — SHINE EFFECT
-   ========================================================================== */
 
+/* Button - Shine Effect */
 .btn::after {
   content: "";
 
@@ -183,7 +162,6 @@
   );
 
   transform: translateX(-120%);
-
   transition: transform var(--duration-slow) var(--ease-standard);
 }
 

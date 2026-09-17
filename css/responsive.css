@@ -1,7 +1,7 @@
 /* ===================================================================================
                                     HEADER RESPONSIVE
  ================================================================================== */
-/* ================= TABLET & COMPACT DESKTOP ================= */
+/* Tablet & Compact Desktop */
 @media (max-width: 1023px) {
   .announcement-banner__message {
     padding: 0.4rem var(--space-sm);
@@ -127,7 +127,7 @@
   }
 }
 
-/* ================= MOBILE NAVIGATION ================= */
+/* Mobile */
 @media (max-width: 767px) {
   .announcement-banner__message {
     font-size: 0.62rem;
@@ -154,7 +154,7 @@
   }
 }
 
-/* ================= SMALL MOBILE ================= */
+/* Small Mobile */
 @media (max-width: 479px) {
   .announcement-banner__message {
     padding: 0.4rem var(--space-sm);
@@ -173,12 +173,10 @@
   }
 }
 
-
-
 /* ===================================================================================
                                   HERO-SECTION RESPONSIVE
  ================================================================================== */
-/* ================= TABLET ================= */
+/* Laptop */
 @media (max-width: 1100px) {
   .hero__content {
     width: min(680px, 68vw);
@@ -193,7 +191,7 @@
   }
 }
 
-/* ================= MOBILE ================= */
+/* Mobile */
 @media (max-width: 760px) {
   .hero__banner {
     background-position: 62% center;
@@ -255,7 +253,7 @@
   }
 }
 
-/* ================= SMALL MOBILE ================= */
+/* Small Mobile */
 @media (max-width: 480px) {
   .hero {
     padding-block: var(--space-xl) var(--space-3xl);
@@ -300,13 +298,10 @@
   }
 }
 
-
-
-
 /* ===================================================================================
                                 CATEGORY-CARD RESPONSIVE
  ================================================================================== */
-/* ================= TABLET / MOBILE ================= */
+/* Large Laptop */
 @media (max-width: 1200px) {
   .category-slider {
     display: flex;
@@ -332,7 +327,7 @@
   }
 }
 
-/* ================= MOBILE ================= */
+/* Mobile */
 @media (max-width: 768px) {
   .category-card {
     width: 120px;
@@ -349,7 +344,7 @@
   }
 }
 
-/* ================= POINTER DEVICES ================= */
+/* Pointer Devices */
 @media (hover: hover) and (pointer: fine) {
   .category-card:hover {
     transform: translateY(-8px) scale(1.03);
@@ -359,5 +354,38 @@
 
   .category-card:hover .category-card__icon {
     transform: rotate(-8deg) scale(1.08);
+  }
+}
+
+/* ===================================================================================
+                                PRODUCT-CARD RESPONSIVE
+ ================================================================================== */
+/* Mobile */
+@media (max-width: 768px) {
+  .section-header-row {
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: flex-start;
+    margin-bottom: var(--space-sm);
+  }
+  .section-header-row .btn {
+    min-height: 48px;
+    font-size: var(--font-size-sm);
+    padding: 0.3rem 1.2rem;
+    align-self: flex-end;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .section-header-row {
+    margin-bottom: var(--space-2xs);
+  }
+
+  .section-header-row .btn {
+    width: 114px;
+    font-size: var(--font-size-sm);
+    align-self: flex-end;
+    transform: scale(0.85);
   }
 }

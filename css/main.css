@@ -14,5 +14,6 @@
 @import url("./components/hero.css");
 @import url("./components/button.css");
 @import url("./components/category-card.css");
+@import url("./components/product-card.css");
 
 @import url("./responsive.css");
