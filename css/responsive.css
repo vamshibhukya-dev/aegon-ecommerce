@@ -401,3 +401,13 @@
   font-weight: var(--font-weight-extrabold);
 }
  }
+
+  /* ===================================================================================
+                                DELIVERY PROCESS RESPONSIVE
+ ================================================================================== */
+ @media (max-width: 600px) {
+  .process-steps {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+ }
