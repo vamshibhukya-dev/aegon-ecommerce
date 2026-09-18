@@ -1,6 +1,6 @@
-/* ===================================================================================
+/* ***********************************************************************************
                                    HERO SECTION STYLES
- ================================================================================== */
+ ************************************************************************************* */
 .hero {
   position: relative;
   overflow: hidden;
@@ -56,13 +56,13 @@
     );
 }
 
-/* ================= HERO CONTENT ================= */
+/* Hero Content */
 .hero__content {
   width: min(750px, 58vw);
   padding-top: 0;
 }
 
-/* ================= EYEBROW ================= */
+/* Eyebrow */
 .hero__eyebrow {
   display: inline-flex;
   align-items: center;
@@ -93,7 +93,7 @@
   stroke-width: 1.8;
 }
 
-/* ================= FLOATING SHAPES ================= */
+/* Floating Shapes */
 .floating-shapes span {
   background: var(--gradient-brand);
 }
@@ -129,10 +129,10 @@
   }
 }
 
-/* ================= MAIN HEADING ================= */
+/* Main Heading */
 .hero__title {
   max-width: 15ch;
-  margin: 25px 0 23px;
+  margin: 18px 0 8px;
 
   font-size: clamp(58px, 4.15vw, 78px);
   font-weight: var(--font-weight-extrabold);
@@ -145,7 +145,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* ================= DESCRIPSCTION ================= */
+/* Description */
 .hero__description {
   color: hsla(0, 0%, 100%, 0.78);
   font-size: var(--font-size-md);
@@ -155,7 +155,7 @@
   max-width: 46ch;
 }
 
-/* ================= HERO ACTIONS ================= */
+/* Hero Actions */
 .hero__actions {
   display: flex;
   align-items: center;
@@ -163,7 +163,7 @@
   margin-top: 28px;
 }
 
-/* ================= STATISTICS ================= */
+/* Statistics */
 .hero__stats {
   display: flex;
   align-items: flex-start;
@@ -206,7 +206,7 @@
 
 
 
-/* ================= FLOATING CARDS ================= */
+/* Floating Cards */
 .hero__floating-card {
   position: absolute;
   z-index: 2;
@@ -289,7 +289,7 @@
 }
 
 
-/* ================= SCROLL INDICATOR ================= */
+/* Scroll Indicator */
 .hero__scroll-hint {
   position: absolute;
   left: 50%;

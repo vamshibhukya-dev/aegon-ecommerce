@@ -1,6 +1,7 @@
-/* ==========================================================================
+/* ****************************************************************************
                                 PRODUCT-CARD STYLES
-   ========================================================================== */
+   ************************************************************************* */
+/* Product-Card Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -25,6 +26,7 @@
   box-shadow: var(--shadow-lg);
 }
 
+/* Product-Card Media */
 .product-card__media {
   position: relative;
   aspect-ratio: 1 / 1;
@@ -48,6 +50,7 @@
   height: 100%;
 }
 
+/* Product-Card Badge */
 .product-card__badge {
   position: absolute;
   top: 10px;
@@ -72,6 +75,7 @@
   color: hsl(38, 90%, 38%);
 }
 
+/* Product-Card Wishlist */
 .product-card__wishlist {
   position: absolute;
   top: 8px;
@@ -108,6 +112,7 @@
   cursor: pointer;
 }
 
+/* Product-Card Overlay */
 .product-card__overlay {
   position: absolute;
   inset: auto 0 0 0;
@@ -128,6 +133,7 @@
   opacity: 1;
 }
 
+/* Product-Card Quickview */
 .product-card__quickview {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
@@ -163,6 +169,7 @@
   white-space: nowrap;
 }
 
+/* Product-Card Rating */
 .product-card__rating {
   display: flex;
   align-items: center;
@@ -177,6 +184,7 @@
   color: var(--color-warning);
 }
 
+/* Product-Card Price */
 .product-card__price-row {
   display: flex;
   align-items: baseline;
@@ -196,17 +204,20 @@
   text-decoration: line-through;
 }
 
+/* Product-Card Discount */
 .product-card__discount {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   color: var(--color-success);
 }
 
+/* Product-Card Footer */
 .product-card__footer {
   padding: 0 var(--space-sm) var(--space-sm);
   margin-top: auto;
 }
 
+/* Product-Card Button */
 .product-card__add-btn {
   width: 100%;
   display: flex;
@@ -238,9 +249,9 @@
   height: 22px;
 }
 
-/* ==========================================================================
+/* *****************************************************************************
                                 FLASH SALE STYLES
-   ========================================================================== */
+   **************************************************************************** */
 .flash-sale {
   position: relative;
   border-radius: var(--radius-xl);
@@ -275,6 +286,7 @@
   }
 }
 
+/* Flash Sale Header */
 .flash-sale__header {
   display: flex;
   align-items: center;
@@ -289,6 +301,7 @@
   padding: var(--space-xs);
 }
 
+/* Flash Sale Countdown */
 .countdown {
   display: flex;
   gap: var(--space-2xs);

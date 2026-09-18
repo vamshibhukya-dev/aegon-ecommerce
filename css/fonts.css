@@ -1,12 +1,11 @@
-/* ==========================================================================
+/* *****************************************************************************
                             AEGON — LOCAL FONT FACES
-   ========================================================================== */
+   **************************************************************************** */
 
 
-/* ========== Poppins font-family ========== */
+/* ***************** Poppins font-family ***************** */
 
-/* ---------- Poppins — SemiBold (600) ---------- */
-
+/* Poppins — SemiBold (600) */
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
@@ -16,8 +15,7 @@
 }
 
 
-/* ---------- Poppins — Bold (700) ---------- */
-
+/* Poppins — Bold (700) */
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
@@ -27,8 +25,7 @@
 }
 
 
-/* ---------- Poppins — ExtraBold (800) ---------- */
-
+/* Poppins — ExtraBold (800) */
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
@@ -40,10 +37,9 @@
 
 
 
-/* ========== Manrope font-family ========== */
+/* ***************** Manrope font-family ***************** */
 
-/* ---------- Manrope — Regular (400) ---------- */
-
+/* Manrope — Regular (400) */
 @font-face {
     font-family: 'Manrope';
     font-style: normal;
@@ -53,8 +49,7 @@
 }
 
 
-/* ---------- Manrope — Medium (500) ---------- */
-
+/* Manrope — Medium (500) */
 @font-face {
     font-family: 'Manrope';
     font-style: normal;
@@ -64,8 +59,7 @@
 }
 
 
-/* ---------- Manrope — SemiBold (600) ---------- */
-
+/* Manrope — SemiBold (600) */
 @font-face {
     font-family: 'Manrope';
     font-style: normal;
@@ -75,8 +69,7 @@
 }
 
 
-/* ---------- Manrope — Bold (700) ---------- */
-
+/* Manrope — Bold (700) */
 @font-face {
     font-family: 'Manrope';
     font-style: normal;
@@ -86,8 +79,7 @@
 }
 
 
-/* ---------- Manrope — ExtraBold (800) ---------- */
-
+/* Manrope — ExtraBold (800) */
 @font-face {
     font-family: 'Manrope';
     font-style: normal;
@@ -99,10 +91,9 @@
 
 
 
-/* ========== JetBrains Mono font-family ========== */
+/* ***************** JetBrains Mono font-family ***************** */
 
-/* ---------- JetBrains Mono — Regular (400) ---------- */
-
+/* JetBrains Mono — Regular (400) */
 @font-face {
     font-family: 'JetBrains Mono';
     font-style: normal;
@@ -112,8 +103,7 @@
 }
 
 
-/* ---------- JetBrains Mono — Medium (500) ---------- */
-
+/* JetBrains Mono — Medium (500) */
 @font-face {
     font-family: 'JetBrains Mono';
     font-style: normal;

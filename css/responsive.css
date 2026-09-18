@@ -1,6 +1,10 @@
-/* ===================================================================================
-                                    HEADER RESPONSIVE
- ================================================================================== */
+/* ***********************************************************************************
+                                    AEGON RESPONSIVE
+ ************************************************************************************ */
+
+
+ /* ******* Site Header Responsive ******* */
+
 /* Tablet & Compact Desktop */
 @media (max-width: 1023px) {
   .announcement-banner__message {
@@ -37,6 +41,7 @@
   .navbar__actions {
     margin-left: auto;
   }
+
 
   /* Categories menu */
   .mega-menu {
@@ -79,6 +84,7 @@
       visibility 350ms var(--ease-standard);
   }
 
+
   /* Open Categories */
   .mega-menu.is-open .mega-menu__panel,
   .mega-menu:focus-within .mega-menu__panel {
@@ -92,6 +98,7 @@
 
     border-bottom: 1px solid var(--color-border-default);
   }
+
 
   /* Category Coloumns */
   .mega-menu__col {
@@ -127,6 +134,7 @@
   }
 }
 
+
 /* Mobile */
 @media (max-width: 767px) {
   .announcement-banner__message {
@@ -154,6 +162,7 @@
   }
 }
 
+
 /* Small Mobile */
 @media (max-width: 479px) {
   .announcement-banner__message {
@@ -173,9 +182,9 @@
   }
 }
 
-/* ===================================================================================
-                                  HERO-SECTION RESPONSIVE
- ================================================================================== */
+
+/* ******* Hero-Section Responsive ******* */
+
 /* Laptop */
 @media (max-width: 1100px) {
   .hero__content {
@@ -190,6 +199,7 @@
     right: 24px;
   }
 }
+
 
 /* Mobile */
 @media (max-width: 760px) {
@@ -253,6 +263,7 @@
   }
 }
 
+
 /* Small Mobile */
 @media (max-width: 480px) {
   .hero {
@@ -298,9 +309,9 @@
   }
 }
 
-/* ===================================================================================
-                                CATEGORY-CARD RESPONSIVE
- ================================================================================== */
+
+/* ******* Category-Card Responsive ******* */
+
 /* Large Laptop */
 @media (max-width: 1200px) {
   .category-slider {
@@ -327,6 +338,7 @@
   }
 }
 
+
 /* Mobile */
 @media (max-width: 768px) {
   .category-card {
@@ -344,6 +356,7 @@
   }
 }
 
+
 /* Pointer Devices */
 @media (hover: hover) and (pointer: fine) {
   .category-card:hover {
@@ -357,9 +370,9 @@
   }
 }
 
-/* ===================================================================================
-                                PRODUCT-CARD RESPONSIVE
- ================================================================================== */
+
+/* ******* Product-Card Responsive ******* */
+
 /* Mobile */
 @media (max-width: 768px) {
   .section-header-row {
@@ -376,6 +389,7 @@
   }
 }
 
+
 /* Small Mobile */
 @media (max-width: 480px) {
   .section-header-row {
@@ -390,24 +404,49 @@
   }
 }
 
-/* ===================================================================================
-                                FLASH SALE RESPONSIVE
- ================================================================================== */
- /* Small Mobile */
- @media (max-width: 480px) {
-  .countdown__num {
-  font-family: var(--font-display);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-extrabold);
-}
- }
 
-  /* ===================================================================================
-                                DELIVERY PROCESS RESPONSIVE
- ================================================================================== */
- @media (max-width: 600px) {
-  .process-steps {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+/* ******* Flash Sale Responsive ******* */
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .countdown__num {
+    font-family: var(--font-display);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-extrabold);
+  }
 }
- }
+
+
+/* ******* Delivery Process Resonsive ******* */
+
+/* Mobile */
+@media (max-width: 600px) {
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+
+/* ******* Site Footer Responsive ******* */
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

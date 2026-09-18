@@ -1,12 +1,10 @@
-/* =====================================================================================
+/* ************************************************************************************
                                    AEGON — DESIGN TOKENS
                      Core visual tokens shared across the application.
-   ================================================================================== */
+   ************************************************************************************ */
 
 :root {
-  /* ==========================================================================
-       01. BRAND COLORS
-       ========================================================================== */
+  /* Brand Colors */
   --color-brand-primary: hsl(152, 68%, 42%);
   --color-brand-primary-dark: hsl(152, 68%, 32%);
   --color-brand-primary-light: hsl(152, 68%, 92%);
@@ -16,11 +14,9 @@
 
   --color-brand-accent: hsl(28, 96%, 58%);
   --color-brand-accent-light: hsl(28, 96%, 92%);
-  
 
-  /* ==========================================================================
-       02. NEUTRAL COLORS
-       ========================================================================== */
+
+  /* Neutral Colors */
   --color-white: #ffffff;
   --color-black: #0a0e0c;
 
@@ -36,9 +32,7 @@
   --color-gray-900: #161e1c;
 
 
-  /* ==========================================================================
-       03. SEMANTIC COLORS
-       ========================================================================== */
+/* Semantics Colors */
   --color-success: hsl(152, 68%, 42%);
   --color-success-light: hsl(152, 68%, 93%);
 
@@ -52,9 +46,7 @@
   --color-info-light: hsl(206, 90%, 94%);
 
 
-  /* ==========================================================================
-       04. SURFACE COLORS
-       ========================================================================== */
+/* Surface Colors */
   --color-surface-body: var(--color-gray-50);
   --color-surface-primary: var(--color-white);
   --color-surface-secondary: var(--color-gray-100);
@@ -68,9 +60,7 @@
   --color-surface-glass-strong: hsla(0, 0%, 100%, 0.82);
 
 
-  /* ==========================================================================
-       05. TEXT COLORS
-       ========================================================================== */
+/* Text Colors */
   --color-text-primary: var(--color-gray-900);
   --color-text-secondary: var(--color-gray-600);
   --color-text-muted: var(--color-gray-500);
@@ -80,18 +70,27 @@
   --color-text-link: var(--color-brand-primary-dark);
 
 
-  /* ==========================================================================
-       06. BORDER COLORS
-       ========================================================================== */
+/* Border Colors */
   --color-border-default: var(--color-gray-200);
   --color-border-strong: var(--color-gray-300);
 
   --color-border-glass: hsla(0, 0%, 100%, 0.35);
 
 
-  /* ==========================================================================
-       07. SHADOWS
-       ========================================================================== */
+  /* Button Tokens */
+  --btn-primary-background: var(--gradient-brand);
+  --btn-primary-color: var(--color-white);
+
+  --btn-secondary-background: var(--btn-secondary-background-dark);
+  --btn-secondary-color: var(--color-brand-primary-dark);
+  --btn-secondary-border-color: var(--color-brand-primary);
+
+  --btn-ghost-color: var(--color-gray-800);
+
+  --btn-hover-lift: -3px;
+
+
+/* Shadows */
   --shadow-color: 160 30% 10%;
 
   --shadow-xs: 0 1px 2px hsl(var(--shadow-color) / 0.06);
@@ -107,9 +106,7 @@
     0 0 0 1px hsl(28 96% 58% / 0.25), 0 8px 30px hsl(28 96% 58% / 0.35);
 
 
-  /* ==========================================================================
-       08. GRADIENTS
-       ========================================================================== */
+/* Gradients */
   --gradient-brand: linear-gradient(
     135deg,
     hsl(152, 68%, 46%) 0%,
@@ -187,9 +184,9 @@
   );
 
 
-  /* ==========================================================================
-       09. TYPOGRAPHY
-       ========================================================================== */
+
+/* ******* TYPOGRAPHY ******* */
+
   /* Font Families */
   --font-display: "Clash Display", "Poppins", "Segoe UI", sans-serif;
 
@@ -229,9 +226,7 @@
   --letter-spacing-wider: 0.12em;
 
 
-  /* ==========================================================================
-       10. SPACING SCALE
-       ========================================================================== */
+/* Spacing Scale */
   --space-3xs: 0.25rem;
   --space-2xs: 0.5rem;
   --space-xs: 0.75rem;
@@ -244,9 +239,7 @@
   --space-4xl: 8rem;
 
 
-  /* ==========================================================================
-       11. BORDER RADIUS
-       ========================================================================== */
+/* Border Radius */
   --radius-xs: 6px;
   --radius-sm: 10px;
   --radius-2md: 14px;
@@ -256,9 +249,7 @@
   --radius-full: 999px;
 
 
-  /* ==========================================================================
-       12. LAYOUT
-       ========================================================================== */
+/* Layout */
   --container-width: 1280px;
   --container-width-narrow: 880px;
 
@@ -268,9 +259,7 @@
   --header-height-scrolled: 64px;
 
 
-  /* ==========================================================================
-       13. TRANSITIONS & MOTION
-       ========================================================================== */
+/* Transitions & Motions */
   --duration-fast: 150ms;
   --duration-base: 280ms;
   --duration-slow: 480ms;
@@ -280,9 +269,7 @@
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 
 
-  /* ==========================================================================
-       14. Z-INDEX SCALE
-       ========================================================================== */
+/* Z-index Scale */
   --z-index-dropdown: 100;
   --z-index-sticky: 200;
   --z-index-overlay: 300;
@@ -290,30 +277,14 @@
   --z-index-toast: 500;
 
 
-  /* ==========================================================================
-       15. GLASS EFFECT
-       ========================================================================== */
+/* Glass Effect */
   --glass-blur: 18px;
   --glass-saturation: 180%;
 
-
-  /* ==========================================================================
-       16. BUTTON TOKENS
-       ========================================================================== */
-  --btn-primary-background: var(--gradient-brand);
-  --btn-primary-color: var(--color-white);
-
-  --btn-secondary-background: var(--btn-secondary-background-dark);
-  --btn-secondary-color: var(--color-brand-primary-dark);
-  --btn-secondary-border-color: var(--color-brand-primary);
-
-  --btn-ghost-color: var(--color-gray-800);
-
-  --btn-hover-lift: -3px;
 }
 
 
-/* THEME OVERIDES */
+/* ******* THEME OVERIDES ******* */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-surface-body: var(--color-gray-900);
@@ -339,13 +310,9 @@
     --shadow-color: 160 60% 2%;
 
     --shadow-xs: 0 1px 2px hsl(var(--shadow-color) / 0.4);
-
     --shadow-sm: 0 2px 8px hsl(var(--shadow-color) / 0.45);
-
     --shadow-md: 0 8px 28px hsl(var(--shadow-color) / 0.5);
-
     --shadow-lg: 0 18px 48px hsl(var(--shadow-color) / 0.55);
-
     --shadow-xl: 0 28px 72px hsl(var(--shadow-color) / 0.6);
   }
 }
