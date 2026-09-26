@@ -1,9 +1,11 @@
 /* ***********************************************************************************
                                     AEGON RESPONSIVE
  ************************************************************************************ */
+/* ***********************************************************************************
+                                         Home
+ ************************************************************************************ */
 
-
- /* ******* Site Header Responsive ******* */
+/* ******* Site Header Responsive ******* */
 
 /* Tablet & Compact Desktop */
 @media (max-width: 1023px) {
@@ -41,7 +43,6 @@
   .navbar__actions {
     margin-left: auto;
   }
-
 
   /* Categories menu */
   .mega-menu {
@@ -84,7 +85,6 @@
       visibility 350ms var(--ease-standard);
   }
 
-
   /* Open Categories */
   .mega-menu.is-open .mega-menu__panel,
   .mega-menu:focus-within .mega-menu__panel {
@@ -98,7 +98,6 @@
 
     border-bottom: 1px solid var(--color-border-default);
   }
-
 
   /* Category Coloumns */
   .mega-menu__col {
@@ -134,7 +133,6 @@
   }
 }
 
-
 /* Mobile */
 @media (max-width: 767px) {
   .announcement-banner__message {
@@ -162,7 +160,6 @@
   }
 }
 
-
 /* Small Mobile */
 @media (max-width: 479px) {
   .announcement-banner__message {
@@ -182,7 +179,6 @@
   }
 }
 
-
 /* ******* Hero-Section Responsive ******* */
 
 /* Laptop */
@@ -199,7 +195,6 @@
     right: 24px;
   }
 }
-
 
 /* Mobile */
 @media (max-width: 760px) {
@@ -263,7 +258,6 @@
   }
 }
 
-
 /* Small Mobile */
 @media (max-width: 480px) {
   .hero {
@@ -309,7 +303,6 @@
   }
 }
 
-
 /* ******* Category-Card Responsive ******* */
 
 /* Large Laptop */
@@ -338,7 +331,6 @@
   }
 }
 
-
 /* Mobile */
 @media (max-width: 768px) {
   .category-card {
@@ -356,7 +348,6 @@
   }
 }
 
-
 /* Pointer Devices */
 @media (hover: hover) and (pointer: fine) {
   .category-card:hover {
@@ -369,7 +360,6 @@
     transform: rotate(-8deg) scale(1.08);
   }
 }
-
 
 /* ******* Product-Card Responsive ******* */
 
@@ -389,7 +379,6 @@
   }
 }
 
-
 /* Small Mobile */
 @media (max-width: 480px) {
   .section-header-row {
@@ -404,7 +393,6 @@
   }
 }
 
-
 /* ******* Flash Sale Responsive ******* */
 
 /* Small Mobile */
@@ -416,7 +404,6 @@
   }
 }
 
-
 /* ******* Delivery Process Resonsive ******* */
 
 /* Mobile */
@@ -426,7 +413,6 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
-
 
 /* ******* Site Footer Responsive ******* */
 
@@ -448,5 +434,318 @@
 @media (max-width: 480px) {
   .footer-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* ***********************************************************************************
+                                          About
+ ************************************************************************************ */
+/* ******* About Hero Responsive ******* */
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .about-hero__title {
+    max-width: 900px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .about-hero {
+    padding: var(--space-lg) 0 var(--space-xl);
+  }
+
+  /* Breadcrumb */
+  .about-hero__breadcrumb {
+    margin-bottom: var(--space-sm);
+  }
+  .about-hero__breadcrumb-list {
+    font-size: var(--font-size-xs);
+  }
+
+  /* About Hero Content */
+  .about-hero__title {
+    font-size: clamp(2.35rem, 10vw, 3.25rem);
+    line-height: 1.08;
+  }
+  .about-hero__description {
+    max-width: 90%;
+
+    margin-top: var(--space-sm);
+
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+  }
+}
+
+/* ******* About Aegon Responsive ******* */
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-header p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+  }
+}
+
+/* ******* Mission & Vision Responsive ******* */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .mission-vision__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .mission-vision__grid {
+    gap: var(--space-sm);
+  }
+
+  /* Aegon Difference Cards */
+  .mission-vision__card {
+    min-height: auto;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+  }
+
+  /* Aegon Difference Icon */
+  .mission-vision__icon {
+    width: 48px;
+    height: 48px;
+  }
+  .mission-vision__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Mission & Vision Content */
+  .mission-vision__card-title {
+    font-size: var(--font-size-2xl);
+  }
+  .mission-vision__card-description {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* ******* Aegon Difference Responsive ******* */
+
+/* Large Tablet */
+@media (max-width: 1100px) {
+  .aegon-difference__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .aegon-difference__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  /* Aegon Difference Icon */
+  .aegon-difference__icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: var(--space-md);
+  }
+  .aegon-difference__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Aegon Difference Content */
+  .aegon-difference__card-title {
+    font-size: var(--font-size-xl);
+  }
+  .aegon-difference__card-description {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ******* Trusted Scale Responsive ******* */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .trusted-scale__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .trusted-scale__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  /* Trusted Scale Cards */
+  .trusted-scale__card {
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+  }
+
+  /* Trusted Scale Icon */
+  .trusted-scale__icon {
+    width: 44px;
+    height: 44px;
+  }
+  .trusted-scale__icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Trusted Scale Content */
+  .trusted-scale__number {
+    font-size: var(--font-size-2xl);
+  }
+  .trusted-scale__label {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ******* 3D Carousel Responsive ******* */
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .taste-showcase__carousel {
+    height: 360px;
+  }
+
+  .taste-showcase__track {
+    width: 210px;
+    height: 290px;
+  }
+
+  /* 3D Carousel Cards */
+  .taste-showcase__carousel-card {
+    padding: var(--space-sm);
+  }
+
+  .taste-showcase__carousel-card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(270px);
+  }
+  .taste-showcase__carousel-card:nth-child(2) {
+    transform: rotateY(60deg) translateZ(270px);
+  }
+  .taste-showcase__carousel-card:nth-child(3) {
+    transform: rotateY(120deg) translateZ(270px);
+  }
+  .taste-showcase__carousel-card:nth-child(4) {
+    transform: rotateY(180deg) translateZ(270px);
+  }
+  .taste-showcase__carousel-card:nth-child(5) {
+    transform: rotateY(240deg) translateZ(270px);
+  }
+  .taste-showcase__carousel-card:nth-child(6) {
+    transform: rotateY(300deg) translateZ(270px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .taste-showcase__carousel {
+    height: 340px;
+    perspective: 1200px;
+  }
+
+  .taste-showcase__track {
+    width: 200px;
+    height: 280px;
+  }
+
+  /* 3D Carousel Content */
+  .taste-showcase__carousel-card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(235px);
+  }
+  .taste-showcase__carousel-card:nth-child(2) {
+    transform: rotateY(60deg) translateZ(235px);
+  }
+  .taste-showcase__carousel-card:nth-child(3) {
+    transform: rotateY(120deg) translateZ(235px);
+  }
+  .taste-showcase__carousel-card:nth-child(4) {
+    transform: rotateY(180deg) translateZ(235px);
+  }
+  .taste-showcase__carousel-card:nth-child(5) {
+    transform: rotateY(240deg) translateZ(235px);
+  }
+  .taste-showcase__carousel-card:nth-child(6) {
+    transform: rotateY(300deg) translateZ(235px);
+  }
+
+  /* 3D Carousel Media */
+  .taste-showcase__carousel-media {
+    width: 80px;
+    height: 80px;
+  }
+  .taste-showcase__carousel-media img {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* 3D Carousel Content */
+  .taste-showcase__carousel-interaction {
+    margin-top: var(--space-2xl);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .taste-showcase__carousel {
+    height: 290px;
+    perspective: 850px;
+  }
+
+  .taste-showcase__track {
+    width: 150px;
+    height: 220px;
+  }
+
+  /* 3D Carousel Cards */
+  .taste-showcase__carousel-card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(165px);
+  }
+  .taste-showcase__carousel-card:nth-child(2) {
+    transform: rotateY(60deg) translateZ(165px);
+  }
+  .taste-showcase__carousel-card:nth-child(3) {
+    transform: rotateY(120deg) translateZ(165px);
+  }
+  .taste-showcase__carousel-card:nth-child(4) {
+    transform: rotateY(180deg) translateZ(165px);
+  }
+  .taste-showcase__carousel-card:nth-child(5) {
+    transform: rotateY(240deg) translateZ(165px);
+  }
+  .taste-showcase__carousel-card:nth-child(6) {
+    transform: rotateY(300deg) translateZ(165px);
+  }
+
+  /* 3D Carousel Media */
+  .taste-showcase__carousel-media {
+    width: 58px;
+    height: 58px;
+  }
+  .taste-showcase__carousel-media img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* 3D Carousel Content */
+  .taste-showcase__carousel-name {
+    font-size: var(--font-size-sm);
+  }
+  .taste-showcase__carousel-description {
+    font-size: var(--font-size-xs);
+    max-width: 125px;
+  }
+  .taste-showcase__carousel-interaction {
+    font-size: var(--font-size-sm);
+    margin-top: var(--space-lg);
+    padding-inline: var(--space-sm);
   }
 }

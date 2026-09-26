@@ -1,5 +1,5 @@
 /* **************************************************************************
-                                   FOOTER STYLES
+                                GLOBAL FOOTER STYLES
    ************************************************************************** */
 .site-footer {
   background: var(--gradient-footer);
@@ -37,6 +37,9 @@
   font-size: var(--font-size-sm);
   color: hsla(0, 0%, 100%, 0.65);
   transition: color var(--duration-fast), padding-left var(--duration-fast);
+}
+.footer-col a .logo-text {
+  font-size: var(--font-size-md);
 }
 
 .footer-col a:hover {

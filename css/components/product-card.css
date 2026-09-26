@@ -135,14 +135,25 @@
 
 /* Product-Card Quickview */
 .product-card__quickview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3xs);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   color: var(--color-white);
   background: hsla(0, 0%, 100%, 0.18);
   border: 1px solid hsla(0, 0%, 100%, 0.4);
-  padding: var(--space-3xs) var(--space-sm);
+  padding: var(--space-3xs) var(--space-xs);
   border-radius: var(--radius-full);
   backdrop-filter: blur(6px);
+  position: relative;
+}
+
+.product-card__quickview svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
 }
 
 .product-card__body {
