@@ -212,7 +212,7 @@
   background: var(--color-surface-glass-strong);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  place-items: center;
+  place-items: start center;
   gap: var(--space-md);
   padding: var(--space-lg);
   backdrop-filter: blur(var(--glass-blur));

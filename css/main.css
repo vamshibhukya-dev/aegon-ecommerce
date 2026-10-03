@@ -24,4 +24,7 @@
 /* About */
 @import url("./pages/about/about.css");
 
+/* Products */
+@import url("./pages/products/products.css");
+
 @import url("./responsive.css");

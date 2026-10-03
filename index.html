@@ -57,7 +57,7 @@
     </div>
 
     <!-- ***************************************************************************
-                                   SITE HEADER NAVIGATION
+                                   GLOBAL HEADER NAVIGATION
        **************************************************************************** -->
     <header class="site-header">
       <input
@@ -946,7 +946,11 @@
 
           <div class="product-grid">
             <!-- Product Card 1 -->
-            <article class="product-card">
+            <article
+              class="product-card"
+              data-cat="vegetables"
+              data-product-id="3"
+            >
               <div class="product-card__media">
                 <span class="badge badge--danger product-card__badge"
                   >-25%</span
@@ -955,7 +959,7 @@
                   class="product-card__wishlist"
                   aria-label="Add Broccoli Florets 300g to wishlist"
                 >
-                  <input type="checkbox" data-wishlist-toggle="8" />
+                  <input type="checkbox" data-wishlist-toggle="3" />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -988,7 +992,7 @@
 
                 <div class="product-card__overlay">
                   <a
-                    href="./pages/product-details.html?id=7"
+                    href="./pages/product-details.html?id=3"
                     class="product-card__quickview"
                   >
                     <svg
@@ -1060,7 +1064,7 @@
                 <button
                   type="button"
                   class="product-card__add-btn"
-                  data-add-to-cart="8"
+                  data-add-to-cart="3"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1091,16 +1095,17 @@
             </article>
 
             <!-- Product Card 2 -->
-            <article class="product-card">
+            <article class="product-card" data-cat="vegetables"
+                data-product-id="7">
               <div class="product-card__media">
-                <span class="badge badge--accent product-card__badge"
+                <span class="badge badge--danger product-card__badge"
                   >-17%</span
                 >
                 <label
                   class="product-card__wishlist"
                   aria-label="Add Baby Potatoes 1kg to wishlist"
                 >
-                  <input type="checkbox" data-wishlist-toggle="11" />
+                  <input type="checkbox" data-wishlist-toggle="7" />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -1163,7 +1168,7 @@
               </div>
               <div class="product-card__body">
                 <span class="product-card__category">vegetables</span>
-                <h3 class="product-card__title">Baby Potatoes (1kg)</h3>
+                <h3 class="product-card__title">Baby Potatoes (1-kg)</h3>
                 <div class="product-card__rating">
                   <svg
                     class="icon--filled"
@@ -1203,7 +1208,7 @@
                 <button
                   type="button"
                   class="product-card__add-btn"
-                  data-add-to-cart="11"
+                  data-add-to-cart="7"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1234,16 +1239,17 @@
             </article>
 
             <!-- Product Card 3 -->
-            <article class="product-card">
+            <article class="product-card" data-cat="fruits"
+                data-product-id="11">
               <div class="product-card__media">
-                <span class="badge badge--success product-card__badge"
-                  >-15%</span
+                <span class="badge badge--accent product-card__badge"
+                  >Bestseller</span
                 >
                 <label
                   class="product-card__wishlist"
                   aria-label="Add Farm Bananas Dozen to wishlist"
                 >
-                  <input type="checkbox" data-wishlist-toggle="22" />
+                  <input type="checkbox" data-wishlist-toggle="11" />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -1276,7 +1282,7 @@
 
                 <div class="product-card__overlay">
                   <a
-                    href="./pages/product-details.html?id=7"
+                    href="./pages/product-details.html?id=11"
                     class="product-card__quickview"
                   >
                     <svg
@@ -1346,7 +1352,7 @@
                 <button
                   type="button"
                   class="product-card__add-btn"
-                  data-add-to-cart="22"
+                  data-add-to-cart="11"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1377,16 +1383,17 @@
             </article>
 
             <!-- Product Card 4 -->
-            <article class="product-card">
+            <article class="product-card" data-cat="groceries"
+                data-product-id="15">
               <div class="product-card__media">
-                <span class="badge badge--warning product-card__badge"
+                <span class="badge badge--danger product-card__badge"
                   >-14%</span
                 >
                 <label
                   class="product-card__wishlist"
                   aria-label="Add Basmati Rice 5kg to wishlist"
                 >
-                  <input type="checkbox" data-wishlist-toggle="29" />
+                  <input type="checkbox" data-wishlist-toggle="15" />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -1419,7 +1426,7 @@
 
                 <div class="product-card__overlay">
                   <a
-                    href="./pages/product-details.html?id=7"
+                    href="./pages/product-details.html?id=15"
                     class="product-card__quickview"
                   >
                     <svg
@@ -1449,7 +1456,7 @@
               </div>
               <div class="product-card__body">
                 <span class="product-card__category">groceries</span>
-                <h3 class="product-card__title">Basmati Rice (5kg)</h3>
+                <h3 class="product-card__title">Basmati Rice (5-kg)</h3>
                 <div class="product-card__rating">
                   <svg
                     class="icon--filled"
@@ -1489,7 +1496,7 @@
                 <button
                   type="button"
                   class="product-card__add-btn"
-                  data-add-to-cart="29"
+                  data-add-to-cart="15"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1541,16 +1548,17 @@
 
           <div class="product-grid">
             <!-- Product Card 1 -->
-            <article class="product-card">
+            <article class="product-card" data-cat="snacks"
+                data-product-id="37">
               <div class="product-card__media">
-                <span class="badge badge--danger product-card__badge"
-                  >-15%</span
+                <span class="badge badge--accent product-card__badge"
+                  >Bestseller</span
                 >
                 <label
                   class="product-card__wishlist"
                   aria-label="Add Roasted Almonds, 200g to wishlist"
                 >
-                  <input type="checkbox" data-wishlist-toggle="8" />
+                  <input type="checkbox" data-wishlist-toggle="37" />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -1583,7 +1591,7 @@
 
                 <div class="product-card__overlay">
                   <a
-                    href="./pages/product-details.html?id=7"
+                    href="./pages/product-details.html?id=37"
                     class="product-card__quickview"
                   >
                     <svg
@@ -1655,7 +1663,7 @@
                 <button
                   type="button"
                   class="product-card__add-btn"
-                  data-add-to-cart="8"
+                  data-add-to-cart="37"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1686,16 +1694,17 @@
             </article>
 
             <!-- Product Card 2 -->
-            <article class="product-card">
+            <article class="product-card" data-cat="snacks"
+                data-product-id="36">
               <div class="product-card__media">
-                <span class="badge badge--accent product-card__badge"
-                  >-10%</span
+                <span class="badge badge--success product-card__badge"
+                  >New</span
                 >
                 <label
                   class="product-card__wishlist"
                   aria-label="Add Potato Chips, 150g to wishlist"
                 >
-                  <input type="checkbox" data-wishlist-toggle="11" />
+                  <input type="checkbox" data-wishlist-toggle="36" />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -1728,7 +1737,7 @@
 
                 <div class="product-card__overlay">
                   <a
-                    href="./pages/product-details.html?id=7"
+                    href="./pages/product-details.html?id=36"
                     class="product-card__quickview"
                   >
                     <svg
@@ -1798,7 +1807,7 @@
                 <button
                   type="button"
                   class="product-card__add-btn"
-                  data-add-to-cart="11"
+                  data-add-to-cart="36"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1829,16 +1838,17 @@
             </article>
 
             <!-- Product Card 3 -->
-            <article class="product-card">
+            <article class="product-card" data-cat="bakery"
+                data-product-id="35">
               <div class="product-card__media">
-                <span class="badge badge--success product-card__badge"
-                  >-25%</span
+                <span class="badge badge--info product-card__badge"
+                  >Trending</span
                 >
                 <label
                   class="product-card__wishlist"
                   aria-label="Add Whole Wheat Bread to wishlist"
                 >
-                  <input type="checkbox" data-wishlist-toggle="22" />
+                  <input type="checkbox" data-wishlist-toggle="35" />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -1871,7 +1881,7 @@
 
                 <div class="product-card__overlay">
                   <a
-                    href="./pages/product-details.html?id=7"
+                    href="./pages/product-details.html?id=35"
                     class="product-card__quickview"
                   >
                     <svg
@@ -1941,7 +1951,7 @@
                 <button
                   type="button"
                   class="product-card__add-btn"
-                  data-add-to-cart="22"
+                  data-add-to-cart="35"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1972,16 +1982,17 @@
             </article>
 
             <!-- Product Card 4 -->
-            <article class="product-card">
+            <article class="product-card" data-cat="bakery"
+                data-product-id="34">
               <div class="product-card__media">
-                <span class="badge badge--warning product-card__badge"
+                <span class="badge badge--danger product-card__badge"
                   >-20%</span
                 >
                 <label
                   class="product-card__wishlist"
                   aria-label="Add Garlic Breadsticks to wishlist"
                 >
-                  <input type="checkbox" data-wishlist-toggle="29" />
+                  <input type="checkbox" data-wishlist-toggle="34" />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -2014,7 +2025,7 @@
 
                 <div class="product-card__overlay">
                   <a
-                    href="./pages/product-details.html?id=7"
+                    href="./pages/product-details.html?id=34"
                     class="product-card__quickview"
                   >
                     <svg
@@ -2084,7 +2095,7 @@
                 <button
                   type="button"
                   class="product-card__add-btn"
-                  data-add-to-cart="29"
+                  data-add-to-cart="34"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -2162,16 +2173,17 @@
 
             <div class="product-grid">
               <!-- Product Card 1 -->
-              <article class="product-card">
+              <article class="product-card" data-cat="groceries"
+                data-product-id="19">
                 <div class="product-card__media">
-                  <span class="badge badge--danger product-card__badge"
-                    >-23%</span
+                  <span class="badge badge--success product-card__badge"
+                    >New</span
                   >
                   <label
                     class="product-card__wishlist"
                     aria-label="Add Sugar, 1kg to wishlist"
                   >
-                    <input type="checkbox" data-wishlist-toggle="8" />
+                    <input type="checkbox" data-wishlist-toggle="19" />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="1em"
@@ -2204,7 +2216,7 @@
 
                   <div class="product-card__overlay">
                     <a
-                      href="./pages/product-details.html?id=7"
+                      href="./pages/product-details.html?id=19"
                       class="product-card__quickview"
                     >
                       <svg
@@ -2235,7 +2247,7 @@
 
                 <div class="product-card__body">
                   <span class="product-card__category">groceries</span>
-                  <h3 class="product-card__title">Sugar (1kg)</h3>
+                  <h3 class="product-card__title">Sugar (1-kg)</h3>
                   <div class="product-card__rating">
                     <svg
                       class="icon--filled"
@@ -2276,7 +2288,7 @@
                   <button
                     type="button"
                     class="product-card__add-btn"
-                    data-add-to-cart="8"
+                    data-add-to-cart="19"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2307,16 +2319,17 @@
               </article>
 
               <!-- Product Card 2 -->
-              <article class="product-card">
+              <article class="product-card" data-cat="dairy"
+                data-product-id="23">
                 <div class="product-card__media">
-                  <span class="badge badge--accent product-card__badge"
+                  <span class="badge badge--danger product-card__badge"
                     >-20%</span
                   >
                   <label
                     class="product-card__wishlist"
                     aria-label="Add Greek Yogurt 400g to wishlist"
                   >
-                    <input type="checkbox" data-wishlist-toggle="11" />
+                    <input type="checkbox" data-wishlist-toggle="23" />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="1em"
@@ -2349,7 +2362,7 @@
 
                   <div class="product-card__overlay">
                     <a
-                      href="./pages/product-details.html?id=7"
+                      href="./pages/product-details.html?id=23"
                       class="product-card__quickview"
                     >
                       <svg
@@ -2419,7 +2432,7 @@
                   <button
                     type="button"
                     class="product-card__add-btn"
-                    data-add-to-cart="11"
+                    data-add-to-cart="23"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2450,16 +2463,17 @@
               </article>
 
               <!-- Product Card 3 -->
-              <article class="product-card">
+              <article class="product-card" data-cat="dairy"
+                data-product-id="27">
                 <div class="product-card__media">
-                  <span class="badge badge--success product-card__badge"
-                    >-18%</span
+                  <span class="badge badge--accent product-card__badge"
+                    >Bestseller</span
                   >
                   <label
                     class="product-card__wishlist"
                     aria-label="Add Cheese Slices, 10-pk to wishlist"
                   >
-                    <input type="checkbox" data-wishlist-toggle="22" />
+                    <input type="checkbox" data-wishlist-toggle="27" />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="1em"
@@ -2492,7 +2506,7 @@
 
                   <div class="product-card__overlay">
                     <a
-                      href="./pages/product-details.html?id=7"
+                      href="./pages/product-details.html?id=27"
                       class="product-card__quickview"
                     >
                       <svg
@@ -2562,7 +2576,7 @@
                   <button
                     type="button"
                     class="product-card__add-btn"
-                    data-add-to-cart="22"
+                    data-add-to-cart="27"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2593,16 +2607,17 @@
               </article>
 
               <!-- Product Card 4 -->
-              <article class="product-card">
+              <article class="product-card" data-cat="bakery"
+                data-product-id="31">
                 <div class="product-card__media">
-                  <span class="badge badge--warning product-card__badge"
+                  <span class="badge badge--danger product-card__badge"
                     >-17%</span
                   >
                   <label
                     class="product-card__wishlist"
                     aria-label="Add Brown Buns 6-pk to wishlist"
                   >
-                    <input type="checkbox" data-wishlist-toggle="29" />
+                    <input type="checkbox" data-wishlist-toggle="31" />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="1em"
@@ -2635,7 +2650,7 @@
 
                   <div class="product-card__overlay">
                     <a
-                      href="./pages/product-details.html?id=7"
+                      href="./pages/product-details.html?id=31"
                       class="product-card__quickview"
                     >
                       <svg
@@ -2705,7 +2720,7 @@
                   <button
                     type="button"
                     class="product-card__add-btn"
-                    data-add-to-cart="29"
+                    data-add-to-cart="31"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
