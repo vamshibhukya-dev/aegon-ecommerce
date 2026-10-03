@@ -27,4 +27,7 @@
 /* Products */
 @import url("./pages/products/products.css");
 
+/* Offers */
+@import url("./pages/offers/offers.css");
+
 @import url("./responsive.css");

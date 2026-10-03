@@ -750,8 +750,6 @@
   }
 }
 
-
-
 /* ***********************************************************************************
                                           Products
  ************************************************************************************ */
@@ -759,7 +757,68 @@
 
 /* Mobile */
 @media (max-width: 640px) {
-    .products-toolbar {
-        padding-top: var(--space-sm);
-    }
+  .products-toolbar {
+    padding-top: var(--space-sm);
+  }
+}
+
+/* ***********************************************************************************
+                                          Offers
+ ************************************************************************************ */
+/* ******* Offers Responsive ******* */
+
+/* Mobile */
+@media (max-width: 600px) {
+  .offers {
+    padding: var(--space-xl) var(--container-padding);
+  }
+
+  /* Offers Content */
+  .offers__content {
+    padding-block: var(--space-md);
+  }
+
+  .offers-status__icon {
+    width: 140px;
+    height: 140px;
+
+    font-size: var(--font-size-xl);
+  }
+
+  .offers-title {
+    font-size: clamp(2.35rem, 11vw, 3.2rem);
+  }
+
+  .offers-description {
+    font-size: var(--font-size-base);
+  }
+
+  /* Notification Form */
+  .offers-notify {
+    width: 100%;
+    flex-direction: column;
+    padding: var(--space-2xs) var(--space-xs);
+    border-radius: var(--radius-xl);
+  }
+
+  .offers-notify__input {
+    width: 100%;
+    padding: var(--space-sm);
+  }
+}
+
+/* ******* Reduced Motion ******* */
+@media (prefers-reduced-motion: reduce) {
+  .offers__content,
+  .offers-status {
+    animation: none;
+  }
+
+  .offers-status__icon {
+    animation: none;
+  }
+
+  .offers-notify__button {
+    transition: none;
+  }
 }
