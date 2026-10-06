@@ -146,7 +146,7 @@
   color: var(--color-white);
 
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 4vw, 4.4rem);
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
 
   font-weight: var(--font-weight-extrabold);
   line-height: 1.2;

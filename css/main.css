@@ -30,4 +30,7 @@
 /* Offers */
 @import url("./pages/offers/offers.css");
 
+/* Cart */
+@import url("./pages/cart/cart.css");
+
 @import url("./responsive.css");
