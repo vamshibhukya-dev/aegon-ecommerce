@@ -888,3 +888,96 @@
     font-size: var(--font-size-lg);
   }
 }
+
+/* ***********************************************************************************
+                                      Product Details
+ ************************************************************************************ */
+/* Tablet */
+@media (max-width: 900px) {
+  .product-overview {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .product-info__delivery {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .product-info__actions {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+  }
+
+  .product-tabs__navigation {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .product-tabs__navigation::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-tabs__button {
+    flex-shrink: 0;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 500px) {
+  .product-details__breadcrumb-list {
+    align-items: flex-start;
+    font-size: var(--font-size-xs);
+  }
+
+  .product-info__title {
+    font-size: 2rem;
+  }
+
+  .product-info__actions {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xs);
+  }
+
+  .quantity-stepper__button {
+    flex: 1;
+  }
+
+  .product-wishlist {
+    width: 100%;
+  }
+  .product-wishlist:hover {
+    transform: scale(1);
+  }
+  .product-wishlist:has(.product-wishlist__input:checked) {
+    background: var(--color-surface-secondary);
+    transform: none;
+  }
+
+  .product-specifications th,
+  .product-specifications td {
+    padding: var(--space-xs);
+  }
+
+  .product-specifications th {
+    width: 40%;
+  }
+}
+
+/* ****** REDUCED MOTION ****** */
+@media (prefers-reduced-motion: reduce) {
+  .product-card__media-inner,
+  .product-action,
+  .product-wishlist,
+  .product-tabs__button,
+  .product-tabs__button::after,
+  .quantity-stepper__button {
+    transition: none;
+  }
+}

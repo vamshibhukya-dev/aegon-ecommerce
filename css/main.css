@@ -33,4 +33,7 @@
 /* Cart */
 @import url("./pages/cart/cart.css");
 
+/* Product Details */
+@import url("./pages/product-details/product-details.css");
+
 @import url("./responsive.css");

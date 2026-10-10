@@ -32,7 +32,6 @@
   font-family: var(--font-body);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  line-height: 1.4;
 }
 
 .products-hero__breadcrumb-list li:not(:last-child)::after {
@@ -43,8 +42,6 @@
 
 .products-hero__breadcrumb a {
   color: var(--color-gray-300);
-  text-decoration: none;
-
   transition: color var(--duration-base) var(--ease-standard);
 }
 
