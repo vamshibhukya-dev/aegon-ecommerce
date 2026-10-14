@@ -890,7 +890,7 @@
 }
 
 /* ***********************************************************************************
-                                      Product Details
+                                  Product Details Responsive
  ************************************************************************************ */
 /* Tablet */
 @media (max-width: 900px) {
@@ -900,10 +900,7 @@
   }
 }
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
+/* Mobile */
 @media (max-width: 700px) {
   .product-info__delivery {
     grid-template-columns: 1fr;
@@ -979,5 +976,39 @@
   .product-tabs__button::after,
   .quantity-stepper__button {
     transition: none;
+  }
+}
+
+/* ***********************************************************************************
+                                    Login Page Responsive
+ ************************************************************************************ */
+/* Small Mobile */
+@media (max-width: 480px) {
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-lg) auto;
+  }
+
+  .login-card__title {
+    font-size: var(--font-size-xl);
+  }
+
+  .login-card__header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .login-form {
+    gap: var(--space-sm);
+  }
+
+  .login-form__options {
+    gap: var(--space-2xs);
+  }
+
+  .login-divider {
+    margin: var(--space-md) 0;
   }
 }
