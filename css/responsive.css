@@ -1012,3 +1012,34 @@
     margin: var(--space-md) 0;
   }
 }
+
+/* ***********************************************************************************
+                                    Signup Page Responsive
+ ************************************************************************************ */
+/* Small Mobile */
+@media (max-width: 480px) {
+  .signup-card {
+    width: 100%;
+    max-width: 400px;
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-lg) auto;
+  }
+
+  .signup-card__title {
+    font-size: var(--font-size-xl);
+  }
+
+  .signup-card__header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .signup-form {
+    gap: var(--space-sm);
+  }
+
+  .signup-divider {
+    margin: var(--space-md) 0;
+  }
+}
+

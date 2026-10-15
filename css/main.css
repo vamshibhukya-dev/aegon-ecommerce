@@ -39,4 +39,7 @@
 /* Login */
 @import url("./pages/login/login.css");
 
+/* Signup */
+@import url("./pages/signup/signup.css");
+
 @import url("./responsive.css");
