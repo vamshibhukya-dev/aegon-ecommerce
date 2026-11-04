@@ -1,3 +1,44 @@
+import { initHeader } from "./components/header.js";
+import { initHomePage } from "./pages/home.js";
+import { initProductsPage } from "./pages/products.js";
+import { initProductDetails } from "./pages/product-details.js";
+import { initCartPage } from "./pages/cart.js";
+import { initWishlistPage } from "./pages/wishlist.js";
+import { initLoginPage } from "./pages/login.js";
+import { initSignupPage } from "./pages/signup.js";
+
+import { initMotion } from "./animations/motion.js";
+
+// Initialize shared header components.
+initHeader();
+
+// Initialize homepage product sections.
+initHomePage();
+
+// Initialize the products listing page.
+initProductsPage();
+
+// Initialize the product details page.
+initProductDetails();
+
+// Initialize the shopping cart page.
+initCartPage();
+
+// Initialize the wishlist page when its grid is available.
+if (document.querySelector("#wishlist-grid")) {
+  initWishlistPage();
+}
+
+// Initialize the login page.
+initLoginPage();
+
+// Initialize the signup page.
+initSignupPage();
+
+// Initialize site-wide motion system.
+initMotion();
+
+
 /* **************************************************************************
                                  SCROLL BUTTON
    ************************************************************************** */

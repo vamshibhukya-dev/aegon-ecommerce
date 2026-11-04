@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/main.css" />
 
     <!-- JavaScript -->
-    <script src="./js/main.js" defer></script>
+    <script type="module" src="./js/main.js"></script>
   </head>
   <body>
     <!-- ***************************************************************************
@@ -219,6 +219,36 @@
 
         <!-- ***************** NAVBAR ACTIONS ***************** -->
         <div class="navbar__actions">
+          <a
+            href="./pages/wishlist.html"
+            class="navbar__icon-btn navbar__wishlist-link"
+            aria-label="Open wishlist"
+            title="Wishlist"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M3.25 10.03c0-2.7 2.37-4.78 5.15-4.78c1.433 0 2.695.672 3.6 1.542c.905-.87 2.166-1.542 3.6-1.542c2.78 0 5.15 2.08 5.15 4.78c0 1.85-.789 3.476-1.882 4.852c-1.09 1.372-2.518 2.537-3.884 3.484c-.523.362-1.05.695-1.534.941c-.453.231-.975.443-1.45.443s-.996-.212-1.45-.443a14 14 0 0 1-1.533-.941c-1.367-.947-2.794-2.112-3.885-3.484C4.039 13.506 3.25 11.88 3.25 10.03M8.4 6.75c-2.08 0-3.65 1.53-3.65 3.28c0 1.403.596 2.71 1.556 3.918c.962 1.21 2.257 2.279 3.565 3.185c.495.343.96.634 1.36.838c.428.218.676.279.769.279s.341-.061.77-.28a12 12 0 0 0 1.36-.837c1.307-.906 2.602-1.974 3.564-3.185c.96-1.208 1.556-2.515 1.556-3.918c0-1.75-1.57-3.28-3.65-3.28c-1.194 0-2.31.713-3.005 1.619a.75.75 0 0 1-1.19 0C10.71 7.463 9.595 6.75 8.4 6.75"
+                clip-rule="evenodd"
+              />
+            </svg>
+
+            <span
+              class="badge badge--gradient badge--wishlist"
+              aria-label="Wishlist items"
+            >
+              <span data-wishlist-count>0</span>
+            </span>
+          </a>
+          
           <div class="navbar__user-menu">
             <button
               type="button"
@@ -262,7 +292,7 @@
                 <span>Login</span>
               </a>
 
-              <a href="signup.html">
+              <a href="./pages/signup.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -525,7 +555,7 @@
     <!-- ***************************************************************************
                                        HERO SECTION
        **************************************************************************** -->
-    <main>
+    <main id="main">
       <section class="hero hero--banner" aria-labelledby="hero-title">
         <!-- ================= BACKGROUND LAYERS ================= -->
         <div class="hero__banner" aria-hidden="true"></div>
@@ -1052,11 +1082,11 @@
                     </g>
                   </svg>
 
-                  4.8 <span>(128)</span>
+                  4.6 <span>(61)</span>
                 </div>
                 <div class="product-card__price-row">
-                  <span class="product-card__price">$4.99</span>
-                  <span class="product-card__price-old">$6.49</span>
+                  <span class="product-card__price">$4.98</span>
+                  <span class="product-card__price-old">$6.64</span>
                   <span class="product-card__discount">Save 25%</span>
                 </div>
               </div>
@@ -1095,11 +1125,14 @@
             </article>
 
             <!-- Product Card 2 -->
-            <article class="product-card" data-cat="vegetables"
-                data-product-id="7">
+            <article
+              class="product-card"
+              data-cat="vegetables"
+              data-product-id="7"
+            >
               <div class="product-card__media">
-                <span class="badge badge--danger product-card__badge"
-                  >-17%</span
+                <span class="badge badge--accent product-card__badge"
+                  >Bestseller</span
                 >
                 <label
                   class="product-card__wishlist"
@@ -1196,11 +1229,11 @@
                       />
                     </g>
                   </svg>
-                  4.6 <span>(98)</span>
+                  4.4 <span>(89)</span>
                 </div>
                 <div class="product-card__price-row">
-                  <span class="product-card__price">$2.49</span>
-                  <span class="product-card__price-old">$2.99</span>
+                  <span class="product-card__price">$8.30</span>
+                  <span class="product-card__price-old">$11.07</span>
                   <span class="product-card__discount">Save 17%</span>
                 </div>
               </div>
@@ -1239,11 +1272,14 @@
             </article>
 
             <!-- Product Card 3 -->
-            <article class="product-card" data-cat="fruits"
-                data-product-id="11">
+            <article
+              class="product-card"
+              data-cat="fruits"
+              data-product-id="11"
+            >
               <div class="product-card__media">
-                <span class="badge badge--accent product-card__badge"
-                  >Bestseller</span
+                <span class="badge badge--success product-card__badge"
+                  >New</span
                 >
                 <label
                   class="product-card__wishlist"
@@ -1340,12 +1376,12 @@
                       />
                     </g>
                   </svg>
-                  4.9 <span>(210)</span>
+                  4.8 <span>(117)</span>
                 </div>
                 <div class="product-card__price-row">
-                  <span class="product-card__price">$1.79</span>
-                  <span class="product-card__price-old">$2.10</span>
-                  <span class="product-card__discount">Save 15%</span>
+                  <span class="product-card__price">$2.49</span>
+                  <span class="product-card__price-old">$3.32</span>
+                  <span class="product-card__discount">Save 25%</span>
                 </div>
               </div>
               <div class="product-card__footer">
@@ -1383,11 +1419,14 @@
             </article>
 
             <!-- Product Card 4 -->
-            <article class="product-card" data-cat="groceries"
-                data-product-id="15">
+            <article
+              class="product-card"
+              data-cat="groceries"
+              data-product-id="15"
+            >
               <div class="product-card__media">
                 <span class="badge badge--danger product-card__badge"
-                  >-14%</span
+                  >-25%</span
                 >
                 <label
                   class="product-card__wishlist"
@@ -1484,12 +1523,12 @@
                       />
                     </g>
                   </svg>
-                  4.7 <span>(76)</span>
+                  4.6 <span>(145)</span>
                 </div>
                 <div class="product-card__price-row">
-                  <span class="product-card__price">$2.99</span>
-                  <span class="product-card__price-old">$3.49</span>
-                  <span class="product-card__discount">Save 14%</span>
+                  <span class="product-card__price">$5.81</span>
+                  <span class="product-card__price-old">$7.75</span>
+                  <span class="product-card__discount">Save 25%</span>
                 </div>
               </div>
               <div class="product-card__footer">
@@ -1548,8 +1587,11 @@
 
           <div class="product-grid">
             <!-- Product Card 1 -->
-            <article class="product-card" data-cat="snacks"
-                data-product-id="37">
+            <article
+              class="product-card"
+              data-cat="snacks"
+              data-product-id="37"
+            >
               <div class="product-card__media">
                 <span class="badge badge--accent product-card__badge"
                   >Bestseller</span
@@ -1694,8 +1736,11 @@
             </article>
 
             <!-- Product Card 2 -->
-            <article class="product-card" data-cat="snacks"
-                data-product-id="36">
+            <article
+              class="product-card"
+              data-cat="snacks"
+              data-product-id="36"
+            >
               <div class="product-card__media">
                 <span class="badge badge--success product-card__badge"
                   >New</span
@@ -1798,8 +1843,8 @@
                   4.3 <span>(292)</span>
                 </div>
                 <div class="product-card__price-row">
-                  <span class="product-card__price">$2.98</span>
-                  <span class="product-card__price-old">$2.53</span>
+                  <span class="product-card__price">$4.98</span>
+                  <span class="product-card__price-old">$5.53</span>
                   <span class="product-card__discount">Save 10%</span>
                 </div>
               </div>
@@ -1838,11 +1883,14 @@
             </article>
 
             <!-- Product Card 3 -->
-            <article class="product-card" data-cat="bakery"
-                data-product-id="35">
+            <article
+              class="product-card"
+              data-cat="bakery"
+              data-product-id="35"
+            >
               <div class="product-card__media">
-                <span class="badge badge--info product-card__badge"
-                  >Trending</span
+                <span class="badge badge--danger product-card__badge"
+                  >-25%</span
                 >
                 <label
                   class="product-card__wishlist"
@@ -1982,11 +2030,14 @@
             </article>
 
             <!-- Product Card 4 -->
-            <article class="product-card" data-cat="bakery"
-                data-product-id="34">
+            <article
+              class="product-card"
+              data-cat="bakery"
+              data-product-id="34"
+            >
               <div class="product-card__media">
-                <span class="badge badge--danger product-card__badge"
-                  >-20%</span
+                <span class="badge badge--warning product-card__badge"
+                  >Limited</span
                 >
                 <label
                   class="product-card__wishlist"
@@ -2173,11 +2224,14 @@
 
             <div class="product-grid">
               <!-- Product Card 1 -->
-              <article class="product-card" data-cat="groceries"
-                data-product-id="19">
+              <article
+                class="product-card"
+                data-cat="groceries"
+                data-product-id="19"
+              >
                 <div class="product-card__media">
-                  <span class="badge badge--success product-card__badge"
-                    >New</span
+                  <span class="badge badge--warning product-card__badge"
+                    >Limited</span
                   >
                   <label
                     class="product-card__wishlist"
@@ -2276,12 +2330,12 @@
                       </g>
                     </svg>
 
-                    4.4 <span>(232)</span>
+                    4.4 <span>(173)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.99</span>
-                    <span class="product-card__price-old">$6.49</span>
-                    <span class="product-card__discount">Save 23%</span>
+                    <span class="product-card__price">$9.13</span>
+                    <span class="product-card__price-old">$12.17</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                 </div>
                 <div class="product-card__footer">
@@ -2319,11 +2373,14 @@
               </article>
 
               <!-- Product Card 2 -->
-              <article class="product-card" data-cat="dairy"
-                data-product-id="23">
+              <article
+                class="product-card"
+                data-cat="dairy"
+                data-product-id="23"
+              >
                 <div class="product-card__media">
-                  <span class="badge badge--danger product-card__badge"
-                    >-20%</span
+                  <span class="badge badge--info product-card__badge"
+                    >Trending</span
                   >
                   <label
                     class="product-card__wishlist"
@@ -2420,12 +2477,12 @@
                         />
                       </g>
                     </svg>
-                    4.1 <span>(198)</span>
+                    4.8 <span>(201)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$3.99</span>
-                    <span class="product-card__price-old">$4.99</span>
-                    <span class="product-card__discount">Save 20%</span>
+                    <span class="product-card__price">$3.32</span>
+                    <span class="product-card__price-old">$4.43</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                 </div>
                 <div class="product-card__footer">
@@ -2463,8 +2520,11 @@
               </article>
 
               <!-- Product Card 3 -->
-              <article class="product-card" data-cat="dairy"
-                data-product-id="27">
+              <article
+                class="product-card"
+                data-cat="dairy"
+                data-product-id="27"
+              >
                 <div class="product-card__media">
                   <span class="badge badge--accent product-card__badge"
                     >Bestseller</span
@@ -2564,12 +2624,12 @@
                         />
                       </g>
                     </svg>
-                    4.7 <span>(272)</span>
+                    4.6 <span>(229)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$3.29</span>
-                    <span class="product-card__price-old">$3.99</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$6.64</span>
+                    <span class="product-card__price-old">$8.85</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                 </div>
                 <div class="product-card__footer">
@@ -2607,11 +2667,14 @@
               </article>
 
               <!-- Product Card 4 -->
-              <article class="product-card" data-cat="bakery"
-                data-product-id="31">
+              <article
+                class="product-card"
+                data-cat="bakery"
+                data-product-id="31"
+              >
                 <div class="product-card__media">
-                  <span class="badge badge--danger product-card__badge"
-                    >-17%</span
+                  <span class="badge badge--success product-card__badge"
+                    >New</span
                   >
                   <label
                     class="product-card__wishlist"
@@ -2708,12 +2771,12 @@
                         />
                       </g>
                     </svg>
-                    4.9 <span>(105)</span>
+                    4.4 <span>(257)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$2.49</span>
-                    <span class="product-card__price-old">$2.99</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$9.96</span>
+                    <span class="product-card__price-old">$13.28</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                 </div>
                 <div class="product-card__footer">

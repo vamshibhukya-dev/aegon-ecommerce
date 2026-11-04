@@ -2,8 +2,6 @@
                                     AEGON — MAIN STYLESHEET
                        Primary stylesheet entry point for the application.
    ************************************************************************************* */
-
-
 @import url("./variables.css");
 @import url("./reset.css");
 @import url("./global.css");
@@ -36,10 +34,19 @@
 /* Product Details */
 @import url("./pages/product-details/product-details.css");
 
+/* Wishlist */
+@import url("./pages/wishlist/wishlist.css");
+
 /* Login */
 @import url("./pages/login/login.css");
 
 /* Signup */
 @import url("./pages/signup/signup.css");
 
+
+/* AEGON - RESPONSIVE */
 @import url("./responsive.css");
+
+
+/* AEGON - MOTION SYSTEM */
+@import url("./motion.css");

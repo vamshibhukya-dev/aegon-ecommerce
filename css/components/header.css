@@ -147,7 +147,7 @@
 }
 
 /* Cart item count */
-.navbar__cart .badge--cart {
+.badge--cart, .badge--wishlist {
   position: absolute;
   top: -8px;
   right: -14px;
@@ -257,6 +257,24 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+}
+
+.navbar__wishlist-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.navbar__wishlist-link svg {
+  display: block;
+}
+
+.badge--wishlist {
+  position: absolute;
+  top: -5px;
+  right: -7px;
 }
 
 .navbar__user-menu {
@@ -517,4 +535,242 @@
   gap: var(--space-sm);
   padding-top: var(--space-sm);
   border-top: 1px solid var(--color-border-default);
+}
+
+
+/* ************************************************************************************
+                                     ACCOUNT DROPDOWN
+ ********************************************************************************** */
+.navbar__user-menu-panel {
+  min-width: 300px;
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Header */
+.account-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+}
+
+.account-menu__eyebrow,
+.account-menu__section-label {
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--letter-spacing-wider);
+  color: var(--color-text-muted);
+}
+
+.account-menu__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-success);
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.account-menu__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--color-success);
+}
+
+/* Identity */
+.account-menu__identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) 0;
+}
+
+.account-menu__avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-brand);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.account-menu__identity-details {
+  min-width: 0;
+}
+
+.account-menu__identity-details h3 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+}
+
+.account-menu__identity-details p {
+  margin: 4px 0 0;
+  overflow-wrap: anywhere;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+/* Personal information */
+.account-menu__details {
+  display: grid;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-secondary);
+}
+
+.account-menu__detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: var(--font-size-xs);
+}
+
+.account-menu__detail-row span {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
+
+.account-menu__detail-row strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  text-align: right;
+}
+
+/* Navigation */
+.account-menu__navigation {
+  display: grid;
+  gap: 4px;
+  padding: var(--space-sm) 0;
+}
+
+.account-menu__nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition:
+    background var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.account-menu__nav-link:hover {
+  background: var(--color-surface-secondary);
+  color: var(--color-brand-primary);
+}
+
+.account-menu__nav-icon svg {
+  width: 25px;
+  height: 25px;
+  color: var(--color-brand-primary);
+  font-size: var(--font-size-lg);
+  text-align: center;
+}
+
+.account-menu__arrow {
+  margin-left: auto;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xl);
+}
+
+/* Logout */
+.account-menu__logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  width: 100%;
+  padding: 11px;
+  border: 1px solid var(--color-danger-light);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-danger);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition:
+    background var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+
+.account-menu__logout:hover {
+  background: var(--color-danger-light);
+  border-color: var(--color-danger);
+}
+
+/* Footer */
+.account-menu__footer {
+  margin: var(--space-sm) 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.68rem;
+  text-align: center;
+}
+
+/* Guest menu */
+.account-menu__title {
+  margin: var(--space-xs) 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.account-menu__description {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+}
+
+.account-menu__actions {
+  display: grid;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.account-menu__primary-link,
+.account-menu__secondary-link {
+  display: flex;
+  justify-content: center;
+  padding: 11px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.account-menu__primary-link {
+  background: var(--gradient-brand);
+  color: var(--color-white);
+}
+
+.account-menu__secondary-link {
+  border: 1px solid var(--color-border-default);
+  color: var(--color-text-primary);
+}
+
+.account-menu__secondary-link:hover {
+  background: var(--color-surface-secondary);
 }

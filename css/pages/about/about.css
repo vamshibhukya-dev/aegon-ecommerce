@@ -70,8 +70,13 @@
 .about-hero__title {
   margin: 18px 0 8px;
 
-  font-size: clamp(58px, 4.15vw, 78px);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+
   font-weight: var(--font-weight-extrabold);
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 .about-hero__title-accent {
@@ -177,7 +182,7 @@
 .aegon-difference__card:hover {
   transform: translateY(var(--btn-hover-lift));
   border-color: hsl(152 45% 40% / 0.8);
-  background: hsl(160 25% 13%);
+  background: var(--color-surface-card);
 }
 
 .aegon-difference__card::before {
@@ -227,6 +232,10 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--space-md);
+}
+
+.trusted-scale-title {
+  color: var(--color-white);
 }
 
 /* Trusted Scale Cards */

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/main.css" />
 
     <!-- JavaScript -->
-    <script src="../js/main.js" defer></script>
+    <script type="module" src="../js/main.js"></script>
   </head>
   <body>
     <!-- ***************************************************************************
@@ -209,6 +209,36 @@
 
         <!-- ***************** NAVBAR ACTIONS ***************** -->
         <div class="navbar__actions">
+          <a
+            href="../pages/wishlist.html"
+            class="navbar__icon-btn navbar__wishlist-link"
+            aria-label="Open wishlist"
+            title="Wishlist"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M3.25 10.03c0-2.7 2.37-4.78 5.15-4.78c1.433 0 2.695.672 3.6 1.542c.905-.87 2.166-1.542 3.6-1.542c2.78 0 5.15 2.08 5.15 4.78c0 1.85-.789 3.476-1.882 4.852c-1.09 1.372-2.518 2.537-3.884 3.484c-.523.362-1.05.695-1.534.941c-.453.231-.975.443-1.45.443s-.996-.212-1.45-.443a14 14 0 0 1-1.533-.941c-1.367-.947-2.794-2.112-3.885-3.484C4.039 13.506 3.25 11.88 3.25 10.03M8.4 6.75c-2.08 0-3.65 1.53-3.65 3.28c0 1.403.596 2.71 1.556 3.918c.962 1.21 2.257 2.279 3.565 3.185c.495.343.96.634 1.36.838c.428.218.676.279.769.279s.341-.061.77-.28a12 12 0 0 0 1.36-.837c1.307-.906 2.602-1.974 3.564-3.185c.96-1.208 1.556-2.515 1.556-3.918c0-1.75-1.57-3.28-3.65-3.28c-1.194 0-2.31.713-3.005 1.619a.75.75 0 0 1-1.19 0C10.71 7.463 9.595 6.75 8.4 6.75"
+                clip-rule="evenodd"
+              />
+            </svg>
+
+            <span
+              class="badge badge--gradient badge--wishlist"
+              aria-label="Wishlist items"
+            >
+              <span data-wishlist-count>0</span>
+            </span>
+          </a>
+
           <div class="navbar__user-menu">
             <button
               type="button"
@@ -252,7 +282,7 @@
                 <span>Login</span>
               </a>
 
-              <a href="signup.html">
+              <a href="./signup.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -529,7 +559,9 @@
 
             <!-- Main Heading -->
             <h1 class="products-hero__title" id="products-hero-title">
-              Shop Fresh Groceries
+              Shop
+              <span class="products-hero__title-accent">Fresh</span>
+              Groceries
             </h1>
 
             <!-- Description -->
@@ -775,7 +807,7 @@
                 <option value="price-asc">Price: Low to High</option>
                 <option value="price-desc">Price: High to Low</option>
                 <option value="name-asc">name: A - Z</option>
-                <option value="namee-desc">name: Z - A</option>
+                <option value="name-desc">name: Z - A</option>
               </select>
             </label>
           </div>
@@ -787,7 +819,7 @@
               <p>Showing 70 products.</p>
             </div>
 
-            <div class="product-grid" aria-live="polite">
+            <div class="product-grid" id="product-grid" aria-live="polite">
               <!-- ***************** VEGETABLES ***************** -->
               <h3 class="products-grid__header" data-section="vegetables">
                 Vegetables
@@ -853,16 +885,15 @@
                           />
                         </svg>
                       </label>
-                      
-                      <!-- Product Image -->
-                        <img
-                          src="../assets/images/baby-spinach-250g.jpg"
-                          alt="Baby Spinach 250g"
-                          width="400"
-                          height="400"
-                          loading="lazy"
-                        />
 
+                      <!-- Product Image -->
+                      <img
+                        src="../assets/images/baby-spinach-250g.jpg"
+                        alt="Baby Spinach 250g"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div class="product-card__body">
@@ -900,12 +931,12 @@
                           </g>
                         </svg>
 
-                        4.7 <span>(38)</span>
+                        4.4 <span>(47)</span>
                       </div>
                       <div class="product-card__price-row">
-                        <span class="product-card__price">$2.49</span>
-                        <span class="product-card__price-old">$2.99</span>
-                        <span class="product-card__discount">Save 17%</span>
+                        <span class="product-card__price">$3.32</span>
+                        <span class="product-card__price-old">$3.91</span>
+                        <span class="product-card__discount">Save 15%</span>
                       </div>
                       <div class="product-card__delivery">
                         <svg
@@ -1186,12 +1217,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(52)</span>
+                    4.5 <span>(54)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$3.49</span>
-                    <span class="product-card__price-old">$4.29</span>
-                    <span class="product-card__discount">Save 19%</span>
+                    <span class="product-card__price">$4.15</span>
+                    <span class="product-card__price-old">$5.19</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -1376,11 +1407,11 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(128)</span>
+                    4.6 <span>(61)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.99</span>
-                    <span class="product-card__price-old">$6.49</span>
+                    <span class="product-card__price">$4.98</span>
+                    <span class="product-card__price-old">$6.64</span>
                     <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -1566,12 +1597,12 @@
                       </g>
                     </svg>
 
-                    4.5 <span>(41)</span>
+                    4.7 <span>(68)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$2.79</span>
-                    <span class="product-card__price-old">$3.49</span>
-                    <span class="product-card__discount">Save 20%</span>
+                    <span class="product-card__price">$5.81</span>
+                    <span class="product-card__price-old">$6.46</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -1642,7 +1673,7 @@
               >
                 <div class="product-card__media product-card__media--flip">
                   <span class="badge badge--danger product-card__badge"
-                    >-17%</span
+                    >-20%</span
                   >
                   <a
                     href="../pages/product-details.html?id=5"
@@ -1759,9 +1790,9 @@
                     4.8 <span>(75)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.99</span>
-                    <span class="product-card__price-old">$5.99</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$6.64</span>
+                    <span class="product-card__price-old">$7.81</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -1949,9 +1980,9 @@
                     4.3 <span>(82)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$2.49</span>
-                    <span class="product-card__price-old">$3.19</span>
-                    <span class="product-card__discount">Save 22%</span>
+                    <span class="product-card__price">$7.47</span>
+                    <span class="product-card__price-old">$9.34</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -2021,8 +2052,8 @@
                 data-product-id="7"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--danger product-card__badge"
-                    >-17%</span
+                  <span class="badge badge--accent product-card__badge"
+                    >Bestseller</span
                   >
                   <a
                     href="../pages/product-details.html?id=7"
@@ -2136,12 +2167,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(98)</span>
+                    4.4 <span>(89)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$2.49</span>
-                    <span class="product-card__price-old">$2.99</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$8.30</span>
+                    <span class="product-card__price-old">$11.07</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -2269,21 +2300,22 @@
                           />
                         </svg>
                       </label>
-                      
-                      <!-- Product Image -->
-                        <img
-                          src="../assets/images/fresh-red-apples-1kg.jpg"
-                          alt="Fresh Red Apples 1-kg"
-                          width="400"
-                          height="400"
-                          loading="lazy"
-                        />
 
+                      <!-- Product Image -->
+                      <img
+                        src="../assets/images/fresh-red-apples-1kg.jpg"
+                        alt="Fresh Red Apples 1-kg"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div class="product-card__body">
                       <span class="product-card__category">fruits</span>
-                      <h3 class="product-card__title">Fresh Red Apples (1-kg)</h3>
+                      <h3 class="product-card__title">
+                        Fresh Red Apples (1-kg)
+                      </h3>
                       <p class="product-card__desc">
                         Premium quality, handpicked for freshness and delivered
                         fast to your doorstep.
@@ -2316,12 +2348,12 @@
                           </g>
                         </svg>
 
-                        4.7 <span>(84)</span>
+                        4.5 <span>(96)</span>
                       </div>
                       <div class="product-card__price-row">
-                        <span class="product-card__price">$6.99</span>
-                        <span class="product-card__price-old">$8.49</span>
-                        <span class="product-card__discount">Save 18%</span>
+                        <span class="product-card__price">$9.13</span>
+                        <span class="product-card__price-old">$10.14</span>
+                        <span class="product-card__discount">Save 10%</span>
                       </div>
                       <div class="product-card__delivery">
                         <svg
@@ -2602,12 +2634,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(72)</span>
+                    4.6 <span>(103)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.49</span>
-                    <span class="product-card__price-old">$5.49</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$9.96</span>
+                    <span class="product-card__price-old">$11.72</span>
+                    <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -2678,7 +2710,7 @@
               >
                 <div class="product-card__media product-card__media--flip">
                   <span class="badge badge--danger product-card__badge"
-                    >-19%</span
+                    >-20%</span
                   >
                   <a
                     href="../pages/product-details.html?id=10"
@@ -2792,12 +2824,12 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(96)</span>
+                    4.7 <span>(110)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$6.49</span>
-                    <span class="product-card__price-old">$7.99</span>
-                    <span class="product-card__discount">Save 19%</span>
+                    <span class="product-card__price">$10.79</span>
+                    <span class="product-card__price-old">$13.49</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -2867,8 +2899,8 @@
                 data-product-id="11"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--accent product-card__badge"
-                    >Bestseller</span
+                  <span class="badge badge--success product-card__badge"
+                    >New</span
                   >
                   <a
                     href="../pages/product-details.html?id=11"
@@ -2982,12 +3014,12 @@
                       </g>
                     </svg>
 
-                    4.9 <span>(210)</span>
+                    4.8 <span>(117)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$1.79</span>
-                    <span class="product-card__price-old">$2.10</span>
-                    <span class="product-card__discount">Save 15%</span>
+                    <span class="product-card__price">$2.49</span>
+                    <span class="product-card__price-old">$3.32</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -3172,12 +3204,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(68)</span>
+                    4.3 <span>(124)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$8.99</span>
-                    <span class="product-card__price-old">$10.49</span>
-                    <span class="product-card__discount">Save 14%</span>
+                    <span class="product-card__price">$3.32</span>
+                    <span class="product-card__price-old">$3.69</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -3247,8 +3279,8 @@
                 data-product-id="13"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--danger product-card__badge"
-                    >-18%</span
+                  <span class="badge badge--info product-card__badge"
+                    >Trending</span
                   >
                   <a
                     href="../pages/product-details.html?id=13"
@@ -3362,12 +3394,12 @@
                       </g>
                     </svg>
 
-                    4.5 <span>(91)</span>
+                    4.4 <span>(131)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.49</span>
-                    <span class="product-card__price-old">$5.49</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$4.15</span>
+                    <span class="product-card__price-old">$4.88</span>
+                    <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -3437,8 +3469,8 @@
                 data-product-id="14"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--success product-card__badge"
-                    >New</span
+                  <span class="badge badge--warning product-card__badge"
+                    >Limited</span
                   >
                   <a
                     href="../pages/product-details.html?id=14"
@@ -3552,12 +3584,12 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(77)</span>
+                    4.5 <span>(138)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.29</span>
-                    <span class="product-card__price-old">$5.29</span>
-                    <span class="product-card__discount">Save 19%</span>
+                    <span class="product-card__price">$4.98</span>
+                    <span class="product-card__price-old">$6.23</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -3635,7 +3667,7 @@
                   <div class="flip-card__face flip-card__face--front">
                     <div class="product-card__media">
                       <span class="badge badge--danger product-card__badge"
-                        >-14%</span
+                        >-25%</span
                       >
                       <a
                         href="../pages/product-details.html?id=15"
@@ -3685,16 +3717,15 @@
                           />
                         </svg>
                       </label>
-                      
-                      <!-- Product Image -->
-                        <img
-                          src="../assets/images/basmati-rice-5kg.jpg"
-                          alt="Basmati Rice 5-kg"
-                          width="400"
-                          height="400"
-                          loading="lazy"
-                        />
 
+                      <!-- Product Image -->
+                      <img
+                        src="../assets/images/basmati-rice-5kg.jpg"
+                        alt="Basmati Rice 5-kg"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div class="product-card__body">
@@ -3732,12 +3763,12 @@
                           </g>
                         </svg>
 
-                        4.7 <span>(76)</span>
+                        4.6 <span>(145)</span>
                       </div>
                       <div class="product-card__price-row">
-                        <span class="product-card__price">$2.99</span>
-                        <span class="product-card__price-old">$3.49</span>
-                        <span class="product-card__discount">Save 14%</span>
+                        <span class="product-card__price">$5.81</span>
+                        <span class="product-card__price-old">$7.75</span>
+                        <span class="product-card__discount">Save 25%</span>
                       </div>
                       <div class="product-card__delivery">
                         <svg
@@ -4018,12 +4049,12 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(152)</span>
+                    4.7 <span>(152)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.99</span>
-                    <span class="product-card__price-old">$7.49</span>
-                    <span class="product-card__discount">Save 20%</span>
+                    <span class="product-card__price">$6.64</span>
+                    <span class="product-card__price-old">$7.38</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -4208,10 +4239,10 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(159)</span>
+                    4.8 <span>(159)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$7.49</span>
+                    <span class="product-card__price">$7.47</span>
                     <span class="product-card__price-old">$8.79</span>
                     <span class="product-card__discount">Save 15%</span>
                   </div>
@@ -4398,11 +4429,11 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(166)</span>
+                    4.3 <span>(166)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$11.99</span>
-                    <span class="product-card__price-old">$14.99</span>
+                    <span class="product-card__price">$8.30</span>
+                    <span class="product-card__price-old">$10.38</span>
                     <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -4473,8 +4504,8 @@
                 data-product-id="19"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--success product-card__badge"
-                    >New</span
+                  <span class="badge badge--warning product-card__badge"
+                    >Limited</span
                   >
                   <a
                     href="../pages/product-details.html?id=19"
@@ -4555,7 +4586,7 @@
 
                 <div class="product-card__body">
                   <span class="product-card__category">groceries</span>
-                  <h3 class="product-card__title">Butter (100g)</h3>
+                  <h3 class="product-card__title">Sugar (1-kg)</h3>
                   <p class="product-card__desc">
                     Premium quality, handpicked for freshness and delivered fast
                     to your doorstep.
@@ -4588,12 +4619,12 @@
                       </g>
                     </svg>
 
-                    4.5 <span>(173)</span>
+                    4.4 <span>(173)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$2.49</span>
-                    <span class="product-card__price-old">$2.99</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$9.13</span>
+                    <span class="product-card__price-old">$12.17</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -4663,8 +4694,8 @@
                 data-product-id="20"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--warning product-card__badge"
-                    >Limited</span
+                  <span class="badge badge--danger product-card__badge"
+                    >-10%</span
                   >
                   <a
                     href="../pages/product-details.html?id=20"
@@ -4778,12 +4809,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(180)</span>
+                    4.5 <span>(180)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$1.49</span>
-                    <span class="product-card__price-old">$1.79</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$9.96</span>
+                    <span class="product-card__price-old">$10.07</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -4853,8 +4884,8 @@
                 data-product-id="21"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--danger product-card__badge"
-                    >-15%</span
+                  <span class="badge badge--success product-card__badge"
+                    >New</span
                   >
                   <a
                     href="../pages/product-details.html?id=21"
@@ -4968,11 +4999,11 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(187)</span>
+                    4.6 <span>(187)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$10.99</span>
-                    <span class="product-card__price-old">$12.99</span>
+                    <span class="product-card__price">$10.79</span>
+                    <span class="product-card__price-old">$12.69</span>
                     <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -5037,9 +5068,7 @@
               </article>
 
               <!-- ***************** Dairy ***************** -->
-              <h3 class="products-grid__header" data-section="dairy">
-                Dairy
-              </h3>
+              <h3 class="products-grid__header" data-section="dairy">Dairy</h3>
               <!-- Product Card 22 -->
               <article
                 class="product-card flip-card flip-card--auto"
@@ -5101,16 +5130,15 @@
                           />
                         </svg>
                       </label>
-                      
-                      <!-- Product Image -->
-                        <img
-                          src="../assets/images/toned-milk-1l.jpg"
-                          alt="Toned Milk 1l"
-                          width="400"
-                          height="400"
-                          loading="lazy"
-                        />
 
+                      <!-- Product Image -->
+                      <img
+                        src="../assets/images/toned-milk-1l.jpg"
+                        alt="Toned Milk 1l"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div class="product-card__body">
@@ -5152,8 +5180,8 @@
                       </div>
                       <div class="product-card__price-row">
                         <span class="product-card__price">$2.49</span>
-                        <span class="product-card__price-old">$2.99</span>
-                        <span class="product-card__discount">Save 17%</span>
+                        <span class="product-card__price-old">$3.11</span>
+                        <span class="product-card__discount">Save 20%</span>
                       </div>
                       <div class="product-card__delivery">
                         <svg
@@ -5319,8 +5347,8 @@
                 data-product-id="23"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--danger product-card__badge"
-                    >-20%</span
+                  <span class="badge badge--info product-card__badge"
+                    >Trending</span
                   >
                   <a
                     href="../pages/product-details.html?id=23"
@@ -5434,12 +5462,12 @@
                       </g>
                     </svg>
 
-                    4.1 <span>(198)</span>
+                    4.8 <span>(201)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$3.99</span>
-                    <span class="product-card__price-old">$4.99</span>
-                    <span class="product-card__discount">Save 20%</span>
+                    <span class="product-card__price">$3.32</span>
+                    <span class="product-card__price-old">$4.43</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -5624,12 +5652,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(208)</span>
+                    4.3 <span>(208)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.49</span>
-                    <span class="product-card__price-old">$5.49</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$4.15</span>
+                    <span class="product-card__price-old">$4.61</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -5699,8 +5727,8 @@
                 data-product-id="25"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--info product-card__badge"
-                    >Trending</span
+                  <span class="badge badge--danger product-card__badge"
+                    >-15%</span
                   >
                   <a
                     href="../pages/product-details.html?id=25"
@@ -5814,12 +5842,12 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(215)</span>
+                    4.4 <span>(215)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.99</span>
-                    <span class="product-card__price-old">$5.99</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$4.98</span>
+                    <span class="product-card__price-old">$5.86</span>
+                    <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -6004,12 +6032,12 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(222)</span>
+                    4.5 <span>(222)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$2.99</span>
-                    <span class="product-card__price-old">$3.49</span>
-                    <span class="product-card__discount">Save 14%</span>
+                    <span class="product-card__price">$5.81</span>
+                    <span class="product-card__price-old">$7.26</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -6194,12 +6222,12 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(229)</span>
+                    4.6 <span>(229)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.49</span>
-                    <span class="product-card__price-old">$5.49</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$6.64</span>
+                    <span class="product-card__price-old">$8.85</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -6384,12 +6412,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(236)</span>
+                    4.7 <span>(236)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$3.49</span>
-                    <span class="product-card__price-old">$4.19</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$7.47</span>
+                    <span class="product-card__price-old">$8.30</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -6517,16 +6545,15 @@
                           />
                         </svg>
                       </label>
-                      
-                      <!-- Product Image -->
-                        <img
-                          src="../assets/images/multigrain-bread.jpg"
-                          alt="Multigrain Bread"
-                          width="400"
-                          height="400"
-                          loading="lazy"
-                        />
 
+                      <!-- Product Image -->
+                      <img
+                        src="../assets/images/multigrain-bread.jpg"
+                        alt="Multigrain Bread"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div class="product-card__body">
@@ -6564,12 +6591,12 @@
                           </g>
                         </svg>
 
-                        4.8 <span>(242)</span>
+                        4.8 <span>(243)</span>
                       </div>
                       <div class="product-card__price-row">
-                        <span class="product-card__price">$4.49</span>
-                        <span class="product-card__price-old">$5.49</span>
-                        <span class="product-card__discount">Save 18%</span>
+                        <span class="product-card__price">$8.30</span>
+                        <span class="product-card__price-old">$9.76</span>
+                        <span class="product-card__discount">Save 15%</span>
                       </div>
                       <div class="product-card__delivery">
                         <svg
@@ -6850,11 +6877,11 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(250)</span>
+                    4.3 <span>(250)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.99</span>
-                    <span class="product-card__price-old">$7.49</span>
+                    <span class="product-card__price">$9.13</span>
+                    <span class="product-card__price-old">$11.41</span>
                     <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -6925,8 +6952,8 @@
                 data-product-id="31"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--danger product-card__badge"
-                    >-17%</span
+                  <span class="badge badge--success product-card__badge"
+                    >New</span
                   >
                   <a
                     href="../pages/product-details.html?id=31"
@@ -7040,12 +7067,12 @@
                       </g>
                     </svg>
 
-                    4.9 <span>(105)</span>
+                    4.4 <span>(257)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$2.49</span>
-                    <span class="product-card__price-old">$2.99</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$9.96</span>
+                    <span class="product-card__price-old">$13.28</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -7230,12 +7257,12 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(264)</span>
+                    4.5 <span>(264)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$6.49</span>
-                    <span class="product-card__price-old">$7.49</span>
-                    <span class="product-card__discount">Save 13%</span>
+                    <span class="product-card__price">$10.79</span>
+                    <span class="product-card__price-old">$11.99</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -7420,11 +7447,11 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(271)</span>
+                    4.6 <span>(271)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.49</span>
-                    <span class="product-card__price-old">$6.49</span>
+                    <span class="product-card__price">$2.49</span>
+                    <span class="product-card__price-old">$2.93</span>
                     <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -7495,8 +7522,8 @@
                 data-product-id="34"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--danger product-card__badge"
-                    >-20%</span
+                  <span class="badge badge--warning product-card__badge"
+                    >Limited</span
                   >
                   <a
                     href="../pages/product-details.html?id=34"
@@ -7685,8 +7712,8 @@
                 data-product-id="35"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--info product-card__badge"
-                    >Trending</span
+                  <span class="badge badge--danger product-card__badge"
+                    >-25%</span
                   >
                   <a
                     href="../pages/product-details.html?id=35"
@@ -7933,16 +7960,15 @@
                           />
                         </svg>
                       </label>
-                      
-                      <!-- Product Image -->
-                        <img
-                          src="../assets/images/potato-chips-150g.jpg"
-                          alt="Potato Chips 150g"
-                          width="400"
-                          height="400"
-                          loading="lazy"
-                        />
 
+                      <!-- Product Image -->
+                      <img
+                        src="../assets/images/potato-chips-150g.jpg"
+                        alt="Potato Chips 150g"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div class="product-card__body">
@@ -7983,9 +8009,9 @@
                         4.3 <span>(292)</span>
                       </div>
                       <div class="product-card__price-row">
-                        <span class="product-card__price">$4.99</span>
-                        <span class="product-card__price-old">$5.79</span>
-                        <span class="product-card__discount">Save 15%</span>
+                        <span class="product-card__price">$4.98</span>
+                        <span class="product-card__price-old">$5.53</span>
+                        <span class="product-card__discount">Save 10%</span>
                       </div>
                       <div class="product-card__delivery">
                         <svg
@@ -8269,9 +8295,9 @@
                     4.4 <span>(299)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.89</span>
-                    <span class="product-card__price-old">$6.89</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$5.81</span>
+                    <span class="product-card__price-old">$6.84</span>
+                    <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -8456,12 +8482,12 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(306)</span>
+                    4.5 <span>(46)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$7.49</span>
-                    <span class="product-card__price-old">$8.99</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$6.64</span>
+                    <span class="product-card__price-old">$8.30</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -8646,12 +8672,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(313)</span>
+                    4.6 <span>(53)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.49</span>
-                    <span class="product-card__price-old">$6.49</span>
-                    <span class="product-card__discount">Save 15%</span>
+                    <span class="product-card__price">$7.47</span>
+                    <span class="product-card__price-old">$9.96</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -8722,7 +8748,7 @@
               >
                 <div class="product-card__media product-card__media--flip">
                   <span class="badge badge--danger product-card__badge"
-                    >-17%</span
+                    >-10%</span
                   >
                   <a
                     href="../pages/product-details.html?id=40"
@@ -8836,12 +8862,12 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(288)</span>
+                    4.7 <span>(60)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.99</span>
-                    <span class="product-card__price-old">$5.99</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$8.30</span>
+                    <span class="product-card__price-old">$9.22</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -9026,12 +9052,12 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(278)</span>
+                    4.8 <span>(67)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.49</span>
-                    <span class="product-card__price-old">$5.49</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$9.13</span>
+                    <span class="product-card__price-old">$10.74</span>
+                    <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -9216,12 +9242,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(241)</span>
+                    4.3 <span>(74)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$3.49</span>
-                    <span class="product-card__price-old">$4.29</span>
-                    <span class="product-card__discount">Save 19%</span>
+                    <span class="product-card__price">$9.96</span>
+                    <span class="product-card__price-old">$12.45</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -9349,16 +9375,15 @@
                           />
                         </svg>
                       </label>
-                      
-                      <!-- Product Image -->
-                        <img
-                          src="../assets/images/orange-juice-1l.jpg"
-                          alt="Orange Juice 1l"
-                          width="400"
-                          height="400"
-                          loading="lazy"
-                        />
 
+                      <!-- Product Image -->
+                      <img
+                        src="../assets/images/orange-juice-1l.jpg"
+                        alt="Orange Juice 1l"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div class="product-card__body">
@@ -9396,12 +9421,12 @@
                           </g>
                         </svg>
 
-                        4.7 <span>(137)</span>
+                        4.4 <span>(81)</span>
                       </div>
                       <div class="product-card__price-row">
-                        <span class="product-card__price">$4.49</span>
-                        <span class="product-card__price-old">$5.49</span>
-                        <span class="product-card__discount">Save 18%</span>
+                        <span class="product-card__price">$10.79</span>
+                        <span class="product-card__price-old">$14.39</span>
+                        <span class="product-card__discount">Save 25%</span>
                       </div>
                       <div class="product-card__delivery">
                         <svg
@@ -9682,12 +9707,12 @@
                       </g>
                     </svg>
 
-                    4.4 <span>(213)</span>
+                    4.5 <span>(88)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.99</span>
-                    <span class="product-card__price-old">$5.99</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$2.49</span>
+                    <span class="product-card__price-old">$2.77</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -9758,7 +9783,7 @@
               >
                 <div class="product-card__media product-card__media--flip">
                   <span class="badge badge--danger product-card__badge"
-                    >-14%</span
+                    >-15%</span
                   >
                   <a
                     href="../pages/product-details.html?id=45"
@@ -9872,12 +9897,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(191)</span>
+                    4.6 <span>(95)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.99</span>
-                    <span class="product-card__price-old">$6.99</span>
-                    <span class="product-card__discount">Save 14%</span>
+                    <span class="product-card__price">$3.32</span>
+                    <span class="product-card__price-old">$3.91</span>
+                    <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -10005,7 +10030,7 @@
                       class="product-card__media-face product-card__media-face--front"
                     >
                       <img
-                        src="../assets/images/green-tea.jpg"
+                        src="../assets/images/green-tea-25-bags.jpg"
                         alt="Green Tea"
                         width="400"
                         height="400"
@@ -10017,7 +10042,7 @@
                       class="product-card__media-face product-card__media-face--back"
                     >
                       <img
-                        src="../assets/images/green-tea-2.jpg"
+                        src="../assets/images/green-tea-25-bags-2.jpg"
                         alt="Green Tea - Alternate View"
                         width="400"
                         height="400"
@@ -10065,9 +10090,9 @@
                     4.7 <span>(102)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.49</span>
-                    <span class="product-card__price-old">$5.49</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$4.15</span>
+                    <span class="product-card__price-old">$5.19</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -10252,12 +10277,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(172)</span>
+                    4.8 <span>(109)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$3.99</span>
-                    <span class="product-card__price-old">$4.99</span>
-                    <span class="product-card__discount">Save 20%</span>
+                    <span class="product-card__price">$4.98</span>
+                    <span class="product-card__price-old">$6.64</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -10445,9 +10470,9 @@
                     4.3 <span>(116)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.29</span>
-                    <span class="product-card__price-old">$5.29</span>
-                    <span class="product-card__discount">Save 19%</span>
+                    <span class="product-card__price">$5.81</span>
+                    <span class="product-card__price-old">$6.46</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -10632,12 +10657,12 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(123)</span>
+                    4.4 <span>(123)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$6.99</span>
-                    <span class="product-card__price-old">$8.49</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$6.64</span>
+                    <span class="product-card__price-old">$7.81</span>
+                    <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -10715,7 +10740,7 @@
                   <div class="flip-card__face flip-card__face--front">
                     <div class="product-card__media">
                       <span class="badge badge--danger product-card__badge"
-                        >-17%</span
+                        >-20%</span
                       >
                       <a
                         href="../pages/product-details.html?id=50"
@@ -10765,21 +10790,22 @@
                           />
                         </svg>
                       </label>
-                      
-                      <!-- Product Image -->
-                        <img
-                          src="../assets/images/frozen-green-peas-500g.jpg"
-                          alt="Frozen Green Peas 500g"
-                          width="400"
-                          height="400"
-                          loading="lazy"
-                        />
 
+                      <!-- Product Image -->
+                      <img
+                        src="../assets/images/frozen-green-peas-500g.jpg"
+                        alt="Frozen Green Peas 500g"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div class="product-card__body">
                       <span class="product-card__category">Frozen Foods</span>
-                      <h3 class="product-card__title">Frozen Green Peas (500g)</h3>
+                      <h3 class="product-card__title">
+                        Frozen Green Peas (500g)
+                      </h3>
                       <p class="product-card__desc">
                         Premium quality, handpicked for freshness and delivered
                         fast to your doorstep.
@@ -10812,12 +10838,12 @@
                           </g>
                         </svg>
 
-                        4.7 <span>(139)</span>
+                        4.5 <span>(130)</span>
                       </div>
                       <div class="product-card__price-row">
-                        <span class="product-card__price">$2.49</span>
-                        <span class="product-card__price-old">$2.99</span>
-                        <span class="product-card__discount">Save 17%</span>
+                        <span class="product-card__price">$7.47</span>
+                        <span class="product-card__price-old">$9.34</span>
+                        <span class="product-card__discount">Save 20%</span>
                       </div>
                       <div class="product-card__delivery">
                         <svg
@@ -11098,12 +11124,12 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(146)</span>
+                    4.6 <span>(137)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.49</span>
-                    <span class="product-card__price-old">$6.49</span>
-                    <span class="product-card__discount">Save 15%</span>
+                    <span class="product-card__price">$8.30</span>
+                    <span class="product-card__price-old">$11.07</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -11288,12 +11314,12 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(153)</span>
+                    4.7 <span>(144)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$8.99</span>
-                    <span class="product-card__price-old">$10.49</span>
-                    <span class="product-card__discount">Save 14%</span>
+                    <span class="product-card__price">$9.13</span>
+                    <span class="product-card__price-old">$10.14</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -11478,12 +11504,12 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(161)</span>
+                    4.8 <span>(151)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$6.49</span>
-                    <span class="product-card__price-old">$7.49</span>
-                    <span class="product-card__discount">Save 13%</span>
+                    <span class="product-card__price">$9.96</span>
+                    <span class="product-card__price-old">$11.72</span>
+                    <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -11668,11 +11694,11 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(172)</span>
+                    4.3 <span>(158)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.99</span>
-                    <span class="product-card__price-old">$7.49</span>
+                    <span class="product-card__price">$10.79</span>
+                    <span class="product-card__price-old">$13.49</span>
                     <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -11744,7 +11770,7 @@
               >
                 <div class="product-card__media product-card__media--flip">
                   <span class="badge badge--danger product-card__badge"
-                    >-18%</span
+                    >-25%</span
                   >
                   <a
                     href="../pages/product-details.html?id=55"
@@ -11858,12 +11884,12 @@
                       </g>
                     </svg>
 
-                    4.8 <span>(175)</span>
+                    4.4 <span>(165)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$6.99</span>
-                    <span class="product-card__price-old">$8.49</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$2.49</span>
+                    <span class="product-card__price-old">$3.32</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -11933,8 +11959,8 @@
                 data-product-id="56"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--danger product-card__badge"
-                    >-15%</span
+                  <span class="badge badge--success product-card__badge"
+                    >New</span
                   >
                   <a
                     href="../pages/product-details.html?id=56"
@@ -12048,12 +12074,12 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(182)</span>
+                    4.5 <span>(172)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.49</span>
-                    <span class="product-card__price-old">$6.49</span>
-                    <span class="product-card__discount">Save 15%</span>
+                    <span class="product-card__price">$3.32</span>
+                    <span class="product-card__price-old">$3.69</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -12181,16 +12207,15 @@
                           />
                         </svg>
                       </label>
-                      
-                      <!-- Product Image -->
-                        <img
-                          src="../assets/images/herbal-soap-3-pk.jpg"
-                          alt="Herbal Soap 3-pk"
-                          width="400"
-                          height="400"
-                          loading="lazy"
-                        />
 
+                      <!-- Product Image -->
+                      <img
+                        src="../assets/images/herbal-soap-3-pk.jpg"
+                        alt="Herbal Soap 3-pk"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div class="product-card__body">
@@ -12231,8 +12256,8 @@
                         4.6 <span>(179)</span>
                       </div>
                       <div class="product-card__price-row">
-                        <span class="product-card__price">$5.49</span>
-                        <span class="product-card__price-old">$6.49</span>
+                        <span class="product-card__price">$4.15</span>
+                        <span class="product-card__price-old">$4.88</span>
                         <span class="product-card__discount">Save 15%</span>
                       </div>
                       <div class="product-card__delivery">
@@ -12517,8 +12542,8 @@
                     4.7 <span>(186)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.99</span>
-                    <span class="product-card__price-old">$7.49</span>
+                    <span class="product-card__price">$4.98</span>
+                    <span class="product-card__price-old">$6.23</span>
                     <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -12707,8 +12732,8 @@
                     4.8 <span>(193)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.49</span>
-                    <span class="product-card__price-old">$5.99</span>
+                    <span class="product-card__price">$5.81</span>
+                    <span class="product-card__price-old">$7.75</span>
                     <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -12780,7 +12805,7 @@
               >
                 <div class="product-card__media product-card__media--flip">
                   <span class="badge badge--danger product-card__badge"
-                    >-11%</span
+                    >-10%</span
                   >
                   <a
                     href="../pages/product-details.html?id=60"
@@ -12897,9 +12922,9 @@
                     4.3 <span>(200)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$3.99</span>
-                    <span class="product-card__price-old">$4.49</span>
-                    <span class="product-card__discount">Save 11%</span>
+                    <span class="product-card__price">$6.64</span>
+                    <span class="product-card__price-old">$7.38</span>
+                    <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -13087,9 +13112,9 @@
                     4.4 <span>(207)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$7.49</span>
-                    <span class="product-card__price-old">$8.99</span>
-                    <span class="product-card__discount">Save 17%</span>
+                    <span class="product-card__price">$7.47</span>
+                    <span class="product-card__price-old">$8.79</span>
+                    <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -13159,8 +13184,8 @@
                 data-product-id="62"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--danger product-card__badge"
-                    >-20%</span
+                  <span class="badge badge--accent product-card__badge"
+                    >Bestseller</span
                   >
                   <a
                     href="../pages/product-details.html?id=62"
@@ -13277,8 +13302,8 @@
                     4.5 <span>(214)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$7.99</span>
-                    <span class="product-card__price-old">$9.99</span>
+                    <span class="product-card__price">$8.30</span>
+                    <span class="product-card__price-old">$10.38</span>
                     <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -13349,8 +13374,8 @@
                 data-product-id="63"
               >
                 <div class="product-card__media product-card__media--flip">
-                  <span class="badge badge--accent product-card__badge"
-                    >Bestseller</span
+                  <span class="badge badge--info product-card__badge"
+                    >Trending</span
                   >
                   <a
                     href="../pages/product-details.html?id=63"
@@ -13467,9 +13492,9 @@
                     4.6 <span>(221)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$6.99</span>
-                    <span class="product-card__price-old">$8.99</span>
-                    <span class="product-card__discount">Save 22%</span>
+                    <span class="product-card__price">$9.13</span>
+                    <span class="product-card__price-old">$12.17</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -13597,21 +13622,22 @@
                           />
                         </svg>
                       </label>
-                      
-                      <!-- Product Image -->
-                        <img
-                          src="../assets/images/dish-wash-liquid-500-ml.jpg"
-                          alt="Dish Wash Liquid 500-ml"
-                          width="400"
-                          height="400"
-                          loading="lazy"
-                        />
 
+                      <!-- Product Image -->
+                      <img
+                        src="../assets/images/dish-wash-liquid-500ml.jpg"
+                        alt="Dish Wash Liquid 500-ml"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div class="product-card__body">
                       <span class="product-card__category">Household</span>
-                      <h3 class="product-card__title">Dish Wash Liquid (500-ml)</h3>
+                      <h3 class="product-card__title">
+                        Dish Wash Liquid (500ml)
+                      </h3>
                       <p class="product-card__desc">
                         Premium quality, handpicked for freshness and delivered
                         fast to your doorstep.
@@ -13644,12 +13670,12 @@
                           </g>
                         </svg>
 
-                        4.6 <span>(228)</span>
+                        4.7 <span>(228)</span>
                       </div>
                       <div class="product-card__price-row">
-                        <span class="product-card__price">$3.49</span>
-                        <span class="product-card__price-old">$3.99</span>
-                        <span class="product-card__discount">Save 13%</span>
+                        <span class="product-card__price">$9.96</span>
+                        <span class="product-card__price-old">$11.07</span>
+                        <span class="product-card__discount">Save 10%</span>
                       </div>
                       <div class="product-card__delivery">
                         <svg
@@ -13930,11 +13956,11 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(186)</span>
+                    4.8 <span>(235)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.49</span>
-                    <span class="product-card__price-old">$6.49</span>
+                    <span class="product-card__price">$10.79</span>
+                    <span class="product-card__price-old">$12.69</span>
                     <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -14087,7 +14113,7 @@
 
                 <div class="product-card__body">
                   <span class="product-card__category">Household</span>
-                  <h3 class="product-card__title">Laundry Detergent (1kg)</h3>
+                  <h3 class="product-card__title">Laundry Detergent (1-kg)</h3>
                   <p class="product-card__desc">
                     Premium quality, handpicked for freshness and delivered fast
                     to your doorstep.
@@ -14123,9 +14149,9 @@
                     4.3 <span>(242)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$7.49</span>
-                    <span class="product-card__price-old">$9.49</span>
-                    <span class="product-card__discount">Save 21%</span>
+                    <span class="product-card__price">$2.49</span>
+                    <span class="product-card__price-old">$3.11</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -14253,7 +14279,7 @@
                       class="product-card__media-face product-card__media-face--front"
                     >
                       <img
-                        src="../assets/images/trash-bags-30pk.jpg"
+                        src="../assets/images/trash-bags-30-pk.jpg"
                         alt="Trash Bags 30-pk"
                         width="400"
                         height="400"
@@ -14265,7 +14291,7 @@
                       class="product-card__media-face product-card__media-face--back"
                     >
                       <img
-                        src="../assets/images/trash-bags-30pk-2.jpg"
+                        src="../assets/images/trash-bags-30-pk-2.jpg"
                         alt="Trash Bags 30-pk - Alternate View"
                         width="400"
                         height="400"
@@ -14277,7 +14303,7 @@
 
                 <div class="product-card__body">
                   <span class="product-card__category">Household</span>
-                  <h3 class="product-card__title">Trash Bags 30-pk</h3>
+                  <h3 class="product-card__title">Trash Bags (30-pk)</h3>
                   <p class="product-card__desc">
                     Premium quality, handpicked for freshness and delivered fast
                     to your doorstep.
@@ -14310,12 +14336,12 @@
                       </g>
                     </svg>
 
-                    4.3 <span>(198)</span>
+                    4.4 <span>(249)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$5.49</span>
-                    <span class="product-card__price-old">$6.99</span>
-                    <span class="product-card__discount">Save 21%</span>
+                    <span class="product-card__price">$3.32</span>
+                    <span class="product-card__price-old">$4.43</span>
+                    <span class="product-card__discount">Save 25%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -14503,8 +14529,8 @@
                     4.5 <span>(256)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.49</span>
-                    <span class="product-card__price-old">$4.99</span>
+                    <span class="product-card__price">$4.15</span>
+                    <span class="product-card__price-old">$4.61</span>
                     <span class="product-card__discount">Save 10%</span>
                   </div>
                   <div class="product-card__delivery">
@@ -14633,7 +14659,7 @@
                       class="product-card__media-face product-card__media-face--front"
                     >
                       <img
-                        src="../assets/images/kitchen-towels-2pk.jpg"
+                        src="../assets/images/kitchen-towels-2-pk.jpg"
                         alt="Kitchen Towels 2-pk"
                         width="400"
                         height="400"
@@ -14645,7 +14671,7 @@
                       class="product-card__media-face product-card__media-face--back"
                     >
                       <img
-                        src="../assets/images/kitchen-towels-2pk-2.jpg"
+                        src="../assets/images/kitchen-towels-2-pk-2.jpg"
                         alt="Kitchen Towels 2-pk - Alternate View"
                         width="400"
                         height="400"
@@ -14690,12 +14716,12 @@
                       </g>
                     </svg>
 
-                    4.6 <span>(222)</span>
+                    4.6 <span>(263)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$4.49</span>
-                    <span class="product-card__price-old">$5.49</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$4.98</span>
+                    <span class="product-card__price-old">$5.86</span>
+                    <span class="product-card__discount">Save 15%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg
@@ -14766,7 +14792,7 @@
               >
                 <div class="product-card__media product-card__media--flip">
                   <span class="badge badge--danger product-card__badge"
-                    >-18%</span
+                    >-20%</span
                   >
                   <a
                     href="../pages/product-details.html?id=70"
@@ -14880,12 +14906,12 @@
                       </g>
                     </svg>
 
-                    4.7 <span>(273)</span>
+                    4.7 <span>(270)</span>
                   </div>
                   <div class="product-card__price-row">
-                    <span class="product-card__price">$6.99</span>
-                    <span class="product-card__price-old">$8.49</span>
-                    <span class="product-card__discount">Save 18%</span>
+                    <span class="product-card__price">$5.81</span>
+                    <span class="product-card__price-old">$7.26</span>
+                    <span class="product-card__discount">Save 20%</span>
                   </div>
                   <div class="product-card__delivery">
                     <svg

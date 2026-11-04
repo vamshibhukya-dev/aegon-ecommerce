@@ -64,7 +64,7 @@
 .signup-card__title {
   margin: var(--space-xs) 0 0;
 
-  color: var(--color-white);
+  color: var(--color-text-primary);
 
   font-family: var(--font-display);
   font-size: var(--font-size-2xl);

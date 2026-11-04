@@ -134,8 +134,13 @@
   max-width: 15ch;
   margin: 18px 0 8px;
 
-  font-size: clamp(58px, 4.15vw, 78px);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+
   font-weight: var(--font-weight-extrabold);
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 .hero__title-accent {
