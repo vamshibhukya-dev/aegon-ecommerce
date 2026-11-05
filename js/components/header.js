@@ -52,33 +52,7 @@ export function updateAccountMenu() {
   const user = AegonStorage.getCurrentUser();
   const panel = document.querySelector("[data-account-panel]");
 
-  if (!panel) return;
-
-  // Guest user
-  if (!user) {
-    panel.innerHTML = `
-      <div class="account-menu__header">
-        <span class="account-menu__eyebrow">WELCOME TO AEGON</span>
-        <p class="account-menu__title">Your account</p>
-        <p class="account-menu__description">
-          Sign in to enjoy a personalised shopping experience.
-        </p>
-      </div>
-
-      <div class="account-menu__actions">
-        <a href="${getPageLink("login.html")}"
-           class="account-menu__primary-link">
-          Login
-        </a>
-
-        <a href="${getPageLink("signup.html")}"
-           class="account-menu__secondary-link">
-          Create an account
-        </a>
-      </div>
-    `;
-    return;
-  }
+  if (!panel || !user) return;
 
   // Logged-in user
   const name = escapeHTML(user.name || "Customer");

@@ -1,9 +1,3 @@
-/* **************************************************************************
-   AEGON — Products Page
-   Category Filtering | Header Search | Sorting | Pagination
-   Works with the existing HTML product cards.
-   ************************************************************************** */
-
 export function initProductsPage() {
   "use strict";
 

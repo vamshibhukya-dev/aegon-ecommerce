@@ -1,4 +1,3 @@
-
 /* =========================================================
    AEGON — Formatting Utilities
    File: js/utils/format.js

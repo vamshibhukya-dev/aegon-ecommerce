@@ -1,5 +1,14 @@
 import { AegonStorage } from "../storage/storage.js";
 
+import {
+  isRequired,
+  isValidEmail,
+  isValidPhone,
+  isValidPassword,
+  isStrongPassword,
+  doPasswordsMatch,
+} from "../utils/validation.js";
+
 // 1. Select signup form elements
 const signupForm = document.querySelector("#signup-form");
 
@@ -29,17 +38,7 @@ function clearSignupError() {
   errorMessage.style.display = "none";
 }
 
-// 4. Validate password
-function isStrongPassword(password) {
-  const hasMinimumLength = password.length >= 8;
-  const hasLetter = /[a-zA-Z]/.test(password);
-  const hasNumber = /\d/.test(password);
-  const hasSymbol = /[^a-zA-Z0-9]/.test(password);
-
-  return hasMinimumLength && hasLetter && hasNumber && hasSymbol;
-}
-
-// 5. Handle signup form submission
+// 4. Handle signup form submission
 function handleSignup(event) {
   event.preventDefault();
 
@@ -66,9 +65,33 @@ function handleSignup(event) {
   const password = passwordInput.value;
   const confirmPassword = confirmPasswordInput.value;
 
-  // Validate empty fields
-  if (!name || !email || !phone || !password || !confirmPassword) {
+  // Validate required fields
+  if (
+    !isRequired(name) ||
+    !isRequired(email) ||
+    !isRequired(phone) ||
+    !isRequired(password) ||
+    !isRequired(confirmPassword)
+  ) {
     showSignupError("Please fill in all the fields.");
+    return;
+  }
+
+  // Validate email
+  if (!isValidEmail(email)) {
+    showSignupError("Please enter a valid email address.");
+    return;
+  }
+
+  // Validate phone number
+  if (!isValidPhone(phone)) {
+    showSignupError("Please enter a valid phone number.");
+    return;
+  }
+
+  // Validate password length
+  if (!isValidPassword(password)) {
+    showSignupError("Password must be between 8 and 128 characters.");
     return;
   }
 
@@ -81,7 +104,7 @@ function handleSignup(event) {
   }
 
   // Confirm password
-  if (password !== confirmPassword) {
+  if (!doPasswordsMatch(password, confirmPassword)) {
     showSignupError("Passwords do not match.");
     return;
   }
@@ -124,7 +147,7 @@ function handleSignup(event) {
   }
 }
 
-// 6. Initialize signup page
+// 5. Initialize signup page
 export function initSignupPage() {
   if (!signupForm) return;
 

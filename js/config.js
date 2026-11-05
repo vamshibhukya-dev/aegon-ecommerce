@@ -1,4 +1,3 @@
-
 /*
 
  * AEGON — Application Configuration
@@ -16,7 +15,5 @@
 
  */
 
-
 // Base URL of the API server that provides product data.
 export const AEGON_API_BASE = "https://ageon-api.vercel.app";
-

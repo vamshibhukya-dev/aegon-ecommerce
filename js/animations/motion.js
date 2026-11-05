@@ -1,4 +1,3 @@
-
 /* ************************************************************************************************
                                           AEGON — PAGE MOTION
 ********************************************************************************************* */
@@ -9,7 +8,8 @@ export function initMotion() {
     !main ||
     window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
     !("IntersectionObserver" in window)
-  ) return;
+  )
+    return;
 
   const HERO = [
     ".hero",
@@ -20,7 +20,7 @@ export function initMotion() {
     ".cart-header",
     ".product-details-hero",
     ".login-hero",
-    ".signup-hero"
+    ".signup-hero",
   ].join(",");
 
   const CARDS = [
@@ -35,7 +35,7 @@ export function initMotion() {
     ".summary-card",
     ".login-card",
     ".signup-card",
-    ".product-overview__card"
+    ".product-overview__card",
   ].join(",");
 
   const GRIDS = [
@@ -44,7 +44,7 @@ export function initMotion() {
     ".wishlist-grid",
     ".mission-vision__grid",
     ".aegon-difference__grid",
-    ".trusted-scale__grid"
+    ".trusted-scale__grid",
   ].join(",");
 
   const isInsideCard = (element) => element.closest(CARDS);
@@ -57,20 +57,16 @@ export function initMotion() {
     entrance.push(
       hero.querySelector(".eyebrow, [class*='__eyebrow'], [class*='-eyebrow']"),
       hero.querySelector("h1"),
-      hero.querySelector("p")
+      hero.querySelector("p"),
     );
   }
 
-  main.querySelectorAll("a.button, a.btn, .btn")
-    .forEach((element) => {
-      const { top, bottom } = element.getBoundingClientRect();
+  main.querySelectorAll("a.button, a.btn, .btn").forEach((element) => {
+    const { top, bottom } = element.getBoundingClientRect();
 
-      if (
-        !isInsideCard(element) &&
-        top < window.innerHeight &&
-        bottom > 0
-      ) entrance.push(element);
-    });
+    if (!isInsideCard(element) && top < window.innerHeight && bottom > 0)
+      entrance.push(element);
+  });
 
   [...new Set(entrance.filter(Boolean))]
     .sort((a, b) => {
@@ -83,17 +79,20 @@ export function initMotion() {
     });
 
   /* 2. CARD-ONLY SCROLL REVEAL */
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(({ target, isIntersecting }) => {
-      if (!isIntersecting) return;
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (!isIntersecting) return;
 
-      target.classList.add("is-visible");
-      observer.unobserve(target);
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: "0px 0px -30px 0px"
-  });
+        target.classList.add("is-visible");
+        observer.unobserve(target);
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -30px 0px",
+    },
+  );
 
   // Individual cards outside grids.
   main.querySelectorAll(CARDS).forEach((card) => {

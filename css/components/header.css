@@ -361,8 +361,7 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-full);
   margin-left: auto;
   transition:
     background var(--duration-fast) var(--ease-standard),

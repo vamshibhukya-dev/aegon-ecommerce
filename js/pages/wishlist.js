@@ -1,24 +1,8 @@
-
-/* **********************************************************
-   AEGON — Wishlist Page
-   File: js/pages/wishlist.js
-
-   Responsibilities:
-    * Fetch the product catalogue
-    * Retrieve saved wishlist product IDs
-    * Display matching products
-    * Remove products from wishlist
-    * Add wishlist products to cart
-    * Update wishlist count
-    * Display empty wishlist state
-************************************************************* */
-
 import { AegonStorage } from "../storage/storage.js";
 import { showNotification } from "../components/notification.js";
 
 // 1. API CONFIGURATION
 const AEGON_API_BASE = "https://ageon-api.vercel.app";
-
 
 // 2. PAGE INITIALIZATION
 export async function initWishlistPage() {
@@ -27,9 +11,7 @@ export async function initWishlistPage() {
   const wishlistGrid = document.querySelector("#wishlist-grid");
   const emptyState = document.querySelector("#wishlist-empty");
   const wishlistCount = document.querySelector("#wishlist-count");
-  const wishlistCountLabel = document.querySelector(
-    "#wishlist-count-label"
-  );
+  const wishlistCountLabel = document.querySelector("#wishlist-count-label");
   const resultCount = document.querySelector("#wishlist-result-count");
   const clearButton = document.querySelector("#wishlist-clear");
 
@@ -41,9 +23,7 @@ export async function initWishlistPage() {
   // 3. FETCH PRODUCT CATALOGUE
   async function getProducts() {
     try {
-      const response = await fetch(
-        `${AEGON_API_BASE}/products?limit=100`
-      );
+      const response = await fetch(`${AEGON_API_BASE}/products?limit=100`);
 
       if (!response.ok) {
         throw new Error("Unable to load products.");
@@ -51,17 +31,11 @@ export async function initWishlistPage() {
 
       const data = await response.json();
 
-      return Array.isArray(data.products)
-        ? data.products
-        : [];
-
+      return Array.isArray(data.products) ? data.products : [];
     } catch (error) {
       console.error("AEGON: Product loading failed.", error);
 
-      showNotification(
-        "Could not load wishlist products.",
-        "error"
-      );
+      showNotification("Could not load wishlist products.", "error");
 
       return [];
     }
@@ -73,9 +47,7 @@ export async function initWishlistPage() {
 
     return wishlistIds
       .map((id) =>
-        products.find(
-          (product) => Number(product.id) === Number(id)
-        )
+        products.find((product) => Number(product.id) === Number(id)),
       )
       .filter(Boolean);
   }
@@ -105,9 +77,7 @@ export async function initWishlistPage() {
     const hasDiscount = originalPrice > currentPrice;
 
     const discountPercentage = hasDiscount
-      ? Math.round(
-          ((originalPrice - currentPrice) / originalPrice) * 100
-        )
+      ? Math.round(((originalPrice - currentPrice) / originalPrice) * 100)
       : 0;
 
     const imageURL = product.frontImage || "";
@@ -115,21 +85,29 @@ export async function initWishlistPage() {
     const rating = Number(product.rating) || 0;
     const reviewCount = Number(product.reviewCount) || 0;
 
-    const safeName = name.replace(/[&<>"']/g, (character) => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;",
-    })[character]);
+    const safeName = name.replace(
+      /[&<>"']/g,
+      (character) =>
+        ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        })[character],
+    );
 
-    const safeCategory = category.replace(/[&<>"']/g, (character) => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;",
-    })[character]);
+    const safeCategory = category.replace(
+      /[&<>"']/g,
+      (character) =>
+        ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        })[character],
+    );
 
     const imageFileName = imageURL.split("/").pop();
 
@@ -205,7 +183,7 @@ export async function initWishlistPage() {
                 ? `
                   <img
                     src="../assets/images/${encodeURIComponent(
-                      String(product.backImage).split("/").pop()
+                      String(product.backImage).split("/").pop(),
                     )}"
                     alt="${safeName} - Alternate View"
                     width="400"
@@ -342,34 +320,32 @@ export async function initWishlistPage() {
     });
 
     // remove
-    const removeButton = article.querySelector(
-  ".wishlist-remove-btn"
-);
+    const removeButton = article.querySelector(".wishlist-remove-btn");
 
-Object.assign(removeButton.style, {
-  position: "absolute",
-  top: "8px",
-  right: "8px",
-  zIndex: "1",
-  width: "34px",
-  height: "34px",
-  display: "grid",
-  placeItems: "center",
-  borderRadius: "var(--radius-full)",
-  background: "hsla(0, 0%, 100%, 0.85)",
-  backdropFilter: "blur(4px)",
-  color: "var(--color-gray-600)",
-});
+    Object.assign(removeButton.style, {
+      position: "absolute",
+      top: "8px",
+      right: "8px",
+      zIndex: "1",
+      width: "34px",
+      height: "34px",
+      display: "grid",
+      placeItems: "center",
+      borderRadius: "var(--radius-full)",
+      background: "hsla(0, 0%, 100%, 0.85)",
+      backdropFilter: "blur(4px)",
+      color: "var(--color-gray-600)",
+    });
 
-removeButton.addEventListener("mouseenter", () => {
-  removeButton.style.background = "#fee2e2";
-  removeButton.style.color = "#dc2626";
-});
+    removeButton.addEventListener("mouseenter", () => {
+      removeButton.style.background = "#fee2e2";
+      removeButton.style.color = "#dc2626";
+    });
 
-removeButton.addEventListener("mouseleave", () => {
-  removeButton.style.background = "hsla(0, 0%, 100%, 0.85)";
-  removeButton.style.color = "var(--color-gray-600)";
-});
+    removeButton.addEventListener("mouseleave", () => {
+      removeButton.style.background = "hsla(0, 0%, 100%, 0.85)";
+      removeButton.style.color = "var(--color-gray-600)";
+    });
 
     return article;
   }
@@ -389,8 +365,7 @@ removeButton.addEventListener("mouseleave", () => {
     }
 
     if (resultCount) {
-      resultCount.textContent =
-        `${count} ${count === 1 ? "product" : "products"}`;
+      resultCount.textContent = `${count} ${count === 1 ? "product" : "products"}`;
     }
 
     if (clearButton) {
@@ -422,9 +397,7 @@ removeButton.addEventListener("mouseleave", () => {
     if (isEmpty) return;
 
     wishlistProducts.forEach((product) => {
-      wishlistGrid.appendChild(
-        createWishlistCard(product)
-      );
+      wishlistGrid.appendChild(createWishlistCard(product));
     });
   }
 
@@ -433,9 +406,7 @@ removeButton.addEventListener("mouseleave", () => {
   // =======================================================
 
   function handleWishlistRemove(event) {
-    const button = event.target.closest(
-      "[data-wishlist-remove]"
-    );
+    const button = event.target.closest("[data-wishlist-remove]");
 
     if (!button || !wishlistGrid.contains(button)) {
       return;
@@ -452,21 +423,11 @@ removeButton.addEventListener("mouseleave", () => {
 
       renderWishlist();
 
-      showNotification(
-        "Removed from wishlist.",
-        "success"
-      );
-
+      showNotification("Removed from wishlist.", "success");
     } catch (error) {
-      console.error(
-        "AEGON: Could not remove wishlist product.",
-        error
-      );
+      console.error("AEGON: Could not remove wishlist product.", error);
 
-      showNotification(
-        "Could not update wishlist.",
-        "error"
-      );
+      showNotification("Could not update wishlist.", "error");
     }
   }
 
@@ -475,9 +436,7 @@ removeButton.addEventListener("mouseleave", () => {
   // =======================================================
 
   function handleAddToCart(event) {
-    const button = event.target.closest(
-      "[data-add-to-cart]"
-    );
+    const button = event.target.closest("[data-add-to-cart]");
 
     if (!button || !wishlistGrid.contains(button)) {
       return;
@@ -492,21 +451,11 @@ removeButton.addEventListener("mouseleave", () => {
     try {
       AegonStorage.addToCart(productId, 1);
 
-      showNotification(
-        "Product added to cart!",
-        "success"
-      );
-
+      showNotification("Product added to cart!", "success");
     } catch (error) {
-      console.error(
-        "AEGON: Could not add wishlist product to cart.",
-        error
-      );
+      console.error("AEGON: Could not add wishlist product to cart.", error);
 
-      showNotification(
-        "Could not add product to cart.",
-        "error"
-      );
+      showNotification("Could not add product to cart.", "error");
     }
   }
 
@@ -528,25 +477,15 @@ removeButton.addEventListener("mouseleave", () => {
 
       renderWishlist();
 
-      showNotification(
-        "Wishlist cleared.",
-        "success"
-      );
-
+      showNotification("Wishlist cleared.", "success");
     } catch (error) {
       isClearing = false;
 
-      console.error(
-        "AEGON: Could not clear wishlist.",
-        error
-      );
+      console.error("AEGON: Could not clear wishlist.", error);
 
       renderWishlist();
 
-      showNotification(
-        "Could not clear wishlist.",
-        "error"
-      );
+      showNotification("Could not clear wishlist.", "error");
     }
   }
 
@@ -554,29 +493,17 @@ removeButton.addEventListener("mouseleave", () => {
   // 12. LISTEN FOR WISHLIST CHANGES
   // =======================================================
 
-  document.addEventListener(
-    "aegon:wishlist-updated",
-    renderWishlist
-  );
+  document.addEventListener("aegon:wishlist-updated", renderWishlist);
 
   // =======================================================
   // 13. EVENT LISTENERS
   // =======================================================
 
-  wishlistGrid.addEventListener(
-    "click",
-    handleWishlistRemove
-  );
+  wishlistGrid.addEventListener("click", handleWishlistRemove);
 
-  wishlistGrid.addEventListener(
-    "click",
-    handleAddToCart
-  );
+  wishlistGrid.addEventListener("click", handleAddToCart);
 
-  clearButton?.addEventListener(
-    "click",
-    handleClearWishlist
-  );
+  clearButton?.addEventListener("click", handleClearWishlist);
 
   // =======================================================
   // 14. INITIAL LOAD

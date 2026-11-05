@@ -1,11 +1,10 @@
-
-/* =========================================================
+/* ***********************************************************
    AEGON — HTML Escaping Utility
    File: js/utils/escape-html.js
 
    Purpose:
    Convert HTML-sensitive characters into safe text.
-   ========================================================= */
+ ************************************************************* */
 
 export function escapeHTML(value) {
   const htmlEntities = {
@@ -18,6 +17,6 @@ export function escapeHTML(value) {
 
   return String(value ?? "").replace(
     /[&<>"']/g,
-    (character) => htmlEntities[character]
+    (character) => htmlEntities[character],
   );
 }

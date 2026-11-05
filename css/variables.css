@@ -250,7 +250,7 @@
 
 
 /* Layout */
-  --container-width: 1280px;
+  --container-width: 1440px;
   --container-width-narrow: 880px;
 
   --container-padding: clamp(1.25rem, 4vw, 3rem);

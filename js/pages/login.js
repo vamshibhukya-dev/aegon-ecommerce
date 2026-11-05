@@ -1,16 +1,9 @@
-/* *********************************************************
-   AEGON — Login Page
-   File: js/pages/login.js
-
-   Responsibilities:
-   * Handle login form submission
-   * Validate user credentials
-   * Create login session
-   * Display login errors
-   * Redirect after successful login
-  ********************************************************** */
-
 import { AegonStorage } from "../storage/storage.js";
+import {
+  isRequired,
+  isValidEmail,
+  isValidPassword,
+} from "../utils/validation.js";
 
 // 1. LOGIN PAGE ELEMENTS
 const loginForm = document.querySelector("#login-form");
@@ -38,14 +31,32 @@ function clearLoginError() {
   errorMessage.style.display = "none";
 }
 
-// 4. HANDLE LOGIN SUBMISSION
+const passwordToggle = document.querySelector("[data-password-toggle]");
+
+// 4. PRESS AND HOLD TO REVEAL PASSWORD
+function showPassword() {
+  if (!passwordInput || !passwordToggle) return;
+
+  passwordInput.type = "text";
+
+  passwordToggle.setAttribute("aria-label", "Hide password");
+  passwordToggle.setAttribute("aria-pressed", "true");
+}
+
+function hidePassword() {
+  if (!passwordInput || !passwordToggle) return;
+
+  passwordInput.type = "password";
+
+  passwordToggle.setAttribute("aria-label", "Show password");
+  passwordToggle.setAttribute("aria-pressed", "false");
+}
+
+// 5. HANDLE LOGIN SUBMISSION
 function handleLogin(event) {
   event.preventDefault();
 
   clearLoginError();
-
-  const email = emailInput.value.trim();
-  const password = passwordInput.value;
 
   // Check whether the required elements exist.
   if (!emailInput || !passwordInput || !errorMessage) {
@@ -53,9 +64,25 @@ function handleLogin(event) {
     return;
   }
 
-  // Check empty values.
-  if (!email || !password) {
+  // Collect user input.
+  const email = emailInput.value.trim().toLowerCase();
+  const password = passwordInput.value;
+
+  // 1. Check required fields.
+  if (!isRequired(email) || !isRequired(password)) {
     showLoginError("Please enter your email address and password.");
+    return;
+  }
+
+  // 2. Validate email format.
+  if (!isValidEmail(email)) {
+    showLoginError("Please enter a valid email address.");
+    return;
+  }
+
+  // 3. Validate password length.
+  if (!isValidPassword(password)) {
+    showLoginError("Password must be between 8 and 128 characters.");
     return;
   }
 
@@ -88,7 +115,7 @@ function handleLogin(event) {
   }
 }
 
-// 5. INITIALIZE LOGIN PAGE
+// 6. INITIALIZE LOGIN PAGE
 export function initLoginPage() {
   if (!loginForm) {
     return;
@@ -100,3 +127,37 @@ export function initLoginPage() {
   emailInput?.addEventListener("input", clearLoginError);
   passwordInput?.addEventListener("input", clearLoginError);
 }
+
+// Password visibility — Press and Hold
+passwordToggle?.addEventListener("pointerdown", (event) => {
+  if (event.pointerType === "mouse" && event.button !== 0) return;
+
+  event.preventDefault();
+  showPassword();
+});
+
+// Hide when mouse/finger is released anywhere
+window.addEventListener("pointerup", hidePassword);
+window.addEventListener("pointercancel", hidePassword);
+
+// Prevent right-click context menu on the icon
+passwordToggle?.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+});
+
+// Keyboard accessibility — Space key
+passwordToggle?.addEventListener("keydown", (event) => {
+  if (event.code === "Space" && !event.repeat) {
+    event.preventDefault();
+    showPassword();
+  }
+});
+
+passwordToggle?.addEventListener("keyup", (event) => {
+  if (event.code === "Space") {
+    event.preventDefault();
+    hidePassword();
+  }
+});
+
+passwordToggle?.addEventListener("blur", hidePassword);

@@ -27,19 +27,16 @@ function getProductId(product) {
 
 function getDiscount(product) {
   return Number(
-    product.discountPct ??
-    product.discountPercentage ??
-    product.discount ??
-    0
+    product.discountPct ?? product.discountPercentage ?? product.discount ?? 0,
   );
 }
 
 function getOriginalPrice(product) {
   return Number(
     product.oldPrice ??
-    product.originalPrice ??
-    product.original_price ??
-    product.price
+      product.originalPrice ??
+      product.original_price ??
+      product.price,
   );
 }
 
@@ -58,9 +55,7 @@ function updateExistingCard(card, product) {
   const discount = getDiscount(product);
   const rating = product.rating;
   const reviewCount =
-    product.reviewCount ??
-    product.reviewsCount ??
-    product.reviews_count;
+    product.reviewCount ?? product.reviewsCount ?? product.reviews_count;
 
   // Keep the card connected to its actual product.
   card.dataset.productId = getProductId(product);
@@ -69,7 +64,7 @@ function updateExistingCard(card, product) {
   updateText(
     card,
     ".product-card__title, .product-card__name, [data-product-name]",
-    name
+    name,
   );
 
   // Current price.
@@ -77,14 +72,12 @@ function updateExistingCard(card, product) {
     updateText(
       card,
       ".product-card__price, [data-product-price]",
-      formatPrice(price)
+      formatPrice(price),
     );
   }
 
   // Original price.
-  const oldPriceElement = card.querySelector(
-    ".product-card__price-old"
-  );
+  const oldPriceElement = card.querySelector(".product-card__price-old");
 
   if (oldPriceElement) {
     if (
@@ -100,9 +93,7 @@ function updateExistingCard(card, product) {
   }
 
   // Discount percentage.
-  const discountElement = card.querySelector(
-    ".product-card__discount"
-  );
+  const discountElement = card.querySelector(".product-card__discount");
 
   if (discountElement) {
     if (
@@ -111,7 +102,7 @@ function updateExistingCard(card, product) {
       originalPrice > price
     ) {
       const calculatedDiscount = Math.round(
-        ((originalPrice - price) / originalPrice) * 100
+        ((originalPrice - price) / originalPrice) * 100,
       );
 
       discountElement.textContent = `Save ${calculatedDiscount}%`;
@@ -122,9 +113,7 @@ function updateExistingCard(card, product) {
   }
 
   // Rating.
-  const ratingElement = card.querySelector(
-    ".product-card__rating"
-  );
+  const ratingElement = card.querySelector(".product-card__rating");
 
   if (ratingElement && rating !== undefined && rating !== null) {
     const ratingNumber = Number(rating);
@@ -132,8 +121,7 @@ function updateExistingCard(card, product) {
     if (Number.isFinite(ratingNumber)) {
       const ratingText = [...ratingElement.childNodes].find(
         (node) =>
-          node.nodeType === Node.TEXT_NODE &&
-          node.textContent.trim() !== ""
+          node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== "",
       );
 
       if (ratingText) {
@@ -143,21 +131,15 @@ function updateExistingCard(card, product) {
   }
 
   // Review count.
-  const reviewsElement = card.querySelector(
-    ".product-card__rating span"
-  );
+  const reviewsElement = card.querySelector(".product-card__rating span");
 
-  if (
-    reviewsElement &&
-    reviewCount !== undefined &&
-    reviewCount !== null
-  ) {
+  if (reviewsElement && reviewCount !== undefined && reviewCount !== null) {
     reviewsElement.textContent = `(${reviewCount})`;
   }
 
   // Product image.
   const imageElement = card.querySelector(
-    ".product-card__image, .product-card__media img, img[data-product-image]"
+    ".product-card__image, .product-card__media img, img[data-product-image]",
   );
 
   if (imageElement && getProductImage(product)) {
@@ -167,7 +149,7 @@ function updateExistingCard(card, product) {
     // The existing homepage images are stored in assets/images/.
     const localImage = new URL(
       `./assets/images/${fileName}`,
-      window.location.origin + window.location.pathname.replace(/[^/]*$/, "")
+      window.location.origin + window.location.pathname.replace(/[^/]*$/, ""),
     ).href;
 
     imageElement.onerror = () => {
@@ -181,12 +163,11 @@ function updateExistingCard(card, product) {
 
   // Update product detail links.
   const detailLink = card.querySelector(
-    ".product-card__quickview, .product-card__quickview-btn"
+    ".product-card__quickview, .product-card__quickview-btn",
   );
 
   if (detailLink) {
-    detailLink.href =
-      `./pages/product-details.html?id=${encodeURIComponent(product.id)}`;
+    detailLink.href = `./pages/product-details.html?id=${encodeURIComponent(product.id)}`;
 
     detailLink.setAttribute("aria-label", `View ${name}`);
   }
@@ -200,9 +181,7 @@ function getSectionProducts(products, type) {
     const oldPrice = getOriginalPrice(product);
 
     return (
-      Number.isFinite(price) &&
-      Number.isFinite(oldPrice) &&
-      oldPrice > price
+      Number.isFinite(price) && Number.isFinite(oldPrice) && oldPrice > price
     );
   });
 
@@ -214,7 +193,7 @@ function getSectionProducts(products, type) {
     .sort(
       (a, b) =>
         Number(b.popularity ?? b.rating ?? 0) -
-        Number(a.popularity ?? a.rating ?? 0)
+        Number(a.popularity ?? a.rating ?? 0),
     )
     .slice(0, 4);
 }
@@ -228,21 +207,14 @@ function renderSection(section, products) {
 
   // Create a lookup using every API product's ID.
   const productsById = new Map(
-    products.map((product) => [
-      String(product.id),
-      product,
-    ])
+    products.map((product) => [String(product.id), product]),
   );
 
   // Update only the existing HTML cards with matching IDs.
-  const existingCards = grid.querySelectorAll(
-    "[data-product-id]"
-  );
+  const existingCards = grid.querySelectorAll("[data-product-id]");
 
   existingCards.forEach((card) => {
-    const product = productsById.get(
-      card.dataset.productId
-    );
+    const product = productsById.get(card.dataset.productId);
 
     if (!product) return;
 
@@ -251,23 +223,21 @@ function renderSection(section, products) {
 }
 
 export async function initHomePage() {
-  console.log("HOME.JS FILE LOADED");
   const isHomePage = HOME_SECTIONS.some(({ id }) =>
-    document.getElementById(id)
+    document.getElementById(id),
   );
-
 
   if (!isHomePage) return;
 
   try {
     const products = await getProducts();
     console.log("PRODUCTS CHECK");
-console.log("Products loaded:", products.length);
+    console.log("Products loaded:", products.length);
 
-console.log(
-  "Brown Buns product:",
-  products.find((product) => String(product.id) === "31")
-);
+    console.log(
+      "Brown Buns product:",
+      products.find((product) => String(product.id) === "31"),
+    );
 
     if (!Array.isArray(products) || products.length === 0) {
       return;
@@ -277,9 +247,6 @@ console.log(
       renderSection(section, products);
     });
   } catch (error) {
-    console.error(
-      "Homepage products could not be loaded:",
-      error
-    );
+    console.error("Homepage products could not be loaded:", error);
   }
 }

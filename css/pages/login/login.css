@@ -154,6 +154,13 @@
   color: var(--color-brand-primary);
 }
 
+.login-form__input-icon[data-password-toggle] {
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: none;
+  user-select: none;
+}
+
 /* Options */
 .login-form__options {
   display: flex;

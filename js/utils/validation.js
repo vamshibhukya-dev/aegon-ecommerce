@@ -1,4 +1,3 @@
-
 /* =========================================================
    AEGON — Form Validation Utilities
    File: js/utils/validation.js
@@ -14,9 +13,7 @@
 // 1. Check whether a value is empty.
 export function isRequired(value) {
   return (
-    value !== null &&
-    value !== undefined &&
-    String(value).trim().length > 0
+    value !== null && value !== undefined && String(value).trim().length > 0
   );
 }
 
@@ -60,4 +57,18 @@ export function doPasswordsMatch(password, confirmPassword) {
     typeof confirmPassword === "string" &&
     password === confirmPassword
   );
+}
+
+// 6. Validate password strength.
+export function isStrongPassword(password) {
+  if (typeof password !== "string") {
+    return false;
+  }
+
+  const hasMinimumLength = password.length >= 8;
+  const hasLetter = /[a-zA-Z]/.test(password);
+  const hasNumber = /\d/.test(password);
+  const hasSymbol = /[^a-zA-Z0-9]/.test(password);
+
+  return hasMinimumLength && hasLetter && hasNumber && hasSymbol;
 }

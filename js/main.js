@@ -38,7 +38,6 @@ initSignupPage();
 // Initialize site-wide motion system.
 initMotion();
 
-
 /* **************************************************************************
                                  SCROLL BUTTON
    ************************************************************************** */
@@ -53,17 +52,11 @@ const updateScrollButton = () => {
   if (isNearTop) {
     scrollButton.setAttribute("aria-label", "Back to bottom");
 
-    scrollArrow.setAttribute(
-      "d",
-      "M12 4v16m7-7l-7 7l-7-7"
-    );
+    scrollArrow.setAttribute("d", "M12 4v16m7-7l-7 7l-7-7");
   } else {
     scrollButton.setAttribute("aria-label", "Back to top");
 
-    scrollArrow.setAttribute(
-      "d",
-      "M12 20V4m-7 7l7-7l7 7"
-    );
+    scrollArrow.setAttribute("d", "M12 20V4m-7 7l7-7l7 7");
   }
 };
 
@@ -74,12 +67,12 @@ scrollButton?.addEventListener("click", (event) => {
 
   window.scrollTo({
     top: isNearTop ? document.documentElement.scrollHeight : 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
 window.addEventListener("scroll", updateScrollButton, {
-  passive: true
+  passive: true,
 });
 
 updateScrollButton();
