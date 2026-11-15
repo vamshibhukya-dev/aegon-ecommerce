@@ -59,12 +59,19 @@ export function initProductsPage() {
   const PRODUCTS_PER_PAGE = 12;
 
   // 4. APPLICATION STATE
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialSearch = (urlParams.get("q") || "").trim().toLowerCase();
+
   const state = {
     category: getCategoryFromURL(),
-    search: "",
+    search: initialSearch,
     sort: "default",
     page: 1,
   };
+
+  if (searchInput) {
+    searchInput.value = initialSearch;
+  }
 
   // 5. CREATE PAGINATION UI
   const pagination = document.createElement("nav");
